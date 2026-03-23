@@ -1,0 +1,505 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+<meta http-equiv="imagetoolbar" content="no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>나노소프트</title>
+<link rel="stylesheet" href="../theme/nanosoft/css/default.css">
+<link rel="stylesheet" href="../theme/nanosoft/skin/connect/basic/style.css">
+<link rel="stylesheet" href="../theme/nanosoft/skin/latest/notice/style.css">
+<link rel="stylesheet" href="../theme/nanosoft/skin/outlogin/basic/style.css">
+<link rel="stylesheet" href="../theme/nanosoft/skin/visit/basic/style.css">
+<!--[if lte IE 8]>
+<script src="js/html5.js"></script>
+<![endif]-->
+<script>
+// 자바스크립트에서 사용하는 전역변수 선언
+var g5_url       = "https://www.bfit.kr";
+var g5_bbs_url   = "bbs";
+var g5_is_member = "";
+var g5_is_admin  = "";
+var g5_is_mobile = "";
+var g5_bo_table  = "";
+var g5_sca       = "";
+var g5_editor    = "";
+var g5_cookie_domain = "";
+</script>
+<!--<script src="js/jquery-1.8.3.min.js"></script>-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="../js/jquery.menu.js"></script>
+<script src="../js/common.js"></script>
+<script src="../js/wrest.js"></script>
+<script src="../js/placeholders.min.js"></script>
+<script src="../iium_js/jquery.bxslider.min.js"></script>
+<script src="../iium_js/jquery.easing.1.3.min.js"></script>
+<script src="../slick/slick.min.js"></script>
+<script src="../slick/product.js"></script>
+<script src="../iium_js/index.js"></script>
+
+<!--
+<link rel="shortcut icon" href="/iium_img/favicon_03.png" type="image/x-icon" />
+<link rel="icon" href="/iium_img/favicon_03.png" type="image/x-icon" />
+-->
+<link rel="stylesheet" href="../js/font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet" href="../iium_css/common.css">
+<link rel="stylesheet" href="../iium_css/jquery.bxslider.min.css">
+<link rel="stylesheet" href="../slick/slick.css">
+<link rel="stylesheet" href="../slick/product.css">
+<link rel="stylesheet" href="../iium_css/index.css">
+<link rel="stylesheet" href="../iium_css/fonts.css">
+
+<!--privacy-->
+<link rel="stylesheet" type="text/css" href="../iium_css/privacy_kr/base.css">
+<link rel="stylesheet" type="text/css" href="../iium_css/privacy_kr/layout.css">
+<link rel="stylesheet" type="text/css" href="../iium_css/privacy_kr/style.css">
+
+<script src="../js/jquery.bxslider.js"></script>
+</head>
+<body id="">
+
+<!-- 상단 시작 { -->
+<div id="hd">
+    <h1 id="hd_h1">나노소프트</h1>
+
+    <div id="skip_to_container"><a href="sub1_01.html#container">본문 바로가기</a></div>
+            </div>
+    <div id="hd_wrapper">
+
+        <div id="logo">주
+            <a href="../index.html"><img src="../img/logo.png" alt="나노소프트"></a>
+        </div>
+
+        <div class="hd_sch_wr">
+            <fieldset id="hd_sch" >
+                <legend>사이트 내 전체검색</legend>
+                
+
+                <script>
+                
+                    // 검색에 많은 부하가 걸리는 경우 이 주석을 제거하세요.
+                    var cnt = 0;
+                    for (var i=0; i<f.stx.value.length; i++) {
+                        if (f.stx.value.charAt(i) == ' ')
+                            cnt++;
+                    }
+
+                    if (cnt > 1) {
+                        alert("빠른 검색을 위하여 검색어에 공백은 한개만 입력할 수 있습니다.");
+                        f.stx.select();
+                        f.stx.focus();
+                        return false;
+                    }
+
+                    return true;
+                }
+                </script>
+
+            </fieldset>
+
+            
+<!-- 인기검색어 시작 { -->
+
+<!-- } 인기검색어 끝 -->        </div>
+        <ul id="hd_qnb">
+            <li><a href="../bbs/faq.html"><i class="fa fa-question" aria-hidden="true"></i><span>FAQ</span></a></li>
+            <li><a href="../bbs/qalist.html"><i class="fa fa-comments" aria-hidden="true"></i><span>1:1문의</span></a></li>
+            <li><a href="../bbs/current_connect.html" class="visit"><i class="fa fa-users" aria-hidden="true"></i><span>접속자</span><strong class="visit-num">
+3</strong></a></li>
+            <li><a href="../bbs/new.html"><i class="fa fa-history" aria-hidden="true"></i><span>새글</span></a></li>
+        </ul>
+    </div>
+
+    <nav id="gnb">
+        <h2>메인메뉴</h2>
+        <div class="gnb_wrap">
+            <ul id="gnb_1dul">
+                <li class="gnb_1dli gnb_mnal"><button type="button" class="gnb_menu_btn"><i class="fa fa-bars" aria-hidden="true"></i><span class="sound_only">전체메뉴열기</span></button></li>
+                                    <li class="gnb_empty">메뉴 준비 중입니다.</li>
+                            </ul>
+            <div id="gnb_all">
+                <h2>전체메뉴</h2>
+                <ul class="gnb_al_ul">
+                                            <li class="gnb_empty">메뉴 준비 중입니다.</li>
+                                    </ul>
+                <button type="button" class="gnb_close_btn"><i class="fa fa-times" aria-hidden="true"></i></button>
+            </div>
+        </div>
+    </nav>
+    <script>
+
+    $(function(){
+        $(".gnb_menu_btn").click(function(){
+            $("#gnb_all").show();
+        });
+        $(".gnb_close_btn").click(function(){
+            $("#gnb_all").hide();
+        });
+    });
+
+    </script>
+</div>
+<!-- } 상단 끝 -->
+<script>
+  </script>
+<!-- ko_KR -->
+<header id="header">
+	<div id="hd_wrap">
+		<a class="menu">
+			<span class="m_sp"></span>
+			<span class="m_sp"></span>
+			<span class="m_sp0"></span>
+		</a>
+		<a href="../index.html" class="logo"><img src="../iium_img/main_logo_n.png" alt="로고"></a>
+
+        
+	</div>
+<!--
+	<map name="Catalog" id="Catalog">
+		<area shape="rect" coords="0, 0, 61, 50" href="/include/catalog.pdf" alt="" download>
+	</map>
+-->
+
+	<div class="drop_menu">
+		<div class="gnb">
+			<div class="gnb_wrap">
+				<ul>
+					<li><a href="sub1_01.html">Nanosoft</a></li>
+					<li><a href="sub2_01.html">Business </a></li>
+					<li><a href="sub3_01.html">Bfit</a></li>
+					<li><a href="sub4_01.html">Contact us </a></li>
+				</ul>
+				<div class="gnb_text"><p>Let's make a better idea <span>for a better future.</span></p></div>
+			</div>
+		</div>
+		<div class="gnb_sub">
+			<ul>
+				<li><a href="sub1_01.html">회사소개</a></li>
+				<li><a href="sub1_02.html">idoVOX 기술</a></li>
+				<li><a href="sub1_03.html">회사연혁</a></li>
+			</ul>
+			<ul>
+				<li><a href="sub2_01.html">VOX IoT</a></li>
+				<li><a href="sub2_02.html">VOX Fintech</a></li>
+				<li><a href="sub2_03.html">VOX Media</a></li>
+			</ul>
+			<ul>
+				<li><a href="sub3_01.html">비핏 시스템</a></li>
+				<li><a href="sub3_02.html">비핏 제품</a></li>
+                <li><a href="sub3_03.html">앱 다운로드</a></li>
+			</ul>
+			<ul>
+				<li><a href="sub4_01.html">IR투자소개</a></li>
+				<!-- <li><a href="/sub/sub4_01.html">IR투자소개</a></li> -->
+				<li><a href="sub4_02.html">기술협력</a></li>
+				<li><a href="sub4_03.html">문의하기</a></li>
+			</ul>
+		</div>
+	</div>
+</header>
+
+<div class="m_menu">
+	<span class="line"></span>
+	<span class="line"></span>
+	<span class="line"></span>
+</div>
+<div class="m_drop">
+	<div class="m_list_wr">
+		<div class="m_text_wr">
+			<div class="m_gnb_text"><p>Let's make a better idea <span>for a better future.</span></p></div>
+		</div>
+		<ul>
+			<li class="has-sub"><a href="sub1_01.html">Nanosoft</a>
+				<ul>
+					<li><a href="sub1_01.html">회사소개</a></li>
+					<li><a href="sub1_02.html">idoVOX 기술</a></li>
+					<li><a href="sub1_03.html">회사연혁</a></li>
+				</ul>
+			</li>
+			<li class="has-sub"><a href="sub1_01.html">Business </a>
+				<ul>
+					<li><a href="sub2_01.html">VOX IoT</a></li>
+					<li><a href="sub2_02.html">VOX Fintech</a></li>
+					<li><a href="sub2_03.html">VOX Media</a></li>
+				</ul>
+			</li>
+			<li class="has-sub"><a href="sub1_01.html">Bfit</a>
+				<ul>
+					<li><a href="sub3_01.html">비핏 시스템</a></li>
+					<li><a href="sub3_02.html">비핏 제품</a></li>
+					<li><a href="sub3_03.html">앱 다운로드</a></li>
+				</ul>
+			</li>
+			<li class="has-sub"><a href="sub1_01.html">Contact us </a>
+				<ul>
+					<li><a href="sub4_01.html">IR투자소개</a></li>
+					<li><a href="sub4_02.html">기술협력</a></li>
+					<li><a href="sub4_03.html">문의하기</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<div class="mo_lang_wr">
+		<span class="hd_lang mo_lang">
+<!--
+			<a href="#" class="lang kor">KOR</a>
+			<a href="#" class="lang eng">ENG</a>
+			<a href="#" class="lang chn">CHN</a>
+-->
+			<a href="http://ko.bfit.kr" class="lang kor on">ENG</a>
+  			<a href="../en/sub/sub1_01.html" class="lang eng ">KOR</a>
+  			<a href="../cn/sub/sub1_01.html" class="lang chn ">CHI</a>
+			<a href="https://smartstore.naver.com/bfit" class="shop" target="_blank">Bfit shop</a>
+			<a href="../include/download.php%3Ffilepath=include%252Fcatalog_kr.pdf&amp;filename=catalog_kr.pdf" class="catalog" download>CATALOG DOWN</a>
+			<!-- <a href="/include/download.html?filepath=include/catalog.pdf&filename=catalog.pdf" class="catalog" download>CATALOG DOWN</a> -->
+            <a href="sub3_03.html" class="app">APP<br>DOWN</a>
+		</span>
+	</div>
+</div>
+
+
+<!-- 콘텐츠 시작 { -->
+<div id="wrapper">
+    <div id="container_wr">
+
+    <div id="container">
+<!--
+        </div>
+    </div>
+</div>-->
+<div class="sub_content sub1_01">
+	<div class="sub_content_wr">
+		<p class="sub_title first">About US</p>
+		
+		<div class="about_area1">
+			<div class="about_left_box"><div class="vision_blank"></div></div>
+			<div class="about_right_box">
+				<div class="vision_text_box">
+					<p class="sub_title">비전</p>
+					<p class="about_text1">
+						<span>"세상을 건강하게</span>
+						<span>만들고 싶다."</span>
+					</p>
+					<p class="about_text2">
+						“행복의 시작은 건강한 몸과 마음에서 시작한다고 생각합니다. 세상을 구하는 영웅이 되기는 어렵지만, 세상을 건강하게 만드는 사람들의 회사를 만들자.					</p>
+				</div>
+			</div>
+		</div><!--area1-->
+		<div class="about_area2">
+			<p class="sub_title">기술</p>
+			<p class="about_text1">“사용의 편리성!! 말이 더 필요한가요?”</p>
+			<p class="about_text2">
+				<span>기존의 통신방식은 통신설정이 필요하고, 설정시 오작동 등의 불편함이 있었습니다.</span>
+				<span>“이도복스”는 바로 그런 갈증을 해소시킬 나노소프트의 독창적인 통신기술입니다.</span>
+				<span>&nbsp;</span>
+			</p>
+		</div><!--area2-->
+		<div class="about_area3">
+			<div class="scroll_box">
+				<div class="about_area3_wr">
+					<span class="about_cir cir1">ido</span>
+					<div class="about_sym sym1"><span></span></div>
+					<span class="about_cir cir2">VOX</span>
+					<div class="about_sym sym2"><span></span></div>
+					<span class="about_cir cir3">ido VOX</span>
+				</div>
+				<p>한글을 만든 세종대왕의 이름 “이도” 와 영어의 “Vox”를 합성하여 만들었습니다.</p>
+			</div>
+		</div><!--area3-->
+	</div>
+</div>
+
+
+    </div>
+    <div id="aside">
+        
+<div class="notice">
+    <h2><a href="../bbs/board.php%3Fbo_table=notice.html"><i class="fa fa-bullhorn" aria-hidden="true"></i><span class="sound_only"></span></a></h2>
+    <ul>
+            <li class="empty_li">게시물이 없습니다.</li>
+        </ul>
+
+</div>
+        
+<!-- 로그인 전 아웃로그인 시작 { -->
+<section id="ol_before" class="ol">
+    <h2>회원로그인</h2>
+    <form name="foutlogin" action="bbs/login_check.html" onsubmit="return fhead_submit(this);" method="post" autocomplete="off">
+    <fieldset>
+        <div class="ol_wr">
+            <input type="hidden" name="url" value="%2Fsub%2Fsub1_01.html">
+            <label for="ol_id" id="ol_idlabel" class="sound_only">회원아이디<strong>필수</strong></label>
+            <input type="text" id="ol_id" name="mb_id" required maxlength="20" placeholder="아이디">
+            <label for="ol_pw" id="ol_pwlabel" class="sound_only">비밀번호<strong>필수</strong></label>
+            <input type="password" name="mb_password" id="ol_pw" required maxlength="20" placeholder="비밀번호">
+            <input type="submit" id="ol_submit" value="로그인" class="btn_b02">
+        </div>
+        <div class="ol_auto_wr"> 
+            <div id="ol_auto">
+                <input type="checkbox" name="auto_login" value="1" id="auto_login">
+                <label for="auto_login" id="auto_login_label">자동로그인</label>
+            </div>
+            <div id="ol_svc">
+                <a href="../bbs/register.html"><b>회원가입</b></a> /
+                <a href="../bbs/password_lost.html" id="ol_password_lost">정보찾기</a>
+            </div>
+        </div>
+        
+    </fieldset>
+    </form>
+</section>
+
+<script>
+$omi = $('#ol_id');
+$omp = $('#ol_pw');
+$omi_label = $('#ol_idlabel');
+$omi_label.addClass('ol_idlabel');
+$omp_label = $('#ol_pwlabel');
+$omp_label.addClass('ol_pwlabel');
+
+$(function() {
+
+    $("#auto_login").click(function(){
+        if ($(this).is(":checked")) {
+            if(!confirm("자동로그인을 사용하시면 다음부터 회원아이디와 비밀번호를 입력하실 필요가 없습니다.\n\n공공장소에서는 개인정보가 유출될 수 있으니 사용을 자제하여 주십시오.\n\n자동로그인을 사용하시겠습니까?"))
+                return false;
+        }
+    });
+});
+
+function fhead_submit(f)
+{
+    return true;
+}
+</script>
+<!-- } 로그인 전 아웃로그인 끝 -->
+                
+<!-- 접속자집계 시작 { -->
+<section id="visit">
+    <h2><i class="fa fa-users" aria-hidden="true"></i>  접속자집계</h2>
+    <dl>
+        <dt><span class="color_1"></span> 오늘</dt>
+        <dd><strong class="color_1">328</strong></dd>
+        <dt><span class="color_2"></span> 어제</dt>
+        <dd><strong class="color_2">634</strong></dd>
+        <dt><span class="color_3"></span> 최대</dt>
+        <dd><strong class="color_3">2,148</strong></dd>
+        <dt><span class="color_4"></span> 전체</dt>
+        <dd><strong class="color_4">997,450</strong></dd>
+    </dl>
+    </section>
+<!-- } 접속자집계 끝 -->    </div>
+</div>
+
+</div>
+<!-- } 콘텐츠 끝 -->
+
+
+
+
+<div id="footer">
+	<div id="footer_wr">
+		<div id="ft_sns">
+			<a href="https://play.google.com/store/apps/details?id=kr.bfit.kr" class="sns_icn_wr" target="_blank">
+				<img src="../iium_img/playstore.png" alt="플레이스토어">
+			</a>
+			<a href="https://itunes.apple.com/kr/app/bfit-app-body-scale/id747585014?mt=8" class="sns_icn_wr ap_kr" target="_blank">
+				<img src="../iium_img/appstore.png" alt="앱스토어">
+			</a>
+			<a href="https://www.facebook.com/BfitAppCoach" class="sns_icn_wr" target="_blank">
+				<img src="../iium_img/ft_fb.png" alt="페이스북" class="sns_icn">
+				<img src="../iium_img/ft_fb_hov.png" alt="페이스북" class="sns_icn_hov">
+			</a>
+			<a href="https://blog.naver.com/bfitapp" class="sns_icn_wr" target="_blank">
+				<img src="../iium_img/ft_blog.png" alt="블로그" class="sns_icn">
+				<img src="../iium_img/ft_blog_hov.png" alt="블로그" class="sns_icn_hov">
+			</a>
+			<a href="https://www.instagram.com/bfit_app_coach/" class="sns_icn_wr" target="_blank">
+				<img src="../iium_img/instar.png" alt="인스타그램" class="sns_icn">
+				<img src="../iium_img/instar_hov.png" alt="인스타그램" class="sns_icn_hov">
+			</a>
+<!--			<span class="fam_site">Kasite</span>-->
+			<div class="fam_site">
+				<a>Related site</a>
+				<ul>
+					<li><a href="http://smartstore.naver.com/bfit" target="_blank">Bfit Shop</a></li>
+					<li><a href="http://coach.bfit.kr/coaching/login.do" target="_blank">App Coach</a></li>
+					<li><a href="http://coach.bfit.kr/admin/loginPage.do" target="_blank">App Coach Admin</a></li>
+					<li class="privacy ko"><a href="privacy_ko.html" target="_blank">개인정보보호정책</a></li>
+				</ul>
+			</div>
+		</div>
+		<a href="../index.html" class="ft_logo"><img src="../iium_img/ft_logo_n.png" alt="푸터 로고"></a>
+		<p class="ft_copy">
+			<!-- <span>대전 유성구 학하서로 29</span> -->
+			<span>대전시 유성구 대정로68 본관 403호</span>
+			<span></span>
+			<span></span>
+			<span><a href="tel:0426331517">Tel : 82-42-633-1517</a>    Fax : 82-42-823-1517</span>
+			<span>Copyright (c) 2010 Nansoft Co.,Ltd All rights reserved.</span>
+		</p>
+		
+	</div>
+</div>
+
+
+
+<!-- 하단 시작 { -->
+<div id="ft">
+
+    <div id="ft_wr">
+        <div id="ft_link">
+            <a href="../bbs/content.php%3Fco_id=company.html">회사소개</a>
+            <a href="../bbs/content.php%3Fco_id=privacy.html">개인정보처리방침</a>
+            <a href="../bbs/content.php%3Fco_id=provision.html">서비스이용약관</a>
+            <a href="sub1_01.php%3Fdevice=mobile.html">모바일버전</a>
+        </div>
+        <div id="ft_catch"><img src="../img/ft_logo.png" alt="그누보드5"></div>
+        <div id="ft_copy">Copyright &copy; <b>소유하신 도메인.</b> All rights reserved.</div>
+    </div>
+    
+    <button type="button" id="top_btn"><i class="fa fa-arrow-up" aria-hidden="true"></i><span class="sound_only">상단으로</span></button>
+        <script>
+        
+        $(function() {
+            $("#top_btn").on("click", function() {
+                $("html, body").animate({scrollTop:0}, '500');
+                return false;
+            });
+        });
+        </script>
+</div>
+
+
+<!-- } 하단 끝 -->
+
+<script>
+$(function() {
+    // 폰트 리사이즈 쿠키있으면 실행
+    font_resize("container", get_cookie("ck_font_resize_rmv_class"), get_cookie("ck_font_resize_add_class"));
+});
+</script>
+
+
+
+<!-- ie6,7에서 사이드뷰가 게시판 목록에서 아래 사이드뷰에 가려지는 현상 수정 -->
+<!--[if lte IE 7]>
+<script>
+$(function() {
+    var $sv_use = $(".sv_use");
+    var count = $sv_use.length;
+
+    $sv_use.each(function() {
+        $(this).css("z-index", count);
+        $(this).css("position", "relative");
+        count = count - 1;
+    });
+});
+</script>
+<![endif]-->
+
+</body>
+</html>
+ 
