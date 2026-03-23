@@ -1,0 +1,35 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-size: 14px;
+	color: #333;
+	letter-spacing: -0.5px;
+	font-family: 'Noto Sans KR';
+	font-style: normal;
+	font-weight: 300;
+	line-height: 1.2;
+}
+body, html { width: 100%;}
+html { overflow: inherit;}
+body { overflow-x: hidden; position: relative; height: auto; background: #fff;}
+table, tr, td { border-collapse: collapse;}
+ul { list-style: none;}
+li { list-style: none;}
+a { text-decoration: none; }
+img { border: 0; font-size: 0;}
+p{word-break: keep-all;}
+#cn p{word-break: break-all;}
+
+#ft { display: none;}
+.latest_wr { display: none;}
+#aside { display: none;}
+#container_wr { width: 100%;}
+#gnb { display: none;}
+#hd_wrapper { display: none;}
+#hd { border-top: 0;}
+#hd_login_msg { display: none;}
+.black_op { display: none;}
+#container_title { display: none;}
+
+
+
