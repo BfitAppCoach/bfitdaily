@@ -1,0 +1,1382 @@
+.page { 
+	width:100%; 
+	overflow:hidden; 
+	padding-bottom:10px;
+	font-size: 13px;
+}
+
+.blind {
+    position: absolute;
+    left: -9999em;
+}
+
+
+/* 공통 폰트*/
+.fBold { font-weight: bold; }
+.fBlack { color: #000; }
+.fBlue { color: #7495f3; }
+.fRed { color: #bf4343; }
+.fOrange { color: #f7620e; }
+.fGrey { color: #888; }
+.fLighrgrey { color: #a8a8a8; }
+.fGreen { color: #02b035; }
+.fYellow { color: #ffec93; }
+.fGreenyellow { color: #4d7f12; }
+.fPink { color: #fa22f7; }
+.fPurple { color: #5f00ff; }
+.fBrown { color:#c18c4c }
+.fWhite { color:#fff }
+
+.f11 { font-size: 13px; }
+.f12 { font-size: 14px; }
+.f14 { font-size: 14px; }
+.f16 { font-size: 16px; }
+.f18 { font-size: 18px; }
+.f20 { font-size: 20px; }
+
+.lh14 { line-height:14px }
+.lh15 { line-height:15px }
+.lh16 { line-height:16px }
+
+/*공통 정렬*/
+.textC { text-align:center;}
+.textC.marginT15{ margin: 30px 0 0px;}
+.textC.marginT15 h1{font-family: "Noto Sans KR"; font-size: 16px;}
+.textL { text-align:left; }
+.textR { text-align:right; }
+
+.floatR { float: right; }
+.floatL { float: left; }
+.floatC:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+.floatC { *zoom: 1; }
+.dBlock { display: block; }
+.imgM { vertical-align: middle; }
+.cursorP { cursor: pointer; }
+
+.mCenter { margin: 0 auto; }
+.marginT01 { margin-top: 1px; }
+.marginT02 { margin-top: 2px; }
+.marginT03 { margin-top: 3px; }
+.marginT05 { margin-top: 5px; }
+.marginT06 { margin-top: 6px; }
+.marginT07 { margin-top: 7px; }
+.marginT08 { margin-top: 8px; }
+.marginT10 { margin-top: 10px; }
+.marginT12 { margin-top: 12px; }
+.marginT15 { margin-top: 15px; }
+.marginT20 { margin-top: 20px; }
+.marginT30 { margin-top: 30px; }
+.marginT50 { margin-top: 50px; }
+.marginT60 { margin-top: 60px; }
+.marginT80 { margin-top: 80px; }
+.marginT108 { margin-top: 108px; }
+.marginT115 { margin-top: 115px; }
+.marginT210 { margin-top: 210px; }/*141118_추가*/
+.marginT250 { margin-top: 250px; }
+
+.marginR01 { margin-right: 1px; }
+.marginR02 { margin-right: 2px; }
+.marginR03 { margin-right: 3px; }
+.marginR05 { margin-right: 5px; }
+.marginR07 { margin-right: 7px; }
+.marginR10 { margin-right: 10px; }
+.marginR20 { margin-right: 20px; }
+.marginR35 { margin-right: 35px; }
+.marginR50 { margin-right: 50px; }
+.marginR70 { margin-right: 70px; }
+
+.marginB03 { margin-bottom: 3px; }
+.marginB05 { margin-bottom: 5px; }
+.marginB07 { margin-bottom: 7px; }
+.marginB10 { margin-bottom: 10px; }
+.marginB20 { margin-bottom: 20px; }
+
+.marginL01 { margin-left: 1px; }
+.marginL02 { margin-left: 2px; }
+.marginL03 { margin-left: 3px; }
+.marginL05 { margin-left: 5px; }
+.marginL07 { margin-left: 7px; }
+.marginL10 { margin-left: 10px; }
+.marginL13 { margin-left: 13px; }
+.marginL20 { margin-left: 20px; }
+.marginL25 { margin-left: 25px; }
+.marginL30 { margin-left: 30px; }
+.marginL101 { margin-left: 101px; }
+.marginL138 { margin-left: 138px; }
+.marginL267 { margin-left: 267px; }
+
+.paddingT03 { padding-top: 3px; }
+.paddingT05 { padding-top: 5px; }
+.paddingT06 { padding-top: 6px; }
+.paddingT10 { padding-top: 10px; }
+
+.paddingR07 { padding-right: 7px; }
+.paddingR10 { padding-right: 10px; }
+.paddingR20 { padding-right: 20px; }/*141008_추가*/
+
+.paddingB03 { padding-bottom: 3px; }
+.paddingB05 { padding-bottom: 5px; }
+.paddingB10 { padding-bottom: 10px; }
+
+.padding10 { padding: 10px; }/*141008_추가*/
+
+.pri_all{margin-bottom: 90px;}
+
+
+/*header*/
+
+.headerdiv {
+	position:absolute;
+	height:49px;
+	width:100%;
+	border-top:1px solid #73d1b7;
+	border-bottom:1px solid #00694e;
+	background:#2eb17b;
+    background: -moz-linear-gradient(top,  #2eb17b 0%, #139665 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#2eb17b), color-stop(100%,#139665));
+    background: -webkit-linear-gradient(top,  #2eb17b 0%,#139665 100%);
+    background: -o-linear-gradient(top,  #2eb17b 0%,#139665 100%);
+    background: -ms-linear-gradient(top,  #2eb17b 0%,#139665 100%);
+    background: linear-gradient(top,  #2eb17b 0%,#139665 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2eb17b', endColorstr='#139665',GradientType=0 );
+	z-index:99
+}
+.headerdiv > h1 {
+	margin:0 auto;
+	font-family:Helvetica; 
+	letter-spacing:-1px;
+	font-size:22px;
+	color:#fff;
+	line-height:49px;
+	text-align:center;
+}
+
+.headerdiv > h1 > a {
+	margin:0 auto;
+	font-family:Helvetica; 
+	letter-spacing:-1px;
+	font-size:22px;
+	color:#fff;
+	line-height:49px;
+	text-align:center;
+}
+
+.headerdiv .list_btn { 
+	position:absolute;
+	top:7px;
+	left:7px;
+}
+/* 141013 추가 */
+.headerdiv .home_btn { 
+	position:absolute;
+	float:right;
+	top:4px;
+	right:7px;
+}
+
+.headerdiv .app_btn { 
+	position:absolute;
+	float:right;
+	top:5px;
+	right:7px;
+}
+ 
+.headerdiv .list_btn img {
+	width:22px;
+	padding:10px;
+}
+
+.headerdiv .home_btn img {
+	width:22px;
+	padding:10px;
+}
+.headerdiv .app_btn img {
+	width:22px;
+	padding:10px;
+}
+.view_list_layer {	
+	display:none;
+	background:#fff;
+	position:relative;	
+	border-bottom:2px solid #ccc;
+	-webkit-transition:-webkit-transform ease;
+}
+
+
+/*main contents */
+.coatching_box {
+	clear:both;
+	margin:15px 0px;
+	float:left;
+	width:100%;
+}
+.icon_coatching {  /*141117 수정*/
+	float:left;
+	padding:8px;
+	border-radius:20px;
+	background:#2fb67e;
+	margin-left:3px;
+}
+
+.icon_coatching img {
+	width:22px;
+}
+
+.talk_counsel {  /*141117 수정*/
+	position:relative;
+	margin-left:10px;
+	padding:10px 15px;
+	float:left;
+	background:#e4f2ec;
+	border-radius: 15px;
+	line-height:18px;
+	max-width:50%;
+	box-shadow: 0 1px 0 #ccc;
+}
+.talk_counsel_triangle {
+	position:absolute;
+	left:-8px;
+	top:6px;
+	border-right: 12px solid #e4f2ec;
+	border-top: 8px solid transparent;
+	border-bottom: 8px solid transparent;
+	width: 0px;
+ }
+ 
+
+.talk_time {
+	float:left;
+	margin-left:3px;
+	color:#119766 ;
+	font-size:12px;
+}
+.number_box {
+	display:inline-block;
+	background:#2eb17b;
+	color:#fff;
+	font-weight:bold;
+	border-radius:5px;
+	padding:1px 4px 2px ; 
+	margin:1px 0;
+	opacity: 0.8;
+    filter: alpha(opacity=80);
+}
+
+/*141008_추가*/
+.sub_head {
+/* 	position:fixed; */
+	background:#f8f8f8 ;
+    width:100%;
+/* 	z-index:90; */
+	margin-top:50px;
+}
+
+/*20141111_추가*/
+.agree_head {
+	position:fixed;
+	background:#f8f8f8 ;
+    width:100%;
+	z-index:90;
+	margin-top:50px;
+}
+.agree_list li {
+	font-size:14px;
+	margin-left:10px;
+	padding-left:8px;
+	background:url(https://www.bfit.kr/iium_css/images/list_bar.png) no-repeat left 10px;
+}
+/* // 20141111_추가*/
+
+.content {
+	position:static;
+	overflow-x:hidden;
+	overflow-y:auto;
+	height:100%;
+	-webkit-overflow-scrolling: touch;
+}
+
+.goal_box {	/*141118_추가*/
+	max-width:70%;	
+	float:left;
+}
+
+.goal_talk_counsel { /*141118_수정*/
+	position:relative;
+	margin-left:10px;
+	padding:10px 15px;
+	width:100%;
+	background:#E4F4F4;
+	border-radius: 15px;
+	line-height:18px;
+	box-shadow: 0 1px 0 #ccc;
+}
+
+.goal_talk_counsel_detail { /*141118_추가*/
+	clear:both;
+	position:relative;
+	margin:10px 0 10px 10px;
+	padding:10px 15px;
+	width:100%;
+	float:left;	
+	color:#fff;
+	background:#01ACB9;
+	border-radius: 15px;
+	line-height:18px;
+	box-shadow: 0 1px 0 #ccc;
+}
+
+.goal_talk_counsel_triangle{
+	position:absolute;
+	left:-8px;
+	top:6px;
+	border-right: 12px solid #E4F4F4;
+	border-top: 8px solid transparent;
+	border-bottom: 8px solid transparent;
+	width: 0px;
+ }
+ 
+.goal_talk_counsel_bak {
+	position:relative;
+	margin-left:10px;
+	padding:10px 15px;
+	float:left;
+	background:#e4f2ec;
+	border-radius: 10px;
+	line-height:18px;
+	width:90%;
+	max-width:85%;
+	box-shadow: 0 1px 0 #ccc;
+}
+.food_number_box { /*141117 수정*/
+	display:inline-block;
+	color:#f89379;
+	font-weight:700;
+	background:#fff;
+	border-radius:10px;
+	padding:1px 6px 2px ; 
+	margin:1px 0;
+}
+.exercise_number_box {  /*141117 수정*/
+	display:inline-block;
+	color:#FF931E;
+	font-weight:700;
+	background:#fff;
+	border-radius:10px;
+	padding:1px 6px 2px ; 
+	margin:1px 0;
+}
+
+.goal_number_box {  /*141118_수정*/
+	display:inline-block;
+	background:#01ACB9;
+	color:#fff;
+	font-weight:700;
+	border-radius:10px;
+	padding:1px 6px 2px ; 
+	margin:1px 0;
+}
+
+.goal_number_detail_box {  /*141118_추가*/
+	display:inline-block;
+	background:#fff;
+	color:#01ACB9;
+	font-weight:700;
+	border-radius:10px;
+	padding:1px 6px 2px ; 
+	margin:1px 0;
+}
+
+.notice_talk_counsel {/*141117 수정*/
+	position:relative;
+	margin-left:10px;
+	padding:10px 15px;
+	float:left;
+	background:#E6E5E5;
+	border-radius: 15px;
+	line-height:18px;
+	max-width:70%;
+	box-shadow: 0 1px 0 #ccc;
+}
+
+.notice_talk_counsel_triangle{
+	position:absolute;
+	left:-8px;
+	top:6px;
+	border-right: 12px solid #e6e5e5;
+	border-top: 8px solid transparent;
+	border-bottom: 8px solid transparent;
+	width: 0px;
+ }
+ 
+ /*141008_수정*/
+.goal_notice {
+	background:#5DBCC3;
+	margin:10px 0 0;
+	width:100%;
+	display:block;
+	font-size:14px;
+	color:#fff;
+	line-height:20px;
+	box-shadow: 0px 2px 2px #ccc;
+}
+.day_time1 > span { display:block;text-align:left }
+ 
+.user_box {
+	clear:both;
+	float:right;
+	margin:15px 0;
+	width:100%;
+}
+.talk_user_food {/*141117 수정*/
+	float:right;
+	position:relative;
+	max-width:70%;
+	padding:10px 15px 15px 10px;
+	background:#f89379;
+	border-radius: 15px 0 0 15px;
+	line-height:18px;
+	box-shadow: 0 1px 0 #ccc;
+}
+
+.icon_food_s {/*141117 수정*/
+	position:absolute;
+	display:block;
+	top:-20px;
+	right:10px;
+	width:24px;
+	height:25px;
+	background:url("https://www.bfit.kr/iium_css/images/icon_set_s2.png") no-repeat right 1px;
+	background-size:24px
+}
+.talk_user_exercise { /*141117 수정*/
+	float:right;
+	position:relative;
+	max-width:70%;
+	padding:10px 15px 15px 10px; 
+	background:#ffc65b;
+	border-radius: 15px 0 0 15px;
+	line-height:18px;
+	box-shadow: 0 1px 0 #ccc;
+}
+
+.number_box02 { /*141117 수정*/
+	display:inline-block;
+	background:#fff;
+	color:#02b0bc;
+	font-weight:bold;
+	border-radius:10px;
+	padding:1px 6px 2px ; 
+	margin:1px 0;
+}
+.counsel_box {
+	clear:both;
+	float:right;
+	margin:15px 0;
+	width:100%;
+}
+
+.icon_counsel_s { /*141117 수정*/
+	position:absolute;
+	display:block;
+	top:-24px;
+	right:10px;
+	width:24px;
+	height:29px;
+	background:url("https://www.bfit.kr/iium_css/images/icon_set_s2.png") no-repeat right -55px;
+	background-size:24px
+}
+.icon_counsel2_s {  /*141117 수정*/
+	position:absolute;
+	display:block;
+	top:-24px;
+	right:10px;
+	width:24px;
+	height:24px;
+	background:url("https://www.bfit.kr/iium_css/images/icon_set_s2.png") no-repeat right -88px;
+	background-size:24px
+}
+.talk_coatching { /*141117 수정*/
+	float:right;
+	position:relative;
+	max-width:70%;
+	padding:10px 15px 15px 10px;
+	background:#a2dce0;
+	border-radius: 15px 0 0 15px;
+	line-height:18px;
+	box-shadow: 0 1px 0 #ccc;
+}
+/* // 141110_추가*/
+
+.icon_exercise_s {/*141117 수정*/
+	position:absolute;
+	display:block;
+	top:-25px;
+	right:10px;
+	width:24px;
+	height:25px;
+	background:url("https://www.bfit.kr/iium_css/images/icon_set_s2.png") no-repeat right -25px;
+	background-size:24px
+}
+
+.talk_user_goal {/*141117 수정*/
+	float:right;
+	position:relative;
+	max-width:70%;
+	padding:10px 15px 15px;
+	background:#00ACB9;
+	border-radius: 15px 0 0 15px;
+	line-height:18px;
+	color:#fff;
+	box-shadow: 0 1px 0 #ccc;
+}
+
+.user_time {
+	float:right;
+	text-align:right;
+	margin-right:3px;
+	color:#119766 ;
+	font-size:12px;
+}
+
+.day_time {
+	clear:both;
+	background:#b1b1b2;
+	color:#FFF;
+	padding:4px 0;
+	margin:10px auto;
+	width:98%;
+	border-radius:8px;
+	font-size:15px;
+}
+.day_time > span { display:block;text-align:center }
+
+
+/*메뉴리스트*/
+.menu_list li a {
+	display:block;
+	background:#fff;
+	color:#333;
+	line-height:30px;
+	letter-spacing:-1px;
+	font-size:15px;
+	margin:0 0 4px 0;
+	padding:10px 0 12px 10px;		
+}
+.menu_list li {border-bottom : 1px solid #f0f0f0;}
+.menu_list li:last-child {border-bottom:none}
+
+.menu_list li a:hover { color:#333; }
+
+.icon_home, /**** 141110 수정 ****/
+.icon_menu,
+.icon_exercise,
+.icon_diet,
+.icon_notice  {
+	padding-left:40px;
+	display:block;
+	background: url("https://www.bfit.kr/iium_css/images/icon_set_b_1.png") no-repeat;
+	background-size:30px;
+}
+.icon_certifi {
+	padding-left:40px;
+	display:block;
+	background: url("https://www.bfit.kr/iium_css/images/icon_info.png") no-repeat;
+	background-size:30px;
+	background-position:0px -220px;
+}
+
+.icon_menu {background-position:0px 4px }
+.icon_exercise { background-position:0px -44px }
+.icon_diet { background-position:0px -90px }
+.icon_notice { background-position:0px -140px }
+.icon_home { background-position:0px -180px } /**** 141110 수정 ****/
+
+/* contents*/
+h2.sub_menu_tit {
+	display:block;
+	color:#333;
+	line-height:30px;
+	letter-spacing:-1px;
+	font-size:20px;
+	margin:0 0 4px 0;
+	padding:10px 0 8px 10px;	
+	font-weight:bold
+}
+.sub_btn_area {
+	float:right;
+	position:relative;
+}
+.btn_set {
+	display:none;
+	position:absolute;
+	background:#333;
+	padding:0 6px;
+	border-radius:22px;
+	right:-6px;
+	top:0;
+}
+
+.sub_menu_info,
+.sub_exercise_info,
+.sub_goal_info {
+	background:#fff;
+	padding:8px;
+	margin:8px;
+	box-shadow: 1px 1px 1px #ccc;
+}
+.sub_menu_info li,
+.sub_exercise_info li,
+.sub_goal_info li {
+	display:block;
+	background:#f0f0f0;
+	color:#333;
+	letter-spacing:-1px;
+	font-size:15px;
+	margin:0 0 4px 0;
+	padding:10px;
+	vertical-align:middle;
+	box-shadow: 0 1px 0 #f0f0f0;
+}
+.sub_menu_info li.tit { 
+	background:#f89379;
+	border-radius:10px 10px 0 0;
+	padding:5px 10px 5px 10px;
+}
+.sub_exercise_info li.tit { 
+	background:#f7931e;
+	border-radius:10px 10px 0 0;
+	padding:5px 10px 5px 10px;
+}
+
+.sub_goal_info li.tit { 
+	background:#00ACB9;
+	border-radius:10px 10px 0 0;
+	padding:5px 10px 5px 10px;
+}
+
+.sub_menu_date {
+	display:inline-block;
+	float:left;
+	width:23%;
+	margin:12px 10px 10px 10px;
+	line-height:19px;
+	color:#fff;
+	font-size:13px;
+}
+.sub_menu_kcal {
+	float:left;
+	width:60%;
+	margin-left:-10px;
+	text-align:center;
+	color:#fff;
+	font-size:28px;
+	margin-top:14px;
+}
+.sub_menu_date1 {
+	float:left;
+	width:100%;
+	margin-left:-10px;
+	text-align:center;
+	color:#fff;
+	font-size:20px;
+}
+/*--- 상단버튼 ----*/
+.btn_plus,
+.btn_minus,
+.btn_delete,
+.btn_close,
+.btn_modify, 
+.btn_setting,
+.btn_list_close { 
+	background:#fff;
+	padding:4px;
+	margin:15px 0 ;
+	border-radius:24px;	
+}
+.btn_list_delete,
+.btn_plus_food { background:none;margin:6px 0 0px; }
+
+.btn_list_close {
+	position:absolute;
+	bottom:-20px;
+	left:47%;
+	padding:6px;
+	border:2px solid #ccc;
+}
+
+.icon_plus,
+.icon_plus02,
+.icon_minus,
+.icon_minus02,
+.icon_delete,
+.icon_close,
+.icon_modify,
+.icon_setting,
+.icon_setting02,
+.icon_win_close {	
+	display:block;
+	width:26px;
+	height:26px;
+	z-index:1;
+}
+.icon_list_delete {
+	display:block;
+	width:25px;
+	height:25px;
+	z-index:1;
+}
+.icon_plus_s {
+	display:block;
+	width:20px;
+	height:20px;
+	z-index:1;
+}
+.icon_plus { background:url("https://www.bfit.kr/iium_css/images/icon_plus.png") no-repeat left top;background-size:30px }/*141008_수정*/
+.icon_plus02 { background:url("https://www.bfit.kr/iium_css/images/icon_plus.png") no-repeat left -30px;background-size:30px; }/*141008_수정*/
+.icon_minus { background:url("https://www.bfit.kr/iium_css/images/icon_minus.png") no-repeat left top;background-size:30px; }/*141008_수정*/
+.icon_minus02 { background:url("https://www.bfit.kr/iium_css/images/icon_minus.png") no-repeat left -30px;background-size:30px; }/*141008_수정*/
+.icon_setting { background:url("https://www.bfit.kr/iium_css/images/icon_plus.png") no-repeat left top;background-size:30px; }/*141008_수정*/
+.icon_setting02 { background:url("https://www.bfit.kr/iium_css/images/icon_plus.png") no-repeat left -30px;background-size:30px; }/*141008_수정*/
+.icon_win_close { background:url("https://www.bfit.kr/iium_css/images/icon_close.png") no-repeat left -89px; }
+
+/* .icon_delete { background:url("../images/icon_btnset.png") no-repeat 1px top;background-size:30px }141008_수정 */
+.icon_delete { background:url("https://www.bfit.kr/iium_css/images/icon_btnset.png") no-repeat 0px -1px;background-size:27px }/*141021요청사항에 의한 수정*/
+.icon_close { background:url("https://www.bfit.kr/iium_css/images/icon_close.png") no-repeat 1px -27px; background-size:28px} /**** 141110 수정 ****/
+.icon_modify { background:url("https://www.bfit.kr/iium_css/images/icon_btnset.png") no-repeat 1px -52px; background-size:30px}/*141008_수정*/
+
+.icon_list_delete { background:url("https://www.bfit.kr/iium_css/images/icon_btnset.png") no-repeat 1px -30px; background-size:30px}/*141008_수정*/
+
+.icon_plus_s { background:url("https://www.bfit.kr/iium_css/images/icon_plus.png") no-repeat 2px 4px;background-size:16px; }/*141008_수정*/
+
+
+.sub_info_time {
+	display:inline-block;
+	float:left;
+	width:15%;
+	color:#666;
+	font-size:12px;
+}
+.icon_morning,
+.icon_lunch,
+.icon_dinner,
+.icon_night {
+	display:block;
+	width:26px;
+	height:26px;
+}
+.icon_morning { background:url("https://www.bfit.kr/iium_css/images/icon_weather.png") no-repeat left 4px;background-size:26px }/*141008_수정*/
+.icon_lunch { background:url("https://www.bfit.kr/iium_css/images/icon_weather.png") no-repeat left -27px;background-size:26px; }/*141008_수정*/
+.icon_dinner { background:url("https://www.bfit.kr/iium_css/images/icon_weather.png") no-repeat left -53px;background-size:26px; }/*141008_수정*/
+
+.sub_menu_dish {
+	float:left;
+	height:40px;
+	line-height:40px;
+	font-size:14px;
+	width:50%;
+}
+.sub_menu_dish > span { vertical-align:middle;line-height:15px; display:inline-block;}
+
+.sub_kcal_info {
+	float:right;
+	text-align:right;
+	font-size:18px;
+	width:28%;
+	line-height:40px;
+	height:40px;
+	margin-right:0px;
+}
+.sub_kcal_info > span { vertical-align:middle;line-height:15px; display:inline-block;}
+
+.sub_menu_info li.sub_menu_form {
+	background:#fee9e4 ;
+}
+.sub_menu_info li.sub_menu_form_new,
+.sub_exercise_info li.sub_exercise_form_new {
+	background:none;
+	margin:0;
+	padding:0
+}
+.sub_exercise_info li.sub_exercise_form {
+	background:#fde9d2 ;
+}
+.sub_menu_dish_form .btn_record {
+	font-size:22px;	
+	height:40px;
+	line-height:40px;
+	letter-spacing:-1px;
+	width:100%;
+	color:#f89379;
+	background:#fee9e4 ;
+	text-align: center
+}  
+.sub_exercise_info_form .btn_record {
+	font-size:22px;
+	height:40px;
+	line-height:40px;
+	letter-spacing:-1px;
+	width:100%;
+	color:#f7931e;
+	background:#fde9d2 ;
+}
+
+
+/*** 신규등록폼 ***/
+.insert_menu_layer {
+	clear:both;
+	display:none;	
+	background:#fbd0c6 ;
+	margin-top:5px;
+	padding:10px -10px 10px;
+	border-top:1px solid #fbd0c6 ;
+	border-radius:10px;
+	width:100%;
+	padding-bottom:10px;
+}
+.insert_menu_layer input {
+	height:27px;
+	color:#666;
+	padding:1px 5px;
+	border:1px solid #fee9e4 ;
+	border-radius:4px;
+ }
+
+.btn_insert_menu {
+	background:#f89379 ;
+	color:#fff;
+	padding:4px 12px 5px ;
+	border-radius:4px;
+}
+.btn_agree {
+	background:#05ab7d ;
+	color:#fff;
+	padding:4px 12px 5px ;
+	border-radius:4px;
+}
+.btn_cancel {
+	background:#888 ;
+	color:#fff;
+	padding:4px 12px 5px ;
+	border-radius:4px;
+}
+.btn_search {
+	background:#333 ;
+	color:#fff;
+	padding:4px 12px 5px ;
+	border-radius:4px;
+}
+.insert_exercise_layer {
+	display:none;
+	clear:both;
+	background:#ffcc95 ;
+	margin-top:5px;
+	padding:10px -10px 10px;
+	border-top:1px solid #fbd0c6 ;
+	border-radius:10px;
+	width:100%;
+	padding-bottom:10px;
+}
+
+.insert_exercise_layer input {
+	height:27px;
+	padding:1px 5px;
+	border:1px solid #fee9e4 ;
+	border-radius:4px;
+ }
+
+ .btn_insert_exercise {
+	background:#f7931e ;
+	color:#fff;
+	padding:4px 12px 6px ;
+	border-radius:4px;
+}
+
+
+/*---table----*/
+.tWidth, .tWidth02, .tWidth03, .tWidth04 { width:100%;}
+.tWidth th { 
+	text-align:center;
+	color:#fff;
+	padding:8px 0;
+	background:#f7931e;
+}
+
+.tWidth tr { background:#fff4e8; }
+.tWidth tr:nth-child(2n) { background:#ffdcb2 }
+
+.tWidth td {
+	border-top:3px solid #fbd0c6;
+	text-align:center;
+	font-size:13px
+}
+.tWidth td.textL { text-align:left;padding:5px }
+.tWidth td.textR { text-align:right;padding:5px 10px 5px 5px}
+
+.tWidth02 th { 
+	text-align:center;
+	color:#fff;
+	padding:8px 0;
+	background:#f7931e;
+}
+
+.tWidth02 tr { background:#fff4e8; }
+.tWidth02 tr:nth-child(2n) { background:#ffe9ce }
+
+.tWidth02 td {
+	border-top:3px solid #fff;
+	text-align:center;
+	font-size:13px
+}
+.tWidth02 td.textL { text-align:left;padding:8px }
+.tWidth02 td.textR { text-align:right;}
+
+.tWidth03 th { 
+	text-align:center;
+	color:#fff;
+	padding:8px 0;
+	background:#f89379;
+}
+
+.tWidth03 tr { background:#fff4e8; }
+.tWidth03 tr:nth-child(2n) { background:#ffe9ce }
+
+.tWidth03 td {
+	border-top:3px solid #fff;
+	text-align:center;
+	font-size:13px
+}
+.tWidth03 td.textL { text-align:left;padding:8px }
+.tWidth03 td.textR { text-align:right;}
+
+.tWidth04 th { 
+	text-align:center;
+	color:#fff;
+	padding:8px 0;
+	background:#f89379;
+}
+
+.tWidth04 tr { background:#fff4e8; }
+.tWidth04 tr:nth-child(2n) { background:#ffe9ce }
+
+.tWidth04 td {
+	border-top:3px solid #fff;
+	text-align:center;
+	font-size:13px
+}
+.tWidth04 td.textL { text-align:left;padding:8px }
+.tWidth04 td.textR { text-align:right;}
+
+.food_search_layer,
+.exercise_search_layer {
+	display:none;
+	position:absolute;
+	top:150px;
+	left:4%;
+	width:85%;
+	min-height:300px;
+	padding:20px 10px 30px 10px;
+	background:#fff;
+	border:1px solid #fff;
+	border-radius:12px;
+	box-shadow: 1px 1px 5px 0px #666;
+	z-index:99
+}
+.food_search_layer input,
+.exercise_search_layer input {
+	height:27px;
+	color:#666;
+	padding:1px 5px;
+	border:1px solid #fee9e4 ;
+	border-radius:4px;
+}
+.food_search_layer input.textbox,
+.exercise_search_layer input.textbox {
+	height:23px;
+	color:#666;
+	padding:1px 5px;
+	border:1px solid #fee9e4 ;
+	border-radius:4px;
+}
+.btn_layer_close {
+	position:absolute;
+	top:0px;
+	right:10px;
+}
+
+
+/*****메인동의****/
+.agree_tit_area {	   /*141117 수정*/
+	width:78%;
+	margin:0 auto;	
+	position:relative
+}
+h2.agree_tit {	/*141117 수정*/
+	font-size:14px;
+	letter-spacing:-1px;
+	font-weight:bold;
+	display:inline-block;
+	padding:40px 20px 5px 0;
+	margin-left:-20px;
+	color:#05ab7d;
+}
+.btn_up {
+	position:absolute;	
+	right:0px;
+	top:-36px
+}
+.icon_up {
+	display:inline-block;
+	width:28px;
+	height:20px;
+	background:url('https://www.bfit.kr/iium_css/images/icon_up.png') no-repeat left top;
+	background-size:28px;	
+}
+.btn_down {
+	position:absolute;
+	right:-20px;
+	bottom:0px
+}
+.icon_down {
+	display:inline-block;
+	width:28px;
+	height:20px;
+	background:url('https://www.bfit.kr/iium_css/images/icon_down.png') no-repeat left top;
+	background-size:28px;	
+}
+.icon_agree { /*141117 수정*/
+	display:inline-block;
+	background:url('https://www.bfit.kr/iium_css/images/icon_agree.png') no-repeat left Top;
+	padding-left:25px;
+	background-size:18px;
+	font-size: 16px;
+	font-weight: 400;
+}
+.agree_text { /*141117 수정*/
+	position:relative;
+	font-size:13px;
+	border:1px solid #477eed;
+	border-radius:8px;
+	width:78%;
+	margin:0px auto;
+	padding:5px 20px;
+	height:100px;
+	overflow-y:auto;
+	background:#fff;
+	box-shadow: 1px 1px 2px 0px #ccc;
+}
+.agree_check {
+	font-size:14px;
+	text-align:right;
+	border:1px solid #98dac6;
+	border-radius:8px;
+	width:78%;
+	margin:10px auto 20px;
+	padding:10px 20px;
+	background:#98dac6;
+	box-shadow: 1px 1px 2px 0px #ccc;
+}
+
+@media screen and (max-width: 320px){
+	.sub_menu_date{
+		text-align:left;
+		min-width:70px;
+	}
+	.sub_menu_kcal {
+		width:140px;
+	}
+	.insert_menu_layer input {
+		width:170px !important;
+	}
+}
+.bg-overlay {
+	position: fixed; 
+	background:#777;
+	opacity: 0.5;
+	filter: Alpha(Opacity=50);
+	z-index : 98;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	display:none;
+}
+.div_menu_pop {
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	overflow-y:scroll;
+	z-index : 100;
+	-webkit-overflow-scrolling: touch;
+    -ms-overflow-style: scrollbar;
+}
+.numAble {
+	ime-mode:disabled;
+	TEXT-ALIGN: right;
+	text-valign: middle;
+    width:auto;
+    right:0;
+}
+
+.agree_check_s {
+	font-size:14px;
+	text-align:right;
+	width:78%;
+	margin:10px auto 0px;
+	padding:0px 10px 0px;
+}
+
+/*******식단선택_141104추가*******/
+.food_select { position:relative }
+.food_select li { padding:5px 0;font-size:12px;letter-spacing:0;background:none;border:none;box-shadow:none }
+.food_select li.food_title { font-size:14px;letter-spacing:-1px; }
+.food_select li span.food_gram { display:inline-block;width:35% }
+.food_select li span.food_kcal { display:inline-block;width:25%;text-align:right; }
+.food_select li.btn_location { position:absolute;right:4%;top:10px;}
+.food_select li.btn_location2 { position:absolute;right:4%;top:-3px;}
+
+.food_select li input.food_name { display:inline-block;width:34%;padding:0px; }
+.food_select li span.food_kcal2 { display:inline-block; width:27%;text-align:right; }
+
+.tline1_left { border-left:1px solid #fff4e8 }
+.tline1_top { border-top:1px solid #fff4e8 }
+
+/*ellipsis 추가*/
+.fixed {table-layout:fixed;}
+.ellips{
+	white-space:nowrap;
+	overflow:hidden;
+	-o-text-overflow:ellipsis; /*Opera 9*/
+	-ms-text-overflow:ellipsis; /* IE 8 above */
+	text-overflow:ellipsis;
+}
+
+/*20141203_그래프추가*/
+.food_graph {
+	clear:both;
+}
+.food_graph_bar {	
+	background:url(https://www.bfit.kr/iium_css/images/food_graph.png) repeat-x left top;
+	position:absolute;
+	top:51px;
+	left:0;
+	height:51px;
+	display:inline-block;
+	border-bottom:0px;
+}
+.icon_food_graph_bar {
+	position:absolute;
+	top:0;
+    right:0;
+	background:url(https://www.bfit.kr/iium_css/images/food_graph_bar.png) no-repeat right bottom;
+	display:inline-block;
+	width:4px;
+	height:51px;
+	vertical-align:bottom
+}
+.food_graph_text {
+	width:100px;
+	font-size:11px;
+	position:absolute;
+	top:20px;
+	left:3px;
+	display:block;
+	color:#f89379;
+	background:url("https://www.bfit.kr/iium_css/images/icon_set_s2.png") no-repeat left 5px;
+	padding-left:28px;
+	background-size:24px
+}
+.food_over_bar {	
+	background:url(https://www.bfit.kr/iium_css/images/food_over.png) repeat-x left top;
+	position:absolute;
+	top:51px;
+	left:0;
+	height:51px;
+	display:inline-block;
+	border-bottom:0px;
+}
+.icon_food_over_bar {
+	position:absolute;
+	top:0;
+    right:0;
+	background:url(https://www.bfit.kr/iium_css/images/food_over_bar.png) no-repeat right bottom;
+	display:inline-block;
+	width:4px;
+	height:51px;
+	vertical-align:bottom
+}
+.food_over_text {
+	font-size:11px;
+	position:absolute;
+	top:20px;
+	left:3px;
+	display:block;
+	color:#f15a29;
+	background:url("https://www.bfit.kr/iium_css/images/icon_set_s2.png") no-repeat left -125px;
+	padding-left:28px;
+	background-size:24px
+}
+.over_graph_text {
+	font-size:11px;
+	position:absolute;
+	bottom:5px;
+	right:0;
+	display:block;
+	color:#f15a29;
+	line-height:1.1;
+}
+.day_graph {
+	margin:10px 5px 15px 5px;
+	padding:10px;
+	background:#fff;
+	height:102px;	
+	box-shadow: 0 1px 0 #ccc;
+	border-radius:5px;
+}
+.basic_graph {
+	width:100%;	
+}
+.basic_graph_allbar {
+	position:relative;
+	height:102px;
+	width:100%;
+	background:url(https://www.bfit.kr/iium_css/images/basic_bar.png) repeat-x left top;
+}
+.basic_graph_bar {
+	background:url(https://www.bfit.kr/iium_css/images/basic_graph.png) repeat-x left top;
+	position:absolute;
+	top:0;
+	height:102px;
+	display:inline-block;
+	z-index:10
+}
+.basic_graph_text {
+	font-size:11px;
+	position:absolute;
+	top:8px;
+	left:0;
+	display:block;
+	color:#2fb67e;
+}
+.basic_graph_text02 {
+	font-size:11px;
+	position:absolute;
+	bottom:5px;
+	right:0;
+	display:block;
+	color:#2fb67e
+}
+.exercise_graph_bar {
+	background:url(https://www.bfit.kr/iium_css/images/exercise_graph.png) repeat-x left top;
+	position:absolute;
+	top:0;
+	height:51px;
+	display:inline-block;
+	z-index:1
+}
+.icon_exercise_graph_bar {
+	position:absolute;
+	top:0;
+    right:0;
+	background:url(https://www.bfit.kr/iium_css/images/exercise_graph_bar.png) no-repeat right bottom;
+	display:inline-block;
+	width:4px;
+	height:51px;
+	vertical-align:bottom
+}
+.exercise_graph_text {
+	font-size:11px;
+	position:absolute;
+	top:8px;
+	right:-134px;
+	text-align:left;
+	width:90px;
+	display:block;
+	color:#f7941e;
+	background:url("https://www.bfit.kr/iium_css/images/icon_set_s2.png") no-repeat left -25px;
+	padding-left:28px;
+	background-size:24px;
+}
+.exercise_over_text {
+	font-size:11px;
+	position:absolute;
+	top:8px;
+	right:0;
+	text-align:left;
+	width:90px;
+	display:block;
+	color:#f7941e;
+	background:url("https://www.bfit.kr/iium_css/images/icon_set_s2.png") no-repeat left -25px;
+	padding-left:28px;
+	background-size:24px;
+}
+
+/* 150105 추가 */
+.info_text { 
+	position:relative;
+	font-size:13px;
+	border:1px solid #98dac6;
+	border-radius:8px;
+	width:78%;
+	margin:10px auto;
+	padding:15px 20px;
+	background:#fff;
+	box-shadow: 1px 1px 2px 0px #ccc;
+}
+.info_text_detail li {
+	line-height:20px;
+	font-size:14px
+}
+
+/* ============== 탭메뉴 ============== */
+/*
+ul.tabs {
+    float: left;
+    width: 100%;
+    font-size:12px;
+	margin-top:15px
+}
+ul.tabs li {
+    float: left;
+    text-align:center;
+    cursor: pointer;
+	margin:0;
+	padding:5px 0;
+    width:50%;
+    height: 35px;
+    line-height: 35px;
+	background:#a9887e;
+	color:#dacbc7;
+    overflow: hidden;
+	border-radius:10px 10px 0 0 ;
+	box-shadow:none
+}
+ul.tabs li.active {
+    background: #ffbeaf;
+	color:#e06646;	
+    font-weight: bold;
+	width:50%;
+}
+.tab_container { width: 100%; }
+.tab_content { display: none; }
+.tab_insert_menu_layer {
+	clear:both;
+	display:none;	
+	background:#ffbeaf;
+	margin:10px -10px 0 0;
+	padding:10px 0;
+	border-radius:0 0 10px 10px;
+	width:100%;
+}
+.tab_insert_menu_layer input {
+	height:30px;
+	color:#666;
+	padding:1px 5px;
+	border:1px solid #fee9e4 ;
+	border-radius:4px;
+ }*/
