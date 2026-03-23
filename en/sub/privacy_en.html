@@ -1,0 +1,581 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+<meta http-equiv="imagetoolbar" content="no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>나노소프트</title>
+<link rel="stylesheet" href="../theme/nanosoft/css/default.css">
+<link rel="stylesheet" href="../theme/nanosoft/skin/connect/basic/style.css">
+<link rel="stylesheet" href="../theme/nanosoft/skin/latest/notice/style.css">
+<link rel="stylesheet" href="../theme/nanosoft/skin/outlogin/basic/style.css">
+<link rel="stylesheet" href="../theme/nanosoft/skin/visit/basic/style.css">
+<!--[if lte IE 8]>
+<script src="en/js/html5.js"></script>
+<![endif]-->
+<script>
+// 자바스크립트에서 사용하는 전역변수 선언
+var g5_url       = "http://en.bfit.kr";
+var g5_bbs_url   = "en/bbs";
+var g5_is_member = "";
+var g5_is_admin  = "";
+var g5_is_mobile = "";
+var g5_bo_table  = "";
+var g5_sca       = "";
+var g5_editor    = "";
+var g5_cookie_domain = "";
+</script>
+<!--<script src="en/js/jquery-1.8.3.min.js"></script>-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="../js/jquery.menu.js"></script>
+<script src="../js/common.js"></script>
+<script src="../js/wrest.js"></script>
+<script src="../js/placeholders.min.js"></script>
+<script src="../iium_js/jquery.bxslider.min.js"></script>
+<script src="../iium_js/jquery.easing.1.3.min.js"></script>
+<script src="../slick/slick.min.js"></script>
+<script src="../slick/product.js"></script>
+<script src="../iium_js/index.js"></script>
+
+<!--
+<link rel="shortcut icon" href="/iium_img/favicon_03.png" type="image/x-icon" />
+<link rel="icon" href="/iium_img/favicon_03.png" type="image/x-icon" />
+-->
+<link rel="stylesheet" href="../js/font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet" href="../iium_css/common.css">
+<link rel="stylesheet" href="../iium_css/jquery.bxslider.min.css">
+<link rel="stylesheet" href="../slick/slick.css">
+<link rel="stylesheet" href="../slick/product.css">
+<link rel="stylesheet" href="../iium_css/index.css">
+<link rel="stylesheet" href="../iium_css/fonts.css">
+
+<!--privacy-->
+<link rel="stylesheet" type="text/css" href="../iium_css/privacy_kr/base.css">
+<link rel="stylesheet" type="text/css" href="../iium_css/privacy_kr/layout.css">
+<link rel="stylesheet" type="text/css" href="../iium_css/privacy_kr/style.css">
+
+<script src="../js/jquery.bxslider.js"></script>
+</head>
+<body id="en">
+
+<!-- 상단 시작 { -->
+<div id="hd">
+    <h1 id="hd_h1">나노소프트</h1>
+
+    <div id="skip_to_container"><a href="privacy_en.html#container">본문 바로가기</a></div>
+
+            </div>
+    <div id="hd_wrapper">
+
+        <div id="logo">
+            <a href="../index.html"><img src="../img/logo.png" alt="나노소프트"></a>
+        </div>
+
+        <div class="hd_sch_wr">
+            <fieldset id="hd_sch" >
+                <legend>사이트 내 전체검색</legend>
+                
+
+                <script>
+                
+                    // 검색에 많은 부하가 걸리는 경우 이 주석을 제거하세요.
+                    var cnt = 0;
+                    for (var i=0; i<f.stx.value.length; i++) {
+                        if (f.stx.value.charAt(i) == ' ')
+                            cnt++;
+                    }
+
+                    if (cnt > 1) {
+                        alert("빠른 검색을 위하여 검색어에 공백은 한개만 입력할 수 있습니다.");
+                        f.stx.select();
+                        f.stx.focus();
+                        return false;
+                    }
+
+                    return true;
+                }
+                </script>
+
+            </fieldset>
+
+            
+<!-- 인기검색어 시작 { -->
+
+<!-- } 인기검색어 끝 -->        </div>
+        <ul id="hd_qnb">
+            <li><a href="../bbs/faq.html"><i class="fa fa-question" aria-hidden="true"></i><span>FAQ</span></a></li>
+            <li><a href="../bbs/qalist.html"><i class="fa fa-comments" aria-hidden="true"></i><span>1:1문의</span></a></li>
+            <li><a href="../bbs/current_connect.html" class="visit"><i class="fa fa-users" aria-hidden="true"></i><span>접속자</span><strong class="visit-num">
+5</strong></a></li>
+            <li><a href="../bbs/new.html"><i class="fa fa-history" aria-hidden="true"></i><span>새글</span></a></li>
+        </ul>
+    </div>
+
+    <nav id="gnb">
+        <h2>메인메뉴</h2>
+        <div class="gnb_wrap">
+            <ul id="gnb_1dul">
+                <li class="gnb_1dli gnb_mnal"><button type="button" class="gnb_menu_btn"><i class="fa fa-bars" aria-hidden="true"></i><span class="sound_only">전체메뉴열기</span></button></li>
+                                    <li class="gnb_empty">메뉴 준비 중입니다.</li>
+                            </ul>
+            <div id="gnb_all">
+                <h2>전체메뉴</h2>
+                <ul class="gnb_al_ul">
+                                            <li class="gnb_empty">메뉴 준비 중입니다.</li>
+                                    </ul>
+                <button type="button" class="gnb_close_btn"><i class="fa fa-times" aria-hidden="true"></i></button>
+            </div>
+        </div>
+    </nav>
+    <script>
+
+    $(function(){
+        $(".gnb_menu_btn").click(function(){
+            $("#gnb_all").show();
+        });
+        $(".gnb_close_btn").click(function(){
+            $("#gnb_all").hide();
+        });
+    });
+
+    </script>
+</div>
+<!-- } 상단 끝 -->
+<script>
+  </script>
+<!-- en_US -->
+<header id="header">
+	<div id="hd_wrap">
+		<a class="menu">
+			<span class="m_sp"></span>
+			<span class="m_sp"></span>
+			<span class="m_sp0"></span>
+		</a>
+		<a href="../index.html" class="logo"><img src="../iium_img/main_logo_n.png" alt="로고"></a>
+
+        
+	</div>
+<!--
+	<map name="Catalog" id="Catalog">
+		<area shape="rect" coords="0, 0, 61, 50" href="/include/catalog.pdf" alt="" download>
+	</map>
+-->
+
+	<div class="drop_menu">
+		<div class="gnb">
+			<div class="gnb_wrap">
+				<ul>
+					<li><a href="sub1_01.html">Nanosoft</a></li>
+					<li><a href="sub2_01.html">Business </a></li>
+					<li><a href="sub3_01.html">Bfit</a></li>
+					<li><a href="sub4_01.html">Contact us </a></li>
+				</ul>
+				<div class="gnb_text"><p>Let's make a better idea <span>for a better future.</span></p></div>
+			</div>
+		</div>
+		<div class="gnb_sub">
+			<ul>
+				<li><a href="sub1_01.html">about us</a></li>
+				<li><a href="sub1_02.html">idoVOX technology </a></li>
+				<li><a href="sub1_03.html">history</a></li>
+			</ul>
+			<ul>
+				<li><a href="sub2_01.html">VOX IoT</a></li>
+				<li><a href="sub2_02.html">VOX Fintech</a></li>
+				<li><a href="sub2_03.html">VOX Media</a></li>
+			</ul>
+			<ul>
+				<li><a href="sub3_01.html">Bfit system</a></li>
+				<li><a href="sub3_02.html">Bfit product </a></li>
+                <li><a href="sub3_03.html">App Download</a></li>
+			</ul>
+			<ul>
+				<li><a href="sub4_01.html">IR investment introduction</a></li>
+				<!-- <li><a href="/sub/sub4_01.html">IR투자소개</a></li> -->
+				<li><a href="sub4_02.html">technical cooperation </a></li>
+				<li><a href="sub4_03.html">Contact us</a></li>
+			</ul>
+		</div>
+	</div>
+</header>
+
+<div class="m_menu">
+	<span class="line"></span>
+	<span class="line"></span>
+	<span class="line"></span>
+</div>
+<div class="m_drop">
+	<div class="m_list_wr">
+		<div class="m_text_wr">
+			<div class="m_gnb_text"><p>Let's make a better idea <span>for a better future.</span></p></div>
+		</div>
+		<ul>
+			<li class="has-sub"><a href="privacy_en.html">Nanosoft</a>
+				<ul>
+					<li><a href="sub1_01.html">about us</a></li>
+					<li><a href="sub1_02.html">idoVOX technology </a></li>
+					<li><a href="sub1_03.html">history</a></li>
+				</ul>
+			</li>
+			<li class="has-sub"><a href="privacy_en.html">Business </a>
+				<ul>
+					<li><a href="sub2_01.html">VOX IoT</a></li>
+					<li><a href="sub2_02.html">VOX Fintech</a></li>
+					<li><a href="sub2_03.html">VOX Media</a></li>
+				</ul>
+			</li>
+			<li class="has-sub"><a href="privacy_en.html">Bfit</a>
+				<ul>
+					<li><a href="sub3_01.html">Bfit system</a></li>
+					<li><a href="sub3_02.html">Bfit product </a></li>
+					<li><a href="sub3_03.html">App Download</a></li>
+				</ul>
+			</li>
+			<li class="has-sub"><a href="privacy_en.html">Contact us </a>
+				<ul>
+					<li><a href="sub4_01.html">IR investment introduction</a></li>
+					<li><a href="sub4_02.html">technical cooperation </a></li>
+					<li><a href="sub4_03.html">Contact us</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<div class="mo_lang_wr">
+		<span class="hd_lang mo_lang">
+<!--
+			<a href="#" class="lang kor">KOR</a>
+			<a href="#" class="lang eng">ENG</a>
+			<a href="#" class="lang chn">CHN</a>
+-->
+			<a href="http://ko.bfit.kr" class="lang kor ">ENG</a>
+  			<a href="privacy_en.html" class="lang eng on">KOR</a>
+  			<a href="../cn/sub/privacy_en.html" class="lang chn ">CHI</a>
+			<a href="https://smartstore.naver.com/bfit" class="shop" target="_blank">Bfit shop</a>
+			<a href="../include/download.php%3Ffilepath=include%252Fcatalog_en.pdf&amp;filename=catalog_en.pdf" class="catalog" download>CATALOG DOWN</a>
+			<!-- <a href="/include/download.html?filepath=include/catalog.pdf&filename=catalog.pdf" class="catalog" download>CATALOG DOWN</a> -->
+            <a href="sub3_03.html" class="app">APP<br>DOWN</a>
+		</span>
+	</div>
+</div>
+
+
+<!-- 콘텐츠 시작 { -->
+<div id="wrapper">
+    <div id="container_wr">
+
+    <div id="container">
+<!--
+        </div>
+    </div>
+</div>-->
+<section class="marginT108 pri_all">
+	<div class="content1">
+		<div class="agree_tit_area">
+			<p class="privacy_txt01">Privacy Policy</p>
+		</div>
+		<!-- <div class="goal_notice">
+			<div class="padding10">App coach based on the user of health information, to help the health management. And sets a target, it is possible to confirm the appropriate coaching messages to a target, it is possible to manage the daily health</div>
+		</div>  -->
+		<div class="agree_tit_area">
+			<h2 class="agree_tit"><span class="icon_agree">Terms of service</span></h2>
+		</div>
+		<div class="agree_text" id="agree_text01">
+			<h1 class="f13 fBold"> app coach of usage and usage guidelines </h1> <p class="f12 marginT05"> app coach is input through the health information measurement equipment ("Bfit" brand) based on the user's health information that is, purpose is to support the overall health of the user just to be able to self-managing. The user, before use of the app coach, it must comply read the usage guidelines, such as: always, an error occurs or the user of health, if necessary, experts such as always doctor please receive the opinions. <br> <br>App coach medical technology, only can be used in a range that does not conflict with the relevant regulations and medical method, an external device such as a blood glucose level / Hyopuapu / heart rate monitor, which is the interlocking, always Food and Drug processing the licensing There is complete, you may have to use the only legitimate instrument to guide in the coach of the app. <br> <br> app coach, receives the simple measurements of the external device, it is only to provide the ability to record, does not guarantee the measured value of the external equipment. <br> <br>Data entered in the application coach, are stored in the terminal for the purpose of self health management. Personal information of users, collected in the period coach of the app is installed, is saved when the achievement of the purpose of use, select the "data initialization" option in the settings menu, when you delete the data, stored Please note that there is that all the data is deleted. However, SNS sharing, data that is stored in the folder of the SD card, you will need to be removed individually. <br> <br>In account user apps coach with the app coach of account (Bfit website app coach login account), if you are logged in to the Web page, data that has been input to the coach of the app, is stored in the app coach (account) server. You can use this feature, user is able to back up such as health information, other equipment that has been linked with Bfit website app coach login account (TV, etc.), you can see the app coach data, such as application . Bfit website app coach login account user of the information collected also, after the principle collection and use objective has been achieved, are discarded without delay, concrete destruction procedures and methods, the personal information of Bfit website app coach login account you may be prescribed by your handling, etc.. <br> <br>App coach of the SNS, the ability to share data, such as over a e-mail, it occurs only on the user's selection, responsibility for this, because the user will pay fully, please use special attention to. Please set a password for the security of <br> <br> app coach by using the security function of the setting. <br> <br> Notes on use of by each menu are as follows. </p> <h1 class="f13 fBold marginT10"> food of record </h1> <p class="f12 marginT05">Calorie information of food that is provided through a record of food, support the information provided destination is different from Korean food for each language are offers on the basis of the nutrition information database of the Food and Drug Administration. Information of the database might not be complete (at a later date can be updated), some of the information, because there is a possibility that different from the actual calorie content, please use only for simple reference. </p> <h1 class="f13 fBold marginT10"> app coach of the message </h1><p class="f12 marginT05"> app coach messages, health information may be recorded by receiving transmitted to the user to manage the health themselves, and the features that help can be selected lifestyle. Please be used after it was confirmed that <br> communication protocol of the interlocking at the time of connection to the external device is working properly. When used in conjunction with an external device over a wireless connection, depending on the radio wave influence of interest include that the connection is not smooth. On the surrounding environment, and where other wireless equipment is small, please use where ambient noise is 60dB or less. </p> <h1 class="f13 fBold marginT10"> message of the practice of apps coach </h1><p class="f12 marginT05"> message of the practice of the app coach, to record the movement history through the path of movement of the user. Bfit app I will calculate the moving path of the mobile terminal is installed. Users can set their goals along the guide, can be motion. <br> ※ users and pregnant women with chronic diseases such as heart disease and hypertension, the elderly, infants, etc., please experts and consultation, such as a physician before use of this function. <br> ※ dizziness during exercise, dizziness, breathing difficulty, if the abnormal symptoms such as pain occurs, discontinue the use of this function immediately, please receive the consultation of experts, such as doctors. </p><p class="f12 marginT05"> of such ownership and intellectual property rights of all the content on the app coach service rights, because it does not belong to the user, change it arbitrarily, replication, storage, distribution, sale activities, such as is to not allowed. Users, but only if they comply with the coach Works and notes of this application, can be used only for personal purposes. <br> <br> app coach may be different depending on the version of software in products, services to be provided, it may be some change or discontinue without notice, depending on the circumstances of the operators. Before you can use the services of <br> <br> app coach, please read with attention the above-mentioned matter. If you do not agree to the above-mentioned matter, you will not be able to use the coach service app. </p>
+		</div>
+		<!-- <div class="agree_check_s">
+			<input type="checkbox" id="agree_chk01" class="imgM marginR05">Agree
+		</div> -->
+		<div class="agree_tit_area">
+			<h2 class="agree_tit marginR20"><span class="icon_agree">Consent of the collection use of personal information</span></h2>
+		</div>
+		<div class="agree_text" id="agree_text02">
+			<h1 class="f13 fBold"> app coach of usage and Usage Notes </h1> <p class="f12 marginT05"> to collect the user's personal information in the following manner for apps coach services &amp; I middot; we use. Personal information collected through the app coach, are stored in the mobile phone for the purpose of for users of self-health management service. <br> <br> And, the user with the Bfit website app coach login account, if you are logged into the account, information that has been collected in this service, apps coach for the purpose of backup / linkage of health information server [Republic of Korea Jiangxi ward to Nebarusandon (Ltd.) Dan Sol plus position, management responsibility is located in the administrator of nano software (stock) apps coach] is stored in will be managed separately. <br> <br> </p><h2 class="f12">○ collection of personal information and middot; purpose </h2> <ul class="agree_list"> <li> based on the health information of individual users, provide ancillary services to support the strengthening of wellness </li> <li> If you were logged in to the app coach use / understand the information, such as installation situation </li> <li> Bfit website app coach of the account of, </li> <li> of the user's personal health information of backup, statistics, etc. of management </li> <li> health information provides the user from the linked external device in the same account </li> </ul> <h2 class="f12 marginT05"> ○ item of personal information to be collected </h2> <ul class="agree_list"> <li> e-mail, date of birth, gender, height, weight, terminal Serial number, profile photos, location information * </li><li> terminal identification number (IMEI), model ** <br> <span class="f11"> * position information, the coach service apps location-based only if you agree to the Terms of Service, will be collected only if the user has, such as the execution of "function for recording the location and path of movement" important. </span> <br> <span class="f11"> ** IMEI and model, will be limited to collecting only when a determination is made as to whether the previous installation. </span> </li> </ul><h2 class="f12 marginT05"> ○ holdings and middot of personal information; use period </h2> <ul class="agree_list"> <li> Collection &amp; middot; until the achievement of the purposes </li> <li> by all means if the user of Bfit website app coach login account, you will be able to possess the personal information pursuant to the provisions of relevant laws and regulations. </li> </ul> <br> <br> ※ You collect your personal information and middot; may the right to refuse to consent to the use, if you want to deny consent, the coach service apps not available. <p></p>
+		</div>
+		<!-- <div class="agree_check_s">
+			<input type="checkbox" id="agree_chk02" class="imgM marginR05">Agree
+		</div> -->
+		<div class="agree_tit_area">
+			<h2 class="agree_tit marginR20"><span class="icon_agree">Consent of the collection use of sensitive information</span></h2>
+		</div>
+		<div class="agree_text" id="agree_text03">
+			<p class="f12 marginT05"> to collect sensitive information of the user's personal as follows for apps coach service of &amp; middot; we use. <br> <br> </p><h2 class="f12"> ○ collection of sensitive information and middot; purpose </h2> <ul class="agree_list"> <li> of the user's personal health information to the original, provides services to support the strengthening of wellness </li> <li> comparison function </li> of the average number of steps </ul> <h2 class="f12 marginT05"> ○ item of sensitive information to be collected </h2> <ul class="agree_list"> <li> blood sugar, blood pressure food intake information, exercise information, activity information, such as the number of steps </li> <li> record of other health information * [pulse / heart rate, body mass index (BMI), basal metabolic rate (BMR), body fat / visceral fat level, skeletal muscle (Skeletal muscle) information] <br> * The above health information records, will be collected only if you want to work with an external device (ex. heart rate, etc.). </li> </ul> <h2 class="f12 marginT05"> ○ retention and middot of sensitive information; use period </h2> <ul class="agree_list"> <li> Collection &amp; middot; for until the achievement of the purposes of </li> <li> Bfit website app coach login account user, if there is a need to hold personal information pursuant to the provisions of relevant laws and regulations, pursuant to the provisions of the said laws and regulations, personal you can possess the information. </li> </ul> <br> <br> ※ customers, collecting &amp; middot the personal information of customers; may the right to refuse to consent to the use, if you want to deny consent, the coach service apps not available. <p></p>
+		</div>
+		<!-- <div class="agree_check_s">
+			<input type="checkbox" id="agree_chk03" class="imgM marginR05">Agree
+		</div> -->
+		<div class="agree_tit_area">
+			<h2 class="agree_tit marginR20"><span class="icon_agree">Kind of location-based services and fee</span></h2>
+		</div>
+		<div class="agree_text" id="agree_text04">
+			<h1 class="f13 fBold"> Chapter 1 General Provisions </h1> 
+			<p class="f12"> to collect sensitive information of the user's personal as follows for apps coach service of &amp; middot; we use you. </p> 
+			<h2 class="f12 marginT10"> Article 1 (Purpose) </h2> 
+			<p class="f12"> This convention, (you have less company) nano-Soft Co., Ltd. position information provided by the service (hereinafter referred to as service) company and (you have less customers) entered into customer usage contract is that to use, it is not the purpose of defining the required company and customer rights and obligations, other various matters you. </p> 
+			<h2 class="f12 marginT10"> Article 2 About (Terms and Junsoku) </h2> 
+			<p class="f12"> matters not expressly approved in this Agreement, the protection of location information and use law regarding such, the Telecommunications Business Law, please follow the provisions of the detail use guidelines such as information communication network promoting the use and information services for which protection is related laws such as the law and the Company relating to such determined. </p> 
+			<h1 class="f13 fBold marginT10"> use of Chapter 2 Service </h1> 
+			<h2 class="f12 marginT05"> Article 3 (Eligibility) </h2> 
+			<ul class="f12 "> 
+				<li> 1. Customer can utilize the services, the terminal device for collecting location information such as a mobile phone (hereinafter, to a target device) is the holder of the person. </li> 
+				<li> 2. Customers using a target terminal of the corporate name, using a business registration number of the corporation, and can be used to subscribe to the service. </li> 
+			</ul>
+			<h2 class="f12 marginT10"> Article 4 (use of services) </h2> 
+			<ul class="f12"> 
+				<li> 1. Company and customers agree to the Terms and Conditions which defines, by the company to accept, you can use the service. </li> 
+				<li> 2. The company is regard to your application for customer use that falls under any of the following items, you may you do not agree with this. 
+					<ul class="marginL10">
+						<li> (1) Is not a real name, such as using the name of another person, if you want to false application is, </li> 
+						<li> (2) or your registration items is missing, it will be applied in import If </li> 
+						<li> (3) or to inhibit the public order or morality, or if you have application in inhibiting purpose, </li> 
+						<li> (4) Others use application requirements that the company was established If you do not meet the will, </li> 
+					</ul> 
+				</li> 
+				<li> 3. Customers, depending on their qualification, there is a part of the service usage is limited, depending on the variation of services registered mobile communication service company (name change, cancellation, etc.), service usage and customer qualifications use a range of services may fluctuate. </li> 
+			</ul>
+			<h2 class="f12 marginT10"> customers who wish to Article 5 (end of service) </h2> 
+			<p class="f12"> service churn, company to follow certain procedures (wired and wireless Internet, which was established you can apply for the service exit through the then information) such as via the website. </p> 
+			<h2 class="f12 marginT10"> Article 6 (service level) </h2>
+			<ul class="f12"> 
+				<li> 1. Use of the service, in principle a day, seven days a week 24 hours a day. However, there is that the service is paused reasons or technical operations of the company, in the period in which the company has been established for the purposes of the operation, there is that the service is paused. <br> In such a case, the company will advertise this in advance or post. </li> 
+				<li> 2. Position information, depending on the development of related technologies, an error may occur. </li> 
+			</ul> 
+			<h2 class="f12 marginT10"> Article 7 (of service use limit and stop) </h2>
+			<p class="f12"> The company, if the customer falls under any of the following items, without prior notice, or to limit or stop the services your use of, or be subjected to ex officio revocation you can. </p> 
+			<ul class="f12"> 
+				<li> 1. By using, for example, others of the name (resident registration number), you can register to the service, if you have stolen the personal information of others, </li> 
+				<li> 2. If you interfere with the service use of others, </li> 
+				<li> 3. By using the service, if you have laws and regulations, public order, acts contrary to such as morality, </li> 
+				<li> 4. If the customer has difficulty the management of services to intentional or gross negligence </li> 
+			</ul> 
+			<h2 class="f12 marginT10"> Article 8 (service changes and stop) </h2> 
+			<ul class="f12"> 
+				<li> 1. Company if it falls under any of the following items, limit all or part of the service, you can change or stop. 
+					<ul class="marginL10">
+						<li> (1) If it is unavoidable due to construction work such as repair of service equipment </li> 
+						<li> (2) power failure, if it interferes with normal services available in such runaway of failure or usage of various equipment , </li> 
+						<li> (3) If the service in such circumstances or failure on the law of the company, such as termination of the agreement with the partners it is not possible to maintain the service, </li> 
+						<li> (4 ) If the customer is mobile communication services company that has registered has stopped the service, </li> 
+						<li> (5) Other, natural disaster, if there is a force majeure specific events, such as the national state of emergency, and </li> 
+					</ul> 
+				</li> 
+				<li> 2. In the case when such service limitations imposed by paragraph 1 has occurred, the company, you can known the Internet or the like, will notify you. However, Kiseme reason no disk failure of the company, due to service limitations imposed by the reasons that companies will not be able to control, such as system down, if advance notice is not possible, I will be notified after the fact. </li> 
+			</ul> 
+			<h2 class="f12 marginT10">Article 9 (service type and usage fees) </h2> 
+			<p class="f12"> kind of company is to provide services and the details and usage fees, Appendix (available with the kind of location-based service fee) please follow the. </p> 
+			<h1 class="f13 fBold marginT10"> Chapter 3 protection of the position information of individual </h1> 
+			<h2 class="f12 marginT05"> Article 10 (personal location information protection of customers) </h2> 
+			<p class="f12"> company, and in accordance with the provisions of relevant laws and regulations, will endeavor to protect the personal location information of the customer. </p> <h2 class="f12 marginT10"> Article 11 (use or provision of personal location information) </h2> <ul class="f12"> <li> 1. Companies are able to use your location information in order of service provision, customers by agreeing to these Terms will be deemed to have agreed to this. </li> <li> 2. The company, the position information of individual customers has provided, assume that you do not use in the customer's None other than the service provided consent purpose. </li> <li> 3. Company, the location information of individual customers provided, do not offer without the consent of the customer third party. </li> </ul> <h2 class="f12 marginT10"> Article 12 (notification for the provision of personal location information) </h2><ul class="f12"> <li> 1. The company, if you want to provide personal location information of customers to third party customers to specify, who receive the offer to our customers every time, provide the date and time, then immediately notified through the target device of providing purpose. </li> <li> 2. However, if you want to any of the following are true, to the destination terminal the customer has specified, or other objective such as e-mail, so that you can be notified using the appropriate means. <ul class="agree_list"> <li> the target terminal collected location information of individual characters, if not provided with a function of receiving audio or video, </li> <li> customer requests in advance If it is, </li> </ul> </li> </ul> <h2 class="f12 marginT10"> article 13 (personal location information available and middot; provision of the retention of facts confirmation materials) </h2><ul class="f12"> <li> 1. Company, based on the second term Law, Article 16 on such protection and the use of position information, use and middot location information of the customer; providing facts confirm materials automatically record the location information system, the recording time Save 12 months. </li><li> 2. Company, if the customer by the protection and use provisions of the law Article 24, Paragraph 4 concerning such as the position information was to withdraw all or part of the agreement, without delay, position information use and position information of personally identifiable and middot; fact check documentation provided (in case you want to withdraw a part of the consent, personal position information and position information use and middot part to withdraw; only you to provide facts confirmation documentation) Destroys the. However, national tax Basic Law, if the Corporation Tax Act, there is a need to be saved by the provisions of the Value Added Tax Act and other relevant laws and regulations, you can save on the basis of the relevant laws and regulations. </li> </ul> <h2 class="f12 marginT10"> (and use period retention period of personal location information) Article 14 </h2><p class="f12"> The company, when you achieve the purpose of the use or provision of personal location information of customers, it is recorded by the protection and use provisions of the law Article 16 paragraph 2 on such as position information, save Failing that use of position information and middot; providing of fact check article to discard without delay the position information of the other of the individual. </p><h2 class="f12 margint10"> Article 15 (of the legal representative right)  <ul class="f12"><li> 1. Protection and use law Article 18, Paragraph 1, on such as position information of the company from children under the age of 14, Article 19, Paragraph 1, pursuant to the provisions of paragraph 2 or Article 21, use the personal information of the position or If you are trying to offer, you mUST obtain the consent of the legal representative. </li> <li> 2. Terms Article 17 (your rights) this provision, and shall apply mutatis mutandis to the case where legal representative has the consent pursuant to the provisions of the law Article 25 Paragraph 2 on such protection and use of location information. In this case, the customer, will the legal representative. </li> </ul> <h1 class="f13 fBold marginT10"> Chapter 4 company and customer rights and obligations </h1><h2 class="f12 marginT05"> Article 16 (company of the obligation) </h2> <ul class="f12"> <li> 1. If the company that complaints from customers associated with the service has been accepted, and this must be processed quickly, if rapid treatment is difficult, announces its grounds and processing schedule to customers. </li> <li> 2. Company, to comply with laws relating to such protection and use of location information, the Act on Promotion of Information Communications Network and Information Protection, communication secret protection law, service of management such as the Telecommunications Business Law, the laws that have been associated with maintaining you. </li><li> 3. The company is to provide the optimized service with more effective customer service, new products and events information guidance, such as the questionnaire survey, when using contract in order to run the marketing of customer-oriented, collected your personal it is possible to take advantage of the information related to the use of information and services. However, if you want to try to provide to a third party you can use beyond the scope of your consent in advance, it requires the consent to the customer. In this case, the customer, will be able to reject the request of the Company's consent. </li><li> 4. If the company you registration request to the bad credit related organizations, such as unpaid bills and related to user the credit information of use and the Act on the Protection Article 25 of credit information intensive organizations, the subject of the registration request, the principal such as whether, and Shi must go through the necessary verification procedures. </li> </ul> <h2 class="f12 marginT10"> Article 17 (your rights) </h2> <ul class="f12"> <li> 1. Customers, for all or part of the agreement on the use and provision of personal location information of customers of the company, such as over a wired and wireless Internet, you can withdraw. </li><li> 2. Customers will be able to request a temporary suspension of the use and provision of personal location information of customers of the company, such as over a wired and wireless Internet. </li> <li> 3. Customers can request a viewing and announcements such as the following 1 of data items to the Company. <ul class="agree_list"> <li> collecting the location information of the customer &amp; middot; use &amp; middot; providing of fact confirmation materials </li> <li> Law for such protection and use of personal location information of the customer location information or why and what has been provided to third parties pursuant to the provisions of other laws </li> </ul> </li> </ul> <h2 class="f12 marginT10"> Article 18 (your duty) </h2><ul class="f12"> <li> 1. Customer has to be delivered by the date specified a fee based on the subscription service, the billing address and contacts that are published in the company is changed, notifies the company There is a need. </li> <li> 2. Customers can provide various information necessary for use of the service, to register, to provide complete information that matches the current facts, it is assumed to be registered, if a change occurs, not immediately updated Banari. </li><li> 3. Customers, it is necessary to manage so that the target terminal to maintain a normal operation, when there is a difficulty in providing the normal operation is not maintained service for terminals, the repair of the target terminal, processing such as replacement the quickly done, so that smooth service is performed. </li><li>4. Customers, at the time of use of the service, to any act falling under any of the following items will not be. <ul class="marginL10"> <li> (1) If at the time of registration application or change to describe the false facts, </li> <li> (2) or to damage the honor of others, and disadvantage the giving act </li> <li> (3) information of content contrary to order and public policy of the public, sentences, the act of dissemination graphics, such as voice to others </li><li> (4) destroy an act of registration or disseminate computer virus infection information to induce confusion, such as the relevant equipment malfunction or information to the service </li> <li> (5) Acts and pretending the others, others act described in false the relationship between the </li> <li> (6) or give the benefit of on the property to self or others, and circulating false information for the purpose of adding the damages to others act </li><li> (7) use without permission convenient or act of flowing out the personal location information of others that were acquired in connection with the service </li> <li> (8) Other Terms and Conditions Article 7 corresponding to each item Acts or illegal or unjust act </li> </ul> </li> <li> 5. Customers, relevant laws and regulations, the provisions of this Agreement, notes that were advertised on the use guidance and services, it is necessary to comply with such matters that the company be notified, shall not act to interfere with the other company of business will be. </li> </ul> <h1 class="f13 fBold marginT10"> Chapter 5 Other </h1> <h2 class="f12 marginT05"> Article 19 (company of the contact and location information management officer ) </h2><p class="f12"> company's name, address, telephone number and other contact information is as follows. </p> <ul class="f12"> <li> 1. Mutual: (. Nanosoft Co., Ltd) nano-Soft Co., Ltd. </li> <li> 2. Address: West Zone of the picture Road No. 88 Ota </li> <li> 3. Telephone number: 042-633-1517 </li> <li> 4. Matters relating to the location information management officer <ul class="marginL10"> is <li>. Job Category: nano software (stock) Representative Director </li> <li> や. Contact: 042-633-1517 </li> </ul> </li> </ul> <h2 class="f12 marginT10"> Article 20 (negotiable) </h2> <p class="f12"> Customer and company, transfer this Agreement on the status and rights by service subscription customers, all or part of the obligation to a third party, you can delegate, can not be disposed of for the purpose of collateral provided. </p><h2 class="f12 marginT10"> Article 21 (damages) </h2> <ul class="f12"> <li> 1. By customer is in violation of the provisions of this Agreement, if the damage to the company occurs, customers who are in violation of this Agreement, will have to compensate for any damage suffered by the Company. </li><li> 2. If the customer is subject to various objections that company by violation of tort and conditions that went Upon to use the service, including damages claims or lawsuits from any third party other than the customer, the customer is, their it is necessary to compensate for the company's responsibility and expense, if the company is to not exempt, the customer, thereby will have to compensate for the damage that occurred to the company. </li> <li> 3. Company is in violation to Article 26 of the provisions from the law Article 15 relating to such protection and use of location information, or company by the service provided by, if the damage to the customer has occurred, such damage is the company intentionally or to bear the responsibility of the Company only if it is generated in synchronization with the gross negligence, the scope of its responsibility is limited to the normal damage. </li></ul> <h2 class="f12 marginT10"> Article 22 (Disclaimer) </h2> <ul class="f12"> <li> 1. Company, if you are not able to provide a service to the reason that it falls under any of the following, this does not take responsibility for damage caused to our customers. <br> <ul class="agree_list"> <li> If there is a natural disaster or force majeure in this state, </li> <li> If due to reasons attributable to the customer or third party </li> <li> willful other company, if by reason there is no negligence </li> </ul></li> <li> 2. The company can not be held responsible for what is lost revenue that customers expect to use the service, also not responsible for damage or loss due to material obtained through other services. </li> <li> 3. Information company that has been posted on the service and the services, materials, fact of reliability, without the guarantee for such accuracy, the final judgment of the information obtained by using the service and the service that the company is to provide customers There is not must be indirect, responsibilities that go with them, completely, located on your own, the company will not be responsible for damages that occur thereby. </li> <li>4. If you have not started the service by the business or on failure on the technology of the company, the company, you can notice it to a Web page or the like of the Internet, e-mail, will notify you by a method such as SMS. However, for the reasons that the company is not able to manage if prior notice is not possible, you will be notified after the fact. </li> </ul> <h2 class="f12 marginT10"> Article 23 (Resolution of Disputes) </h2> <ul class="f12"> <li> 1. Services utilized in conjunction with, if the dispute between the company and the customer has occurred, the company and the customer will in good faith discussions to resolve the dispute. </li> <li> 2. If the dispute in consultation of the first term is not resolved, the parties, will be able to apply for arbitration to personal information dispute arbitration committee in accordance with the provisions of the Personal Information Protection Law Article 40. </li> </ul> <p class="f12 marginT05"> Supplementary Provisions (2014.11.11) <br>(Enforcement Date) This agreement will come into effect from November 11, 2014. <br> <br> Annex. Kind of location-based services and fee <br> <br> use and type of [Annex] <br> location-based service fee <br> 1. company, using location information and status information of the target terminal Te, I served at the contents, such as the following. <br> <br> Check the location of the [Application Coach] <br> target terminal, and records the path of the position display and / or movement of the current motion (movement), by measuring the movement amount of a user, can be saved / playback service: information free of charge for (communication charge separately) <br> <br> 2. Use communication charge customers for data and expected, may be vary depending on the mobile operator, is basically conforms to the standard data plan and subscription costs carriers provided. </p>
+		<h2 class="f12"></h2>
+		<!-- <div class="agree_check_s">
+			<input type="checkbox" id="agree_chk04" class="imgM marginR05">동의합니다.
+		</div>
+		<div class="agree_check">
+			<input type="checkbox" id="" onclick="javascript:allCheck(this);" class="imgM marginR05">전체동의합니다.
+		</div>
+		<div class="textC marginT15">
+			<form name="frmAgree" id="frmAgree" action="http://coach.bfit.kr/coaching/app/userAgree.do">
+		       	<button type="button" name="userAgree" onclick="senduserAgree();" class="btn_agree marginB10">확인</button>
+		       	<button type="button" name="userCancel" onclick="window.close();" class="btn_cancel marginB10">취소</button>
+			</form>
+		</div> -->
+		<div class="textC marginT15">
+			<h1 class="f12">Privacy Policy Statement Manager Name: Jisu Jang  Email:bfit@bfit.kr Telephone: 042-633-1517</h1>
+		</div>
+		</div>
+	</div>
+</section>
+
+
+    </div>
+    <div id="aside">
+        
+<div class="notice">
+    <h2><a href="../bbs/board.php%3Fbo_table=notice.html"><i class="fa fa-bullhorn" aria-hidden="true"></i><span class="sound_only"></span></a></h2>
+    <ul>
+            <li class="empty_li">게시물이 없습니다.</li>
+        </ul>
+
+</div>
+        
+<!-- 로그인 전 아웃로그인 시작 { -->
+<section id="ol_before" class="ol">
+    <h2>회원로그인</h2>
+    <form name="foutlogin" action="en/bbs/login_check.html" onsubmit="return fhead_submit(this);" method="post" autocomplete="off">
+    <fieldset>
+        <div class="ol_wr">
+            <input type="hidden" name="url" value="%2Fsub%2Fprivacy_en.html">
+            <label for="ol_id" id="ol_idlabel" class="sound_only">회원아이디<strong>필수</strong></label>
+            <input type="text" id="ol_id" name="mb_id" required maxlength="20" placeholder="아이디">
+            <label for="ol_pw" id="ol_pwlabel" class="sound_only">비밀번호<strong>필수</strong></label>
+            <input type="password" name="mb_password" id="ol_pw" required maxlength="20" placeholder="비밀번호">
+            <input type="submit" id="ol_submit" value="로그인" class="btn_b02">
+        </div>
+        <div class="ol_auto_wr"> 
+            <div id="ol_auto">
+                <input type="checkbox" name="auto_login" value="1" id="auto_login">
+                <label for="auto_login" id="auto_login_label">자동로그인</label>
+            </div>
+            <div id="ol_svc">
+                <a href="../bbs/register.html"><b>회원가입</b></a> /
+                <a href="../bbs/password_lost.html" id="ol_password_lost">정보찾기</a>
+            </div>
+        </div>
+        
+    </fieldset>
+    </form>
+</section>
+
+<script>
+$omi = $('#ol_id');
+$omp = $('#ol_pw');
+$omi_label = $('#ol_idlabel');
+$omi_label.addClass('ol_idlabel');
+$omp_label = $('#ol_pwlabel');
+$omp_label.addClass('ol_pwlabel');
+
+$(function() {
+
+    $("#auto_login").click(function(){
+        if ($(this).is(":checked")) {
+            if(!confirm("자동로그인을 사용하시면 다음부터 회원아이디와 비밀번호를 입력하실 필요가 없습니다.\n\n공공장소에서는 개인정보가 유출될 수 있으니 사용을 자제하여 주십시오.\n\n자동로그인을 사용하시겠습니까?"))
+                return false;
+        }
+    });
+});
+
+function fhead_submit(f)
+{
+    return true;
+}
+</script>
+<!-- } 로그인 전 아웃로그인 끝 -->
+                
+<!-- 접속자집계 시작 { -->
+<section id="visit">
+    <h2><i class="fa fa-users" aria-hidden="true"></i>  접속자집계</h2>
+    <dl>
+        <dt><span class="color_1"></span> 오늘</dt>
+        <dd><strong class="color_1">411</strong></dd>
+        <dt><span class="color_2"></span> 어제</dt>
+        <dd><strong class="color_2">634</strong></dd>
+        <dt><span class="color_3"></span> 최대</dt>
+        <dd><strong class="color_3">2,148</strong></dd>
+        <dt><span class="color_4"></span> 전체</dt>
+        <dd><strong class="color_4">997,533</strong></dd>
+    </dl>
+    </section>
+<!-- } 접속자집계 끝 -->    </div>
+</div>
+
+</div>
+<!-- } 콘텐츠 끝 -->
+
+
+
+
+<div id="footer">
+	<div id="footer_wr">
+		<div id="ft_sns">
+			<a href="https://play.google.com/store/apps/details?id=kr.bfit.kr" class="sns_icn_wr" target="_blank">
+				<img src="../iium_img/playstore.png" alt="플레이스토어">
+			</a>
+			<a href="https://itunes.apple.com/kr/app/bfit-app-coach/id747590931?l=en&mt=8" class="sns_icn_wr ap_kr" target="_blank">
+				<img src="../iium_img/appstore.png" alt="앱스토어">
+			</a>
+			<a href="https://www.facebook.com/BfitAppCoach" class="sns_icn_wr" target="_blank">
+				<img src="../iium_img/ft_fb.png" alt="페이스북" class="sns_icn">
+				<img src="../iium_img/ft_fb_hov.png" alt="페이스북" class="sns_icn_hov">
+			</a>
+			<a href="https://blog.naver.com/bfitapp" class="sns_icn_wr" target="_blank">
+				<img src="../iium_img/ft_blog.png" alt="블로그" class="sns_icn">
+				<img src="../iium_img/ft_blog_hov.png" alt="블로그" class="sns_icn_hov">
+			</a>
+			<a href="https://www.instagram.com/bfit_app_coach/" class="sns_icn_wr" target="_blank">
+				<img src="../iium_img/instar.png" alt="인스타그램" class="sns_icn">
+				<img src="../iium_img/instar_hov.png" alt="인스타그램" class="sns_icn_hov">
+			</a>
+<!--			<span class="fam_site">Kasite</span>-->
+			<div class="fam_site">
+				<a>Related site</a>
+				<ul>
+					<li><a href="http://smartstore.naver.com/bfit" target="_blank">Bfit Shop</a></li>
+					<li><a href="http://coach.bfit.kr/coaching/login.do" target="_blank">App Coach</a></li>
+					<li><a href="http://coach.bfit.kr/admin/loginPage.do" target="_blank">App Coach Admin</a></li>
+					<li class="privacy ko"><a href="privacy_en.html" target="_blank">Privacy Policy</a></li>
+				</ul>
+			</div>
+		</div>
+		<a href="../index.html" class="ft_logo"><img src="../iium_img/ft_logo_n.png" alt="푸터 로고"></a>
+		<p class="ft_copy">
+			<!-- <span>29, Hakhaseo-ro, Yousung-gu, Dajeon, Korea</span> -->
+			<span></span>
+			<span>Main Building #403, Daejeong-ro 68, Yuseong-gu, Daejeon, Korea</span>
+			<span></span>
+			<span><a href="tel:0426331517">Tel : 82-42-633-1517</a>    Fax : 82-42-823-1517</span>
+			<span>Copyright (c) 2010 Nansoft Co.,Ltd All rights reserved.</span>
+		</p>
+		
+	</div>
+</div>
+
+
+
+<!-- 하단 시작 { -->
+<div id="ft">
+
+    <div id="ft_wr">
+        <div id="ft_link">
+            <a href="../bbs/content.php%3Fco_id=company.html">회사소개</a>
+            <a href="../bbs/content.php%3Fco_id=privacy.html">개인정보처리방침</a>
+            <a href="../bbs/content.php%3Fco_id=provision.html">서비스이용약관</a>
+            <a href="privacy_en.php%3Fdevice=mobile.html">모바일버전</a>
+        </div>
+        <div id="ft_catch"><img src="../img/ft_logo.png" alt="그누보드5"></div>
+        <div id="ft_copy">Copyright &copy; <b>소유하신 도메인.</b> All rights reserved.</div>
+    </div>
+    
+    <button type="button" id="top_btn"><i class="fa fa-arrow-up" aria-hidden="true"></i><span class="sound_only">상단으로</span></button>
+        <script>
+        
+        $(function() {
+            $("#top_btn").on("click", function() {
+                $("html, body").animate({scrollTop:0}, '500');
+                return false;
+            });
+        });
+        </script>
+</div>
+
+
+<!-- } 하단 끝 -->
+
+<script>
+$(function() {
+    // 폰트 리사이즈 쿠키있으면 실행
+    font_resize("container", get_cookie("ck_font_resize_rmv_class"), get_cookie("ck_font_resize_add_class"));
+});
+</script>
+
+
+
+<!-- ie6,7에서 사이드뷰가 게시판 목록에서 아래 사이드뷰에 가려지는 현상 수정 -->
+<!--[if lte IE 7]>
+<script>
+$(function() {
+    var $sv_use = $(".sv_use");
+    var count = $sv_use.length;
+
+    $sv_use.each(function() {
+        $(this).css("z-index", count);
+        $(this).css("position", "relative");
+        count = count - 1;
+    });
+});
+</script>
+<![endif]-->
+
+</body>
+</html>
+ 

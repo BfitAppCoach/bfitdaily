@@ -1,0 +1,68 @@
+.main {
+  width:100%;
+  display:block;
+  margin:0 auto;
+}
+.sub_content.sub3_02 .slider-nav{position: relative;}
+.sub_content.sub3_02 .slider-nav .slick-slide{margin: 0 18px; cursor: pointer;}
+.sub_content.sub3_02 .slider-nav .slick-slide img:last-child{display: none;}
+.sub_content.sub3_02 .slider-nav .product_nav_wr{text-align: center; background-color: #fafafa; padding: 60px 0;}
+.sub_content.sub3_02 .slider-nav .slick-slide .product_img{height: 85px; text-align: center; display: table; width: 100%;}
+.sub_content.sub3_02 .slider-nav .slick-slide span{display: table-cell; vertical-align: middle;}
+.sub_content.sub3_02 .slider-nav .slick-slide span img{display: inline-block;}
+.sub_content.sub3_02 .slider-nav .product_nav_wr p{padding-top: 35px; font-family: "TitilliumWeb-Light"; font-size: 18px; color: #666;}
+.sub_content.sub3_02 .slider-nav .product_nav_wr p span{font-family: "TitilliumWeb-Light"; font-size: 18px; color: #666; display: inline; vertical-align: top;}
+.sub_content.sub3_02 .slider-nav .slick-list.draggable{width: 85%; margin: 0 auto;}
+
+.sub_content.sub3_02 .slider-nav .slick-slide:hover img:first-child{display: none;}
+.sub_content.sub3_02 .slider-nav .slick-slide:hover img:last-child{display: inline-block;}
+.sub_content.sub3_02 .slider-nav .slick-slide:hover{background-color: #20c5c2; transition: 1s;}
+.sub_content.sub3_02 .slider-nav .slick-slide:hover p{color: #fff;}
+.sub_content.sub3_02 .slider-nav .slick-slide:hover p span{color: #fff;}
+
+.sub_content.sub3_02 .slider-nav .slick-current img:first-child{display: none;}
+.sub_content.sub3_02 .slider-nav .slick-current img:last-child{display: inline-block;}
+.sub_content.sub3_02 .slider-nav .slick-current{background-color: #20c5c2; transition: 1s;}
+.sub_content.sub3_02 .slider-nav .slick-current p{color: #fff;}
+.sub_content.sub3_02 .slider-nav .slick-current p span{color: #fff;}
+
+.slick-arrow{display: block;width:80px; height: 261px; border: 1px solid #eee; box-sizing: border-box; float: left; position: absolute; top: 0; cursor: pointer;}
+.slick-prev{background: url(../iium_img/product_prev.png) no-repeat center; left: 0;}
+.slick-next{background: url(../iium_img/product_next.png) no-repeat center; right: 0;}
+
+.sub_content.sub3_02 .slider-for{width: 100%; padding: 60px 0 120px 0; margin-top: 20px; border-top: 1px solid #eaeaea;}
+.sub_content.sub3_02 .slider-for .slider-for-wr{}
+.sub_content.sub3_02 .slider-for .slider-for-wr:after{content: ""; display: block; clear: both;}
+
+.sub_content.sub3_02 .slider-for .product_explan{float: right; display: table; width: 100%;}
+.sub_content.sub3_02 .slider-for .product_explan p{display: table-cell; vertical-align: middle; padding-left: 53px;}
+.sub_content.sub3_02 .slider-for .product_explan span{display: block; font-family: "TitilliumWeb-Light"; font-size: 18px; color: #666; padding-top: 15px;}
+.sub_content.sub3_02 .slider-for .product_explan span:nth-child(2){font-family: "TitilliumWeb-Regular"; color: #0f0f0f;}
+.sub_content.sub3_02 .slider-for .product_explan span:nth-child(3){padding-top: 30px;}
+.sub_content.sub3_02 .slider-for .product_explan span.pdt_line{display: block; width: 23px; height: 1px; background-color: #0f0f0f; padding-top: 0;}
+
+
+
+/* 20231110 추가 */
+.app-box-wr {display: flex; gap: 30px; justify-content: center; padding-bottom: max(70px, 6vw);}
+.app-box {display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 20px; width: 262px; height: 262px; text-align: center; background-color: #fafafa;;}
+.app-box .product_img{height: 85px; text-align: center; display: table; width: 100%;}
+.app-box span{display: table-cell; vertical-align: middle;}
+.app-box span img{display: inline-block;}
+.app-box p{font-family: "TitilliumWeb-Light"; font-size: 2rem; font-weight: 400; color: #666;}
+.app-box p span{font-family: "TitilliumWeb-Light"; font-size: 18px; color: #666; display: inline; vertical-align: top;}
+.app-box img:first-child{display: inline-block;}
+.app-box img:last-child{display: none;}
+
+.app-box.ios img {width: 60px;}
+.app-box.android img {width: 65px;}
+
+.app-box:hover img:first-child{display: none;}
+.app-box:hover img:last-child{display: inline-block;}
+.app-box:hover{background-color: #20c5c2; transition: 1s;}
+.app-box:hover p{color: #fff;}
+.app-box:hover p span{color: #fff;}
+
+@media screen and (max-width:767px){
+  .app-box-wr {flex-direction: column; align-items: center;}
+}
