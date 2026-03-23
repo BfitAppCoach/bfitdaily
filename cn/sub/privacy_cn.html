@@ -1,0 +1,523 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+<meta http-equiv="imagetoolbar" content="no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>나노소프트</title>
+<link rel="stylesheet" href="../theme/nanosoft/css/default.css">
+<link rel="stylesheet" href="../theme/nanosoft/skin/connect/basic/style.css">
+<link rel="stylesheet" href="../theme/nanosoft/skin/latest/notice/style.css">
+<link rel="stylesheet" href="../theme/nanosoft/skin/outlogin/basic/style.css">
+<link rel="stylesheet" href="../theme/nanosoft/skin/visit/basic/style.css">
+<!--[if lte IE 8]>
+<script src="cn/js/html5.js"></script>
+<![endif]-->
+<script>
+// 자바스크립트에서 사용하는 전역변수 선언
+var g5_url       = "http://cn.bfit.kr";
+var g5_bbs_url   = "cn/bbs";
+var g5_is_member = "";
+var g5_is_admin  = "";
+var g5_is_mobile = "";
+var g5_bo_table  = "";
+var g5_sca       = "";
+var g5_editor    = "";
+var g5_cookie_domain = "";
+</script>
+<!--<script src="cn/js/jquery-1.8.3.min.js"></script>-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="../js/jquery.menu.js"></script>
+<script src="../js/common.js"></script>
+<script src="../js/wrest.js"></script>
+<script src="../js/placeholders.min.js"></script>
+<script src="../iium_js/jquery.bxslider.min.js"></script>
+<script src="../iium_js/jquery.easing.1.3.min.js"></script>
+<script src="../slick/slick.min.js"></script>
+<script src="../slick/product.js"></script>
+<script src="../iium_js/index.js"></script>
+
+<!--
+<link rel="shortcut icon" href="/iium_img/favicon_03.png" type="image/x-icon" />
+<link rel="icon" href="/iium_img/favicon_03.png" type="image/x-icon" />
+-->
+<link rel="stylesheet" href="../js/font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet" href="../iium_css/common.css">
+<link rel="stylesheet" href="../iium_css/jquery.bxslider.min.css">
+<link rel="stylesheet" href="../slick/slick.css">
+<link rel="stylesheet" href="../slick/product.css">
+<link rel="stylesheet" href="../iium_css/index.css">
+<link rel="stylesheet" href="../iium_css/fonts.css">
+
+<!--privacy-->
+<link rel="stylesheet" type="text/css" href="../iium_css/privacy_kr/base.css">
+<link rel="stylesheet" type="text/css" href="../iium_css/privacy_kr/layout.css">
+<link rel="stylesheet" type="text/css" href="../iium_css/privacy_kr/style.css">
+
+<script src="../js/jquery.bxslider.js"></script>
+</head>
+<body id="cn">
+
+<!-- 상단 시작 { -->
+<div id="hd">
+    <h1 id="hd_h1">나노소프트</h1>
+
+    <div id="skip_to_container"><a href="privacy_cn.html#container">본문 바로가기</a></div>
+
+            </div>
+    <div id="hd_wrapper">
+
+        <div id="logo">
+            <a href="../index.html"><img src="../img/logo.png" alt="나노소프트"></a>
+        </div>
+
+        <div class="hd_sch_wr">
+            <fieldset id="hd_sch" >
+                <legend>사이트 내 전체검색</legend>
+                
+
+                <script>
+                
+                    // 검색에 많은 부하가 걸리는 경우 이 주석을 제거하세요.
+                    var cnt = 0;
+                    for (var i=0; i<f.stx.value.length; i++) {
+                        if (f.stx.value.charAt(i) == ' ')
+                            cnt++;
+                    }
+
+                    if (cnt > 1) {
+                        alert("빠른 검색을 위하여 검색어에 공백은 한개만 입력할 수 있습니다.");
+                        f.stx.select();
+                        f.stx.focus();
+                        return false;
+                    }
+
+                    return true;
+                }
+                </script>
+
+            </fieldset>
+
+            
+<!-- 인기검색어 시작 { -->
+
+<!-- } 인기검색어 끝 -->        </div>
+        <ul id="hd_qnb">
+            <li><a href="../bbs/faq.html"><i class="fa fa-question" aria-hidden="true"></i><span>FAQ</span></a></li>
+            <li><a href="../bbs/qalist.html"><i class="fa fa-comments" aria-hidden="true"></i><span>1:1문의</span></a></li>
+            <li><a href="../bbs/current_connect.html" class="visit"><i class="fa fa-users" aria-hidden="true"></i><span>접속자</span><strong class="visit-num">
+3</strong></a></li>
+            <li><a href="../bbs/new.html"><i class="fa fa-history" aria-hidden="true"></i><span>새글</span></a></li>
+        </ul>
+    </div>
+
+    <nav id="gnb">
+        <h2>메인메뉴</h2>
+        <div class="gnb_wrap">
+            <ul id="gnb_1dul">
+                <li class="gnb_1dli gnb_mnal"><button type="button" class="gnb_menu_btn"><i class="fa fa-bars" aria-hidden="true"></i><span class="sound_only">전체메뉴열기</span></button></li>
+                                    <li class="gnb_empty">메뉴 준비 중입니다.</li>
+                            </ul>
+            <div id="gnb_all">
+                <h2>전체메뉴</h2>
+                <ul class="gnb_al_ul">
+                                            <li class="gnb_empty">메뉴 준비 중입니다.</li>
+                                    </ul>
+                <button type="button" class="gnb_close_btn"><i class="fa fa-times" aria-hidden="true"></i></button>
+            </div>
+        </div>
+    </nav>
+    <script>
+
+    $(function(){
+        $(".gnb_menu_btn").click(function(){
+            $("#gnb_all").show();
+        });
+        $(".gnb_close_btn").click(function(){
+            $("#gnb_all").hide();
+        });
+    });
+
+    </script>
+</div>
+<!-- } 상단 끝 -->
+<script>
+  </script>
+<!-- zh_CN -->
+<header id="header">
+	<div id="hd_wrap">
+		<a class="menu">
+			<span class="m_sp"></span>
+			<span class="m_sp"></span>
+			<span class="m_sp0"></span>
+		</a>
+		<a href="../index.html" class="logo"><img src="../iium_img/main_logo_n.png" alt="로고"></a>
+
+        
+	</div>
+<!--
+	<map name="Catalog" id="Catalog">
+		<area shape="rect" coords="0, 0, 61, 50" href="/include/catalog.pdf" alt="" download>
+	</map>
+-->
+
+	<div class="drop_menu">
+		<div class="gnb">
+			<div class="gnb_wrap">
+				<ul>
+					<li><a href="sub1_01.html">Nanosoft</a></li>
+					<li><a href="sub2_01.html">Business </a></li>
+					<li><a href="sub3_01.html">Bfit</a></li>
+					<li><a href="sub4_01.html">Contact us </a></li>
+				</ul>
+				<div class="gnb_text"><p>Let's make a better idea <span>for a better future.</span></p></div>
+			</div>
+		</div>
+		<div class="gnb_sub">
+			<ul>
+				<li><a href="sub1_01.html">公司介绍</a></li>
+				<li><a href="sub1_02.html">idoVOX技术</a></li>
+				<li><a href="sub1_03.html">公司沿革</a></li>
+			</ul>
+			<ul>
+				<li><a href="sub2_01.html">VOX IoT</a></li>
+				<li><a href="sub2_02.html">VOX Fintech</a></li>
+				<li><a href="sub2_03.html">VOX Media</a></li>
+			</ul>
+			<ul>
+				<li><a href="sub3_01.html">Bfit系统</a></li>
+				<li><a href="sub3_02.html">Bfit产品</a></li>
+                <li><a href="sub3_03.html">下载应用程序</a></li>
+			</ul>
+			<ul>
+				<li><a href="sub4_01.html">IR投资介绍</a></li>
+				<!-- <li><a href="/sub/sub4_01.html">IR투자소개</a></li> -->
+				<li><a href="sub4_02.html">技术合作</a></li>
+				<li><a href="sub4_03.html">咨询</a></li>
+			</ul>
+		</div>
+	</div>
+</header>
+
+<div class="m_menu">
+	<span class="line"></span>
+	<span class="line"></span>
+	<span class="line"></span>
+</div>
+<div class="m_drop">
+	<div class="m_list_wr">
+		<div class="m_text_wr">
+			<div class="m_gnb_text"><p>Let's make a better idea <span>for a better future.</span></p></div>
+		</div>
+		<ul>
+			<li class="has-sub"><a href="privacy_cn.html">Nanosoft</a>
+				<ul>
+					<li><a href="sub1_01.html">公司介绍</a></li>
+					<li><a href="sub1_02.html">idoVOX技术</a></li>
+					<li><a href="sub1_03.html">公司沿革</a></li>
+				</ul>
+			</li>
+			<li class="has-sub"><a href="privacy_cn.html">Business </a>
+				<ul>
+					<li><a href="sub2_01.html">VOX IoT</a></li>
+					<li><a href="sub2_02.html">VOX Fintech</a></li>
+					<li><a href="sub2_03.html">VOX Media</a></li>
+				</ul>
+			</li>
+			<li class="has-sub"><a href="privacy_cn.html">Bfit</a>
+				<ul>
+					<li><a href="sub3_01.html">Bfit系统</a></li>
+					<li><a href="sub3_02.html">Bfit产品</a></li>
+					<li><a href="sub3_03.html">下载应用程序</a></li>
+				</ul>
+			</li>
+			<li class="has-sub"><a href="privacy_cn.html">Contact us </a>
+				<ul>
+					<li><a href="sub4_01.html">IR投资介绍</a></li>
+					<li><a href="sub4_02.html">技术合作</a></li>
+					<li><a href="sub4_03.html">咨询</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<div class="mo_lang_wr">
+		<span class="hd_lang mo_lang">
+<!--
+			<a href="#" class="lang kor">KOR</a>
+			<a href="#" class="lang eng">ENG</a>
+			<a href="#" class="lang chn">CHN</a>
+-->
+			<a href="http://ko.bfit.kr" class="lang kor ">ENG</a>
+  			<a href="../en/sub/privacy_cn.html" class="lang eng ">KOR</a>
+  			<a href="privacy_cn.html" class="lang chn on">CHI</a>
+			<a href="https://smartstore.naver.com/bfit" class="shop" target="_blank">Bfit shop</a>
+			<a href="../include/download.php%3Ffilepath=include%252Fcatalog_cn.pdf&amp;filename=catalog_cn.pdf" class="catalog" download>CATALOG DOWN</a>
+			<!-- <a href="/include/download.html?filepath=include/catalog.pdf&filename=catalog.pdf" class="catalog" download>CATALOG DOWN</a> -->
+            <a href="sub3_03.html" class="app">APP<br>DOWN</a>
+		</span>
+	</div>
+</div>
+
+
+<!-- 콘텐츠 시작 { -->
+<div id="wrapper">
+    <div id="container_wr">
+
+    <div id="container">
+<!--
+        </div>
+    </div>
+</div>-->
+<section class="marginT108 pri_all">
+	<div class="content1">
+		<div class="agree_tit_area">
+			<p class="privacy_txt01">个人信息处理方针</p>
+		</div>
+		<!-- <div class="goal_notice">
+			<div class="padding10">APP教练在用户的健康信息基础之上协助管理健康。可以设定目标，确认相应的教练信息，每天管理健康状态。</div>
+		</div>  -->
+		<div class="agree_tit_area">
+			<h2 class="agree_tit"><span class="icon_agree">使用条款</span></h2>
+		</div>
+		<div class="agree_text" id="agree_text01">
+			<h1 class="f13 fBold">APP教练使用方法及使用时注意事项</h1><p class="f12 marginT05">APP教练通过健康信息测量仪器（“Bfit”品牌）接收的健康信息为基础，可以简单管理用户整体健康状况为目的进行设计。用户在使用APP教练之前，请务必阅读如下使用注意事项，用户的健康状况出现异常或有必要时，请务必接受医师或专家的建议。<br><br>APP教练仅在与医疗器械法，医疗法等相关法律不相抵触的范围内使用，与之相关联的血糖/血压/脉搏测量仪等外部器械必须得到食品医药品安全处的许可，APP教练只可在合法的机器上使用。<br><br>APP教练相对应的外部机器仅单纯地提供测量记录，对于本司产品以外机器的测量值不予以保证。<br><br>输入到APP教练的数据以个人健康管理为目的存储于移动终端。用户的个人信息在APP教练设置期间内，收集的内容只保存到达成设定目标为止，选择设定菜单的”数据初始化”删除数据时，请留意储存的所有数据都将被删除。不过，存储在SNS分享，SD卡文件夹的数据需要个别删除。<br><br>有APP教练账号（Bfit主页APP教练登陆账号）的用户，在以APP教练账户登陆网页时，在APP教练输入的数据会存储到云端的APP教练（账户）。使用此功能可以复原用户的健康状况等信息，登陆Bfit主页APP教练，可以在与账户联动的其他机器（TV等）的应用软件上查看APP教练数据。按原则登陆Bfit主页使用账户的用户，在达到收集用户信息的使用目的之后不加延迟，予以作废。具体的作废流程及方法，在Bfit主页APP教练登录账户个人信息收取方针等有规定。<br><br>APP教练的SNS，邮件等数据共享功能只依据用户的选择而发生，据此相关的责任由用户全部负担，敬请注意。<br><br>为了安全使用APP教练，请利用保安功能，设置密码。<br><br>各菜单使用时注意事项如下：</p><h1 class="f13 fBold marginT10">语音记录</h1><p class="f12 marginT05">通过饮食记录提供的饮食热量信息依据不同的语言版本出处不同。韩国饮食信息来源自食品及药品管理局。该数据信息可能不完全（日后可更新），由于部分信息与实际卡路里含量可能有不同，敬请作为参考。</p><h1 class="f13 fBold marginT10">APP教练信息</h1><p class="f12 marginT05">APP教练信息传达并记录健康信息，为用户提供可以自行管理健康，并选择生活方式的功能。<br>在与外部机器联动时，请在确认通信协议是否正常操作之后进行使用。使用无线方式与外部机器进行连动时，依据周围电波的影响连接有可能不稳定。请在周边少有其他无线机器的环境或是周围噪音小于60dB的环境下使用。</p>	<h1 class="f13 fBold marginT10">APP教练运动信息</h1><p class="f12 marginT05">APP教练信息通过用户的移动路线记录运动的经历。计算设置了Bfit APP的手机终端移动路线。用户可以根据指导，设定自己的目标进行运动。<br>※患有心脏病或高血压等慢性疾病的用户，及孕妇，高龄者，幼儿等，在使用本产品功能之前，请与医生或专家进行商谈。<br>※在运动中发生晕眩，发晕，呼吸困难，痛症等异常状况时，请立即中断本产品的使用，向医师或专家咨询。</p><p class="f12 marginT05">由于关于APP教练所有的内容所有权及知识产权等权利不属于用户，因此不可任意变更，复制，保存，发布，销售。用户在遵守本APP教练使用说明及注意事项的情况下，只可用于个人用途。<br><br>APP教练产品会依据软件版本有所不同，提供的服务会根据用户的情况部分变更或中断。<br><br>在使用APP教练服务之前，请先阅读上述注意事项。倘若不同意上述事项，则无法使用APP教练服务。</p>
+		</div>
+		<!-- <div class="agree_check_s">
+			<input type="checkbox" id="agree_chk01" class="imgM marginR05">我同意.
+		</div> -->
+		<div class="agree_tit_area">
+			<h2 class="agree_tit marginR20"><span class="icon_agree">对于个人信息收集的同意</span></h2>
+		</div>
+		<div class="agree_text" id="agree_text02">
+			<p class="f12 marginT05">为了APP教练服务，需收集并使用用户如下个人信息。通过APP教练收集的个人信息，是以用户自家的健康管理服务为目的存储于移动终端。<br><br>并且，拥有Bfit主页教练登录账户的用户，以账户登录时，本服务收集的信息以健康信息的备份/连动为目的，存储于APP教练的的服务器【位于大韩民国江西区内钵山洞 DansolPlus(株)，管理责任属于Nanosoft(株)APP教练管理】另外管理。<br><br></p><h2 class="f12">○ 个人信息的收集、使用目的</h2><ul class="agree_list"><li>以用户个人的健康信息为基础，提供增进身心健康的辅助服务</li><li>掌握APP教练使用/安装现状等信息</li><li>用Bfit主页APP教练账户登录时</li><li>用户个人健康信息的备份，统计等管理</li><li>以同一账号连动，为外部机器的用户提供健康信息</li></ul><h2 class="f12 marginT05">○ 收集个人信息的项目</h2><ul class="agree_list"><li>电子邮箱，出生日期，性别，年龄，身高，体重，终端序列号码，用户照片，位置信息*</li><li>终端识别号码（IMEI）， 型号名**</li></ul><h2 class="f12 marginT05">○ 个人信息的储备，使用时间</h2><ul class="agree_list"><li>达到收集、使用的目的时为止</li><li>不过，Bfit主页APP教练登录账户用户的情况，依据相关法律规定可以储备个人信息。<br><span class="f11">*位置信息限于同意APP教练服务的定位服务使用条款，只在为记录用户“运动位置及路线功能”的实现等必须情况时收集。</span><br><span class="f11">**IMEI与型号名只在判断以前是否设置时有限地收集。</span><br><br>※对于您个人信息的收集、使用，您有拒绝的权利，拒绝时将无法使用APP教练服务。<p></p>
+		</li></ul></div>
+		<!-- <div class="agree_check_s">
+			<input type="checkbox" id="agree_chk02" class="imgM marginR05">我同意.
+		</div> -->
+		<div class="agree_tit_area">
+			<h2 class="agree_tit marginR20"><span class="icon_agree">关于敏感信息收集、使用的同意</span></h2>
+		</div>
+		<div class="agree_text" id="agree_text03">
+			<p class="f12 marginT05">为APP教练服务收集、使用如下的用户个人敏感信息。<br><br></p><h2 class="f12">○ 敏感信息收集、使用的目的</h2><ul class="agree_list"><li>提供以用户个人健康信息为基础，帮助增进身心健康的服务</li><li>比较平均步数的功能</li></ul><h2 class="f12 marginT05">○ 收集敏感信息的项目</h2><ul class="agree_list"><li>血糖，血压饮食摄取信息，运动信息，活动信息，步数等</li><li>其他健康信息记录*【脉搏、心跳、体质量指数（BMI），基础代谢率（BMR）、体脂肪、内脏脂肪、骨骼肌（Skeletal muscle）信息】<br>*上述健康信息记录只在外部机器（如，脉搏计等）连动时限量收集。</li></ul><h2 class="f12 marginT05">○ 敏感信息的储备、使用期限</h2><ul class="agree_list"><li>达到收集、使用的目的为止</li><li>Bfit主页APP教练登录账户用户的情况，依据相关法律规定可以储备个人信息。</li></ul><br><br>※ 对于您个人信息的收集、使用，您有权利拒绝，拒绝时将无法使用APP教练服务。<p></p>
+		</div>
+		<!-- <div class="agree_check_s">
+			<input type="checkbox" id="agree_chk03" class="imgM marginR05">我同意.
+		</div> -->
+		<div class="agree_tit_area">
+			<h2 class="agree_tit marginR20"><span class="icon_agree">基于位置的服务种类及使用费</span></h2>
+		</div>
+		<div class="agree_text" id="agree_text04">
+			<h1 class="f13 fBold">第1章 总则</h1><h2 class="f12 marginT10">第1条 （目的）</h2><p class="f12">本条款是Nanosoft株式会社（以下称为公司）提供的基于位置的服务（以下称为服务）与公司缔结使用条款的顾客（以下称顾客）在使用时必要的公司与顾客的权利与义务，以制定其他各事项为目的。</p><h2 class="f12 marginT10">第2条（条款及守则）</h2><p class="f12">对于没有在本条款中明示的事项，关于位置信息的保护和使用等相关法律，电力通信业法，信息通信网使用促进及信息保护等相关法律及公司制定服务的详细使用指南等规定。</p><h1 class="f13 fBold marginT10">第2章 服务的使用</h1><h2 class="f12 marginT05">第3条（使用资格）</h2><ul class="f12"><li>1. 可以使用服务的顾客手机等位置信息收集终端装置（以下称为用户终端）的名义者本人。</li><li>2. 使用法人名义的用户终端顾客可以使用营业证号加入服务。</li></ul><h2 class="f12 marginT10">第4条（服务使用）</h2><ul class="f12"><li>1. 顾客同意公司制定的本条款，公司承诺服务可以使用。</li><li>2. 公司如下项目中对于顾客使用申请有可能 不予以承诺。<ul class="marginL10"><li>(1)非实名，或不是以本人名义使用等虚假申请时</li><li>(2)申请时遗漏顾客登录事项或误记时</li><li>(3)以妨害公共秩序或妨碍良好风俗为目的申请时</li><li>(4)其他未能达到公司所制定的使用申请时</li></ul></li><li>3. 顾客根据其资格，部分服务的使用可能会受限，根据所加入的移动通信服务公司的服务变动（名义变更，解除合同等）顾客资格及服务使用范围可能会变动。</li></ul><h2 class="f12 marginT10">第5条（服务的终止）</h2><p class="f12">希望终止服务的顾客，通过所制定的流程（有无线网页等通知）可以申请终止服务。</p><h2 class="f12 marginT10">第6条（服务的遵守）</h2><ul class="f12"><li>1. 服务的使用年中无休，以一天24小时为原则。但，公司由于业务上或技术上的原因可能会临时中断服务，出于运营商的目的公司可能在指定的期限临时中止服务。<br>如上情况时，公司事前或事后通知。</li><li>2. 关于位置信息，根据技术的发展，可能会有误差。</li></ul><h2 class="f12 marginT10">第7条（服务使用的限制及停止）</h2><p class="f12">公司在顾客的下述任何一项所属情况，可能会没有事前通知，限制、停止部分服务或解除顾客的职权</p><ul class="f12"><li>1. 使用他人的名义（身份证号码）等加入服务，或盗用他人信息的情况</li><li>2. 妨害他人服务的情况</li><li>3. 利用服务违反法令，公共秩序，良好风俗等行为的情况</li><li>4. 顾客故意或严重过失妨害服务运营的情况</li></ul><h2 class="f12 marginT10">第8条（服务的变更及终止）</h2><ul class="f12"><li>1. 公司在下述任何一项所属情况，可能会限制，变更或终止全部或部分服务。<ul class="marginL10"><li>(1)服务用设备维修等工程的不得已情况</li><li>(2)由于停电，各项设备障碍或用电过量等对正常的服务使用有影响的情况</li><li> (3)服务合作商的合同终止等公司的各项情况或法律上的障碍等原因，造成的服务无法继续维持的情况</li><li>(4)顾客加入的移动通信服务公司终止服务的情况</li><li>(5)其他自然灾害，国家紧急时期等不可抗力的情况</li></ul></li><li>2. 依据第1项的服务限制等发生的情况，将通过公司的网络等方式通知顾客。不过，不属于公司承担责任事由的硬盘故障，系统死机等公司无法控制的原因造成的服务限制，事先无法通知的情况下，将在事后通知。</li></ul><h2 class="f12 marginT10">第9条（服务种类及使用费）</h2><p class="f12">公司提供的服务种类和具体内容及使用费另外告知（基于位置的服务种类及使用费）。</p><h1 class="f13 fBold marginT10">第3章 个人位置信息保护</h1><h2 class="f12 marginT05">第10条（顾客的个人位置信息保护）</h2><p class="f12">公司为依据相关法令所制定的规定，为顾客位置信息的保护而努力。</p><h2 class="f12 marginT10">第11条（个人位置信息的使用及提供）</h2><ul class="f12"><li>1. 公司为提供顾客的位置信息而使用，顾客同意本条款，看作对此项的同意。</li><li>2. 公司为顾客提供个人位置信息，若未经顾客同意，不用作此服务以外的其他目的。</li><li>3.公司为顾客提供的个人位置信息，若未经顾客同意，不向第三方提供。</li></ul><h2 class="f12 marginT10">第12条（关于提供个人位置信息的通知）</h2><ul class="f12"><li>1. 公司向第三方提供顾客的个人位置信息的情况，每次及时通过顾客的终端，向其通知信息接收者，提供日期及提供目的。</li><li>2. 不过，如下任何一项向顾客指定的终端或电子邮箱等其他客观的适当手段进行通报。<ul class="agree_list"><li>个人位置信息的用户终端不具备短信，音频或影像收信功能</li><li>顾客提前要求的情况下</li></ul></li></ul><h2 class="f12 marginT10">第13条（使用个人位置信息、提供事实资料的储备）</h2><ul class="f12"><li>1. 关于公司位置信息的保护和使用等方面的法律，依据第16条第二项，位置信息系统会自动记录顾客位置信息的使用、提供事实确认资料，记录保存时间从记录的日期开始保存12个月。</li><li>2. 公司位置信息的保护和使用等方面的法律，依据第24条第4项的规定，顾客同意全部或部分撤销的情况下，及时地将收集个人的位置信息，并将位置信息的使用及事实资料作废处理（同意部分撤销的情况， 包含收回的部分个人位置信息和位置信息使用、提供的事实资料。）但是，依据国税基本法，法人税法、增值税法等相关法令规定，在有保存必要的情况下根据有关法令保存。</li></ul><h2 class="f12 marginT10">第14条（个人位置信息的储备时间及使用期限）</h2><p class="f12">达到公司对顾客个人位置信息的使用及提供目的时，依据关于位置信息的保护及使用的法律第16条第2项的规定，除了需要保存的位置信息的使用、提供确认材料之外，提供事实材料以外的个人位置信息被立即撤销。</p><h2 class="f12 marginT10">第15条（法庭代理人的权利）</h2><ul class="f12"><li>1. 公司依据未满14岁儿童位置信息的保护及使用的相关法律第18条第1项，第19条第1项，第2项及第21条的规定，欲使用或提供个人位置信息，需得到其法定代理人的同意。</li><li>2. 本条款第17条（顾客的权利）的规定是关于位置保护及使用的法律第25条第2项的规定，在法定代理人的同意下准用。在此情况下，顾客被认为法定代理人。</li></ul><h1 class="f13 fBold marginT10">第4章 公司及顾客的权利与义务</h1><h2 class="f12 marginT05">第16条（公司的义务）</h2><ul class="f12"><li>1. 公司接到的客户服务投诉将迅速处理，若难以迅速处理，则将其事由及处理日程通知顾客。</li><li>2. 关于公司的位置信息的保护及使用等方面的法律，遵守关于连接信息通信网及信息保护等相关法律，通信秘密保护法，电通信业法法等服务的运营，维持及相关的法规.</li><li>3. 为了提供比公司的顾客服务更优化的服务，新商品或活动的信息咨询，问卷调查等顾客导向的营销执行，以便使用签订条约时收集的顾客个人信息及与服务使用相关的信息。但，若用途超过顾客同意的范围，或向第三方提供的情况下，需要事先取得该顾客的同意。在此情况下，顾客可以拒绝公司的要求。</li><li>4. 关于费用延期相关的用户信用信息与保护相关的法律，法律第25条的信用信息集中机关等相关等部门发出作为信用不良者要求登录时，需经过确认注册人是否为本人的确认流程。</li></ul><h2 class="f12 marginT10">第17条（顾客的权利）</h2><ul class="f12"><li>1. 顾客可以通过有无线网络等，撤回全部或部分公司对顾客个人位置的使用及提供的同意。.</li><li>2. 顾客可以通过有无线网络等，要求临时中止公司对顾客个人位置信息的使用及提供。</li><li>3. 顾客可以要求阅读公司下述各项的资料之一：<ul class="agree_list"><li>对于顾客位置信息收集、使用、提供事实的确认资料</li><li>关于顾客的个人位置信息的保护及使用等法律或依据其他法律规定，提供给第三方的原因及内容</li></ul></li></ul><h2 class="f12 marginT10">第18条（顾客的义务）</h2><ul class="f12"><li>1. 依据顾客的服务使用合同，需要在指定日期内付款，公司通知付款的地址与联系方式变更时，请通知公司。</li><li>2. 顾客使用服务所必须提供的诸项信息，在登录时需提供与现在事实相一致的完整信息，有变动事项时请及时更新。</li><li>3. 顾客需管理终端使之可以正常运转，用户终端无法维持正常的运转，提供服务有障碍时，请迅速实行对终端的维修，交换等处理，以便服务可以顺利运行。</li><li>4. 顾客在使用服务时，不可执行下面各项中的任何一项。<ul class="marginL10"><li>(1)加入申请或变更登记时，记载虚假事实的情况</li><li>(2)有损他人名誉或利益的行为</li><li>(3)带有违反公共秩序的信息，文字，图形，声音等传播给他人的行为。</li><li>(4)服务相关设备的误操作，破坏信息，或诱发混乱登录或流传电脑病毒感染的威胁。</li><li>(5)假扮他人的行为，或明示与他人的虚假关系</li><li>(6)为自己或给他人财产上的利益，或以损害他人的目的的伪信息流通行为</li><li>(7)利用与服务相关的信息，无端泄露收取的他人个人信息或私自挪用的行为</li><li>(8)其他适用于本条款第7条各项的行为，非法或不正当的行为</li></ul></li><li>5. 顾客应遵守相关法令，该条款的规定，使用指南和服务上的公告事项，公司通知的事项等，不得有其他妨害公司业务的行为。</li></ul><h1 class="f13 fBold marginT10">第5章 其他</h1><h2 class="f12 marginT05">第19条（公司的联系方式及位置信息管理负责人）</h2><ul class="f12"><li>1. 商号：Nanosoft Co., Ltd.</li><li>2. 地址：韩国大田西区道安北路88番地</li><li>3. 电话号码：042-633-1517</li><li>4. 关于位置信息管理负责人的事项<ul class="marginL10"><li>a. 职位：Nanosoft Co., Ltd. 代表理事</li><li>b. 联系方式：042-633-1517</li></ul></li></ul>	<h2 class="f12 marginT10">第20条（禁止转让）</h2><p class="f12">顾客及公司不可以根据将由加入顾客服务的本条款上的地位或权利、义务的全部或部分转让给第三方，不可用以委任或提供担保等目的的处理。</p><h2 class="f12 marginT10">第21条（损害赔偿）</h2><ul class="f12"><li>1. 顾客因违反本条款的规定使公司发生损失时，需赔偿公司发生的一切损失。</li><li>2. 顾客在使用服务中由于行使非法或违反本条款的行为，使公司从该顾客之外的第三方发起索赔或诉讼在内的各种异议的情况下，该顾客当自行担负责任和费用让公司免责。在无法使公司免责的情况下，该顾客需赔偿公司由此发生的损失。</li><li>3. 关于公司位置信息的保护和使用等方面的法律，第15条至第26条的违反规定行为，或由于公司提供的服务使顾客发生损失的情况，限于公司由于故意或严重过失发生的情况。该情况下由公司负担责任，责任的范围属于通常损害。</li></ul><h2 class="f12 marginT10">第22条（免责事项）</h2><ul class="f12"><li>1. 公司由于下述中的某原因无法提供服务的情况，对顾客发生的损失不承担责任。<br><ul class="agree_list"><li>自然灾害或类似不可避免的状况</li><li>归责事由出自顾客或第三方的情况</li><li>由其他公司故意，或由于非本公司过失发生的情况</li></ul></li><li>2. 对于使用公司服务失去期待效果的顾客不负责任。此外，通过服务取得的资料带来的损失也不负责任。</li><li>3. 公司不保证服务及刊载于服务上的信息、资料、事实的可靠性、准确性，顾客需对公司提供的服务及通过服务获得的信息对出最终适当的判断，相应的责任由顾客完全负担。公司对于由此发生的损失不承担责任。</li><li>4. 公司由于业务上及技术上的障碍，无法发布通知的情况，公司会在主页通知，或以电子邮件，SMS等方法向顾客发出通知。但，公司若由于无法控制的情况无法事前通知，会在事后通知。</li></ul><h2 class="f12 marginT10">第23条（解决争端）</h2><ul class="f12"><li>1. 公司与顾客由于使用服务发生争端时，公司与顾客为解决争端诚实协力。</li><li>2. 第1项的协议没有得到解决的情况下，双方当事者依据个人信息保护法第40条向个人信息纷争调解委员会申请调解。</li></ul><p class="f12 marginT05">附则（2014.11.11）<br>（实施日）本条款字2014年11月11日起实施。<br><br>附录. 基于位置的服务种类及使用费<br><br>【附录】基于位置的服务种类及使用费<br>1. 公司利用用户终端的位置信息和状态信息，就下述内容提供服务。<br><br>【APP教练】<br>确认用户终端的位置，记录现在的运动位置显示和/或移动（运动）路线，测量用户的运动量以保存/查询的服务：信息使用费 免费（通信费另外支出）<br><br>2. 通信费是顾客数据使用的预计值，根据移动通讯等的变动而变动，基本与移动通讯公司提供的数据费用及加入标准费用相当。</p>
+		</div>
+		<!-- <div class="agree_check_s">
+			<input type="checkbox" id="agree_chk04" class="imgM marginR05">동의합니다.
+		</div>
+		<div class="agree_check">
+			<input type="checkbox" id="" onclick="javascript:allCheck(this);" class="imgM marginR05">전체동의합니다.
+		</div>
+		<div class="textC marginT15">
+			<form name="frmAgree" id="frmAgree" action="http://coach.bfit.kr/coaching/app/userAgree.do">
+		       	<button type="button" name="userAgree" onclick="senduserAgree();" class="btn_agree marginB10">확인</button>
+		       	<button type="button" name="userCancel" onclick="window.close();" class="btn_cancel marginB10">취소</button>
+			</form>
+		</div> -->
+		<div class="textC marginT15">
+			<h1 class="f12">个人信息处理方针 负责 人姓名:张志洙 电子邮件:bfit@bfit.kr 电话: +82-42-633-1517</h1>
+		</div>
+	</div>
+</section>
+
+
+    </div>
+    <div id="aside">
+        
+<div class="notice">
+    <h2><a href="../bbs/board.php%3Fbo_table=notice.html"><i class="fa fa-bullhorn" aria-hidden="true"></i><span class="sound_only"></span></a></h2>
+    <ul>
+            <li class="empty_li">게시물이 없습니다.</li>
+        </ul>
+
+</div>
+        
+<!-- 로그인 전 아웃로그인 시작 { -->
+<section id="ol_before" class="ol">
+    <h2>회원로그인</h2>
+    <form name="foutlogin" action="cn/bbs/login_check.html" onsubmit="return fhead_submit(this);" method="post" autocomplete="off">
+    <fieldset>
+        <div class="ol_wr">
+            <input type="hidden" name="url" value="%2Fsub%2Fprivacy_cn.html">
+            <label for="ol_id" id="ol_idlabel" class="sound_only">회원아이디<strong>필수</strong></label>
+            <input type="text" id="ol_id" name="mb_id" required maxlength="20" placeholder="아이디">
+            <label for="ol_pw" id="ol_pwlabel" class="sound_only">비밀번호<strong>필수</strong></label>
+            <input type="password" name="mb_password" id="ol_pw" required maxlength="20" placeholder="비밀번호">
+            <input type="submit" id="ol_submit" value="로그인" class="btn_b02">
+        </div>
+        <div class="ol_auto_wr"> 
+            <div id="ol_auto">
+                <input type="checkbox" name="auto_login" value="1" id="auto_login">
+                <label for="auto_login" id="auto_login_label">자동로그인</label>
+            </div>
+            <div id="ol_svc">
+                <a href="../bbs/register.html"><b>회원가입</b></a> /
+                <a href="../bbs/password_lost.html" id="ol_password_lost">정보찾기</a>
+            </div>
+        </div>
+        
+    </fieldset>
+    </form>
+</section>
+
+<script>
+$omi = $('#ol_id');
+$omp = $('#ol_pw');
+$omi_label = $('#ol_idlabel');
+$omi_label.addClass('ol_idlabel');
+$omp_label = $('#ol_pwlabel');
+$omp_label.addClass('ol_pwlabel');
+
+$(function() {
+
+    $("#auto_login").click(function(){
+        if ($(this).is(":checked")) {
+            if(!confirm("자동로그인을 사용하시면 다음부터 회원아이디와 비밀번호를 입력하실 필요가 없습니다.\n\n공공장소에서는 개인정보가 유출될 수 있으니 사용을 자제하여 주십시오.\n\n자동로그인을 사용하시겠습니까?"))
+                return false;
+        }
+    });
+});
+
+function fhead_submit(f)
+{
+    return true;
+}
+</script>
+<!-- } 로그인 전 아웃로그인 끝 -->
+                
+<!-- 접속자집계 시작 { -->
+<section id="visit">
+    <h2><i class="fa fa-users" aria-hidden="true"></i>  접속자집계</h2>
+    <dl>
+        <dt><span class="color_1"></span> 오늘</dt>
+        <dd><strong class="color_1">412</strong></dd>
+        <dt><span class="color_2"></span> 어제</dt>
+        <dd><strong class="color_2">634</strong></dd>
+        <dt><span class="color_3"></span> 최대</dt>
+        <dd><strong class="color_3">2,148</strong></dd>
+        <dt><span class="color_4"></span> 전체</dt>
+        <dd><strong class="color_4">997,534</strong></dd>
+    </dl>
+    </section>
+<!-- } 접속자집계 끝 -->    </div>
+</div>
+
+</div>
+<!-- } 콘텐츠 끝 -->
+
+
+
+
+<div id="footer">
+	<div id="footer_wr">
+		<div id="ft_sns">
+			<a href="https://play.google.com/store/apps/details?id=kr.bfit.kr" class="sns_icn_wr" target="_blank">
+				<img src="../iium_img/playstore.png" alt="플레이스토어">
+			</a>
+			<a href="https://itunes.apple.com/kr/app/bfit-app-body-scale/id747794917?l=en&mt=8" class="sns_icn_wr ap_kr" target="_blank">
+				<img src="../iium_img/appstore.png" alt="앱스토어">
+			</a>
+			<a href="https://www.facebook.com/BfitAppCoach" class="sns_icn_wr" target="_blank">
+				<img src="../iium_img/ft_fb.png" alt="페이스북" class="sns_icn">
+				<img src="../iium_img/ft_fb_hov.png" alt="페이스북" class="sns_icn_hov">
+			</a>
+			<a href="https://blog.naver.com/bfitapp" class="sns_icn_wr" target="_blank">
+				<img src="../iium_img/ft_blog.png" alt="블로그" class="sns_icn">
+				<img src="../iium_img/ft_blog_hov.png" alt="블로그" class="sns_icn_hov">
+			</a>
+			<a href="https://www.instagram.com/bfit_app_coach/" class="sns_icn_wr" target="_blank">
+				<img src="../iium_img/instar.png" alt="인스타그램" class="sns_icn">
+				<img src="../iium_img/instar_hov.png" alt="인스타그램" class="sns_icn_hov">
+			</a>
+<!--			<span class="fam_site">Kasite</span>-->
+			<div class="fam_site">
+				<a>Related site</a>
+				<ul>
+					<li><a href="http://smartstore.naver.com/bfit" target="_blank">Bfit Shop</a></li>
+					<li><a href="http://coach.bfit.kr/coaching/login.do" target="_blank">App Coach</a></li>
+					<li><a href="http://coach.bfit.kr/admin/loginPage.do" target="_blank">App Coach Admin</a></li>
+					<li class="privacy ko"><a href="privacy_cn.html" target="_blank">个人信息处理方针</a></li>
+				</ul>
+			</div>
+		</div>
+		<a href="../index.html" class="ft_logo"><img src="../iium_img/ft_logo_n.png" alt="푸터 로고"></a>
+		<p class="ft_copy">
+			<!-- <span>29, Hakhaseo-ro, Yousung-gu, Dajeon, Korea</span> -->
+			<span></span>
+			<span></span>
+			<span>大田市 儒城区 大井路68 本馆 403号</span>
+			<span><a href="tel:0426331517">Tel : 82-42-633-1517</a>    Fax : 82-42-823-1517</span>
+			<span>Copyright (c) 2010 Nansoft Co.,Ltd All rights reserved.</span>
+		</p>
+		
+	</div>
+</div>
+
+
+
+<!-- 하단 시작 { -->
+<div id="ft">
+
+    <div id="ft_wr">
+        <div id="ft_link">
+            <a href="../bbs/content.php%3Fco_id=company.html">회사소개</a>
+            <a href="../bbs/content.php%3Fco_id=privacy.html">개인정보처리방침</a>
+            <a href="../bbs/content.php%3Fco_id=provision.html">서비스이용약관</a>
+            <a href="privacy_cn.php%3Fdevice=mobile.html">모바일버전</a>
+        </div>
+        <div id="ft_catch"><img src="../img/ft_logo.png" alt="그누보드5"></div>
+        <div id="ft_copy">Copyright &copy; <b>소유하신 도메인.</b> All rights reserved.</div>
+    </div>
+    
+    <button type="button" id="top_btn"><i class="fa fa-arrow-up" aria-hidden="true"></i><span class="sound_only">상단으로</span></button>
+        <script>
+        
+        $(function() {
+            $("#top_btn").on("click", function() {
+                $("html, body").animate({scrollTop:0}, '500');
+                return false;
+            });
+        });
+        </script>
+</div>
+
+
+<!-- } 하단 끝 -->
+
+<script>
+$(function() {
+    // 폰트 리사이즈 쿠키있으면 실행
+    font_resize("container", get_cookie("ck_font_resize_rmv_class"), get_cookie("ck_font_resize_add_class"));
+});
+</script>
+
+
+
+<!-- ie6,7에서 사이드뷰가 게시판 목록에서 아래 사이드뷰에 가려지는 현상 수정 -->
+<!--[if lte IE 7]>
+<script>
+$(function() {
+    var $sv_use = $(".sv_use");
+    var count = $sv_use.length;
+
+    $sv_use.each(function() {
+        $(this).css("z-index", count);
+        $(this).css("position", "relative");
+        count = count - 1;
+    });
+});
+</script>
+<![endif]-->
+
+</body>
+</html>
+ 
