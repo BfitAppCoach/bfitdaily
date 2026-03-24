@@ -162,53 +162,15 @@ $(function() {
 
         <form name="change" id="change" method="post">
   		<span class="hd_lang pc_lang">
-    <a href="/bfitdaily/index.html" class="lang kor">KOR</a>
-    <a href="/bfitdaily/en/index.html" class="lang eng">ENG</a>
-    <a href="/bfitdaily/cn/index.html" class="lang chn on">CHI</a>
+    <a href="/index.html" class="lang kor">KOR</a>
+    <a href="/en/index.html" class="lang eng">ENG</a>
+    <a href="/cn/index.html" class="lang chn on">CHI</a>
 
     <a href="https://smartstore.naver.com/bfit" class="shop" target="_blank">Bfit shop</a>
     <a href="../include/catalog_kr.pdf" class="catalog" download>CATALOG DOWN</a>
     <a href="sub/sub3_03.html" class="app">APP<br>DOWN</a>
   		</span>
     </form>
-<script>
-(function () {
-    var REPO_BASE = '/bfitdaily';
-    var currentPath = window.location.pathname;
-
-    function normalizePagePath(path) {
-        path = path || '/';
-
-        if (path.indexOf(REPO_BASE) === 0) {
-            path = path.substring(REPO_BASE.length);
-        }
-
-        path = path.replace(/^\/+/, '');
-        path = path.replace(/^en\//, '');
-        path = path.replace(/^cn\//, '');
-
-        if (!path) return 'index.html';
-        return path;
-    }
-
-    function buildLangUrl(lang) {
-        var pagePath = normalizePagePath(currentPath);
-
-        if (lang === 'kr') return REPO_BASE + '/' + pagePath;
-        if (lang === 'en') return REPO_BASE + '/en/' + pagePath;
-        if (lang === 'cn') return REPO_BASE + '/cn/' + pagePath;
-        return REPO_BASE + '/' + pagePath;
-    }
-
-    var krLink = document.querySelector('.pc_lang .lang.kor');
-    var enLink = document.querySelector('.pc_lang .lang.eng');
-    var cnLink = document.querySelector('.pc_lang .lang.chn');
-
-    if (krLink) krLink.setAttribute('href', buildLangUrl('kr'));
-    if (enLink) enLink.setAttribute('href', buildLangUrl('en'));
-    if (cnLink) cnLink.setAttribute('href', buildLangUrl('cn'));
-})();
-</script>
 	</div>
 <!--
 	<map name="Catalog" id="Catalog">
@@ -297,9 +259,9 @@ $(function() {
 	</div>
 	<div class="mo_lang_wr">
 		<span class="hd_lang mo_lang">
-    <a href="/bfitdaily/index.html" class="lang kor">KOR</a>
-    <a href="/bfitdaily/en/index.html" class="lang eng">ENG</a>
-    <a href="/bfitdaily/cn/index.html" class="lang chn on">CHI</a>
+    <a href="/index.html" class="lang kor">KOR</a>
+    <a href="/en/index.html" class="lang eng">ENG</a>
+    <a href="/cn/index.html" class="lang chn on">CHI</a>
 
     <a href="https://smartstore.naver.com/bfit" class="shop" target="_blank">Bfit shop</a>
     <a href="../include/catalog_kr.pdf" class="catalog" download>CATALOG DOWN</a>
@@ -731,42 +693,3 @@ $(function() {
 
 </body>
 </html>
-
-<script>
-(function () {
-    var REPO_BASE = '/bfitdaily';
-    var currentPath = window.location.pathname;
-
-    function normalizePagePath(path) {
-        path = path || '/';
-
-        if (path.indexOf(REPO_BASE) === 0) {
-            path = path.substring(REPO_BASE.length);
-        }
-
-        path = path.replace(/^\/+/, '');
-        path = path.replace(/^en\//, '');
-        path = path.replace(/^cn\//, '');
-
-        if (!path) return 'index.html';
-        return path;
-    }
-
-    function buildLangUrl(lang) {
-        var pagePath = normalizePagePath(currentPath);
-
-        if (lang === 'kr') return REPO_BASE + '/' + pagePath;
-        if (lang === 'en') return REPO_BASE + '/en/' + pagePath;
-        if (lang === 'cn') return REPO_BASE + '/cn/' + pagePath;
-        return REPO_BASE + '/' + pagePath;
-    }
-
-    var krLink = document.querySelector('.mo_lang .lang.kor');
-    var enLink = document.querySelector('.mo_lang .lang.eng');
-    var cnLink = document.querySelector('.mo_lang .lang.chn');
-
-    if (krLink) krLink.setAttribute('href', buildLangUrl('kr'));
-    if (enLink) enLink.setAttribute('href', buildLangUrl('en'));
-    if (cnLink) cnLink.setAttribute('href', buildLangUrl('cn'));
-})();
-</script>
