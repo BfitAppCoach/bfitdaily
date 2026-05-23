@@ -818,6 +818,127 @@ $(function() {
   border-radius:20px;
   cursor:pointer;
 }
+#bfit-ai-box{
+
+  display:none;
+
+  position:fixed;
+
+  right:20px;
+
+  bottom:85px;
+
+  width:360px;
+
+  max-width:calc(100vw - 40px);
+
+  height:500px;
+
+  max-height:calc(100vh - 120px);
+
+  z-index:99999;
+
+  background:#fff;
+
+  border-radius:18px;
+
+  overflow:hidden;
+
+  box-shadow:0 8px 30px rgba(0,0,0,.3);
+
+  font-family:Arial, sans-serif;
+
+}
+
+#bfit-ai-messages{
+
+  height:calc(100% - 125px);
+
+  padding:15px;
+
+  overflow-y:auto;
+
+  background:#f5f5f5;
+
+}
+
+#bfit-ai-input-wrap{
+
+  height:65px;
+
+  display:flex;
+
+  padding:10px;
+
+  background:#fff;
+
+  border-top:1px solid #ddd;
+
+  box-sizing:border-box;
+
+}
+
+#bfit-ai-btn{
+
+  position:fixed;
+
+  right:20px;
+
+  bottom:20px;
+
+  z-index:99999;
+
+  background:#111;
+
+  color:#fff;
+
+  padding:13px 18px;
+
+  border-radius:30px;
+
+  cursor:pointer;
+
+  font-size:14px;
+
+  box-shadow:0 4px 15px rgba(0,0,0,.25);
+
+}
+
+@media screen and (max-width:600px){
+
+  #bfit-ai-box{
+
+    right:10px;
+
+    left:10px;
+
+    bottom:75px;
+
+    width:auto;
+
+    height:70vh;
+
+    max-width:none;
+
+  }
+
+  #bfit-ai-btn{
+
+    right:15px;
+
+    bottom:15px;
+
+  }
+
+  .bfit-ai-bot,
+
+  .bfit-ai-user{
+
+    font-size:13px;
+
+    max-width:85%;
+
+  }
 </style>
 <script>
 (function(){
