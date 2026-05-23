@@ -710,5 +710,168 @@ $(function() {
 </script>
 <![endif]-->
 
+<!-- Bfit AI Chat Widget 시작 -->
+<div id="bfit-ai-btn">AI 상담</div>
+<div id="bfit-ai-box">
+  <div id="bfit-ai-header">
+    Bfit AI 상담
+    <span id="bfit-ai-close">×</span>
+  </div>
+  <div id="bfit-ai-messages">
+    <div class="bfit-ai-bot">
+      안녕하세요. Bfit AI 상담입니다.<br>
+      제품, 앱, 체성분분석기, 구매 및 제휴 문의를 남겨주세요.
+    </div>
+  </div>
+  <div id="bfit-ai-input-wrap">
+    <input type="text" id="bfit-ai-input" placeholder="질문을 입력하세요">
+    <button id="bfit-ai-send">전송</button>
+  </div>
+</div>
+<style>
+#bfit-ai-btn{
+  position:fixed;
+  right:24px;
+  bottom:24px;
+  z-index:99999;
+  background:#111;
+  color:#fff;
+  padding:14px 20px;
+  border-radius:30px;
+  cursor:pointer;
+  font-size:14px;
+  box-shadow:0 4px 15px rgba(0,0,0,.25);
+}
+#bfit-ai-box{
+  display:none;
+  position:fixed;
+  right:24px;
+  bottom:82px;
+  width:360px;
+  height:500px;
+  z-index:99999;
+  background:#fff;
+  border-radius:18px;
+  overflow:hidden;
+  box-shadow:0 8px 30px rgba(0,0,0,.3);
+  font-family:Arial, sans-serif;
+}
+#bfit-ai-header{
+  background:#111;
+  color:#fff;
+  padding:15px;
+  font-size:16px;
+  font-weight:bold;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+#bfit-ai-close{
+  cursor:pointer;
+  font-size:22px;
+}
+#bfit-ai-messages{
+  height:370px;
+  padding:15px;
+  overflow-y:auto;
+  background:#f5f5f5;
+}
+.bfit-ai-bot,
+.bfit-ai-user{
+  max-width:82%;
+  padding:11px 13px;
+  margin-bottom:10px;
+  border-radius:15px;
+  font-size:14px;
+  line-height:1.5;
+  word-break:break-word;
+}
+.bfit-ai-bot{
+  background:#fff;
+  color:#222;
+}
+.bfit-ai-user{
+  background:#111;
+  color:#fff;
+  margin-left:auto;
+}
+#bfit-ai-input-wrap{
+  display:flex;
+  padding:10px;
+  background:#fff;
+  border-top:1px solid #ddd;
+}
+#bfit-ai-input{
+  flex:1;
+  border:1px solid #ddd;
+  border-radius:20px;
+  padding:10px;
+  font-size:14px;
+  outline:none;
+}
+#bfit-ai-send{
+  margin-left:7px;
+  border:0;
+  background:#111;
+  color:#fff;
+  padding:0 15px;
+  border-radius:20px;
+  cursor:pointer;
+}
+</style>
+<script>
+(function(){
+  var btn = document.getElementById("bfit-ai-btn");
+  var box = document.getElementById("bfit-ai-box");
+  var close = document.getElementById("bfit-ai-close");
+  var input = document.getElementById("bfit-ai-input");
+  var send = document.getElementById("bfit-ai-send");
+  var messages = document.getElementById("bfit-ai-messages");
+  btn.onclick = function(){
+    box.style.display = "block";
+  };
+  close.onclick = function(){
+    box.style.display = "none";
+  };
+  function addMessage(text, type){
+    var div = document.createElement("div");
+    div.className = type === "user" ? "bfit-ai-user" : "bfit-ai-bot";
+    div.innerHTML = text;
+    messages.appendChild(div);
+    messages.scrollTop = messages.scrollHeight;
+  }
+  function localAnswer(q){
+    q = q.toLowerCase();
+    if(q.indexOf("체성분") > -1 || q.indexOf("분석기") > -1){
+      return "Bfit 체성분분석기는 앱과 연동하여 체중, 체지방률, 골격근량 등 건강 데이터를 확인할 수 있는 제품입니다.";
+    }
+    if(q.indexOf("앱") > -1 || q.indexOf("비핏 데일리") > -1){
+      return "Bfit Daily 앱은 운동, 건강 기록, 체성분 데이터 관리를 위한 헬스케어 앱입니다.";
+    }
+    if(q.indexOf("구매") > -1 || q.indexOf("가격") > -1){
+      return "제품 구매 및 가격 문의는 Bfit Shop 또는 문의하기 페이지를 통해 확인하실 수 있습니다.";
+    }
+    if(q.indexOf("제휴") > -1 || q.indexOf("납품") > -1){
+      return "기술제휴 및 B2B 납품 문의는 문의하기 페이지 또는 bfit@bfit.kr 로 연락 부탁드립니다.";
+    }
+    return "문의 감사합니다. 제품, 앱, 체성분분석기, 구매, 제휴 관련 내용을 질문해 주시면 안내드리겠습니다.";
+  }
+  function sendMessage(){
+    var question = input.value.trim();
+    if(!question) return;
+    addMessage(question, "user");
+    input.value = "";
+    addMessage(localAnswer(question), "bot");
+  }
+  send.onclick = sendMessage;
+  input.addEventListener("keydown", function(e){
+    if(e.key === "Enter"){
+      sendMessage();
+    }
+  });
+})();
+</script>
+<!-- Bfit AI Chat Widget 끝 -->
+	
 </body>
 </html>
