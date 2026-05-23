@@ -827,21 +827,45 @@ $(function() {
 }
 @media screen and (max-width:600px){
   #bfit-ai-box{
-    right:10px;
-    left:10px;
-    bottom:75px;
-    width:auto;
-    height:70vh;
-    max-width:none;
+    right:14px;
+    left:auto;
+    bottom:70px;
+    width:300px;
+    height:58vh;
+    max-width:calc(100vw - 28px);
+    border-radius:16px;
   }
-  #bfit-ai-btn{
-    right:15px;
-    bottom:15px;
+  #bfit-ai-header{
+    padding:12px;
+    font-size:15px;
+  }
+  #bfit-ai-messages{
+    height:calc(100% - 112px);
+    padding:12px;
+  }
+  #bfit-ai-input-wrap{
+    height:58px;
+    padding:8px;
+  }
+  #bfit-ai-input{
+    font-size:13px;
+    padding:9px;
+  }
+  #bfit-ai-send{
+    padding:0 12px;
+    font-size:13px;
   }
   .bfit-ai-bot,
   .bfit-ai-user{
     font-size:13px;
-    max-width:85%;
+    max-width:86%;
+    padding:10px 12px;
+  }
+  #bfit-ai-btn{
+    right:15px;
+    bottom:15px;
+    padding:12px 16px;
+    font-size:13px;
   }
 }
 </style>
