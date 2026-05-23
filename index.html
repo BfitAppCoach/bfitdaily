@@ -842,91 +842,191 @@ $(function() {
   }
   function localAnswer(q){
 
-  q = q.toLowerCase().replace(/\s/g, "");
+  q = q.toLowerCase().replace(/\s/g,'');
 
   // 인사
 
-  if(q.indexOf("안녕") > -1 || q.indexOf("hello") > -1 || q.indexOf("hi") > -1){
+  if(
 
-    return "안녕하세요. Bfit AI 상담입니다. 제품, 앱, 체성분분석기, 구매 및 제휴 문의를 도와드릴 수 있습니다.";
+    q.includes("안녕") ||
 
-  }
+    q.includes("hello") ||
 
-  // 회사 소개
+    q.includes("hi")
 
-  if(q.indexOf("회사") > -1 || q.indexOf("나노소프트") > -1 || q.indexOf("nanosoft") > -1){
+  ){
 
-    return "나노소프트는 Bfit 헬스케어 시스템과 idoVOX 무선통신기술을 기반으로 건강관리 서비스를 개발하는 회사입니다.";
-
-  }
-
-  // Bfit 소개
-
-  if(q.indexOf("bfit") > -1 || q.indexOf("비핏") > -1){
-
-    return "Bfit은 운동기구, 건강관리 제품, Bfit Daily 앱을 연동하여 사용자의 건강관리를 돕는 헬스케어 브랜드입니다.";
+    return "안녕하세요. Bfit AI 상담입니다. 제품, 앱, 체성분분석기, 구매 및 기술제휴 관련 문의를 도와드릴 수 있습니다.";
 
   }
 
-  // Bfit Daily 앱
+  // 회사소개
 
-  if(q.indexOf("앱") > -1 || q.indexOf("데일리") > -1 || q.indexOf("bfitdaily") > -1){
+  if(
 
-    return "Bfit Daily 앱은 운동 기록, 건강관리, 체성분 데이터 확인 등을 지원하는 Bfit의 헬스케어 앱입니다. 홈페이지의 APP DOWN 메뉴에서 다운로드하실 수 있습니다.";
+    q.includes("나노소프트") ||
+
+    q.includes("회사") ||
+
+    q.includes("nanosoft")
+
+  ){
+
+    return "나노소프트는 AI 헬스케어 및 idoVOX 무선통신 기술을 기반으로 Bfit 건강관리 서비스를 개발하는 기업입니다.";
 
   }
 
-  // 체성분분석기
+  // Bfit
 
-  if(q.indexOf("체성분") > -1 || q.indexOf("분석기") > -1 || q.indexOf("체지방") > -1 || q.indexOf("체중") > -1){
+  if(
 
-    return "Bfit 체성분분석기는 체중, 체지방률, 골격근량 등 신체 데이터를 측정하고 앱과 연동하여 건강 변화를 확인할 수 있도록 개발 중인 제품입니다.";
+    q.includes("비핏") ||
+
+    q.includes("bfit")
+
+  ){
+
+    return "Bfit은 운동기구, 체성분분석기, 건강관리 앱을 연동하여 사용자 건강 데이터를 관리하는 헬스케어 플랫폼입니다.";
 
   }
 
-  // 블루투스
+  // 앱
 
-  if(q.indexOf("블루투스") > -1 || q.indexOf("bluetooth") > -1 || q.indexOf("연결") > -1){
+  if(
 
-    return "블루투스 연결 기능은 Bfit Daily 앱과 체성분분석기 또는 스마트 기기를 연결하여 측정 데이터를 앱에서 확인할 수 있도록 하는 기능입니다.";
+    q.includes("앱") ||
+
+    q.includes("어플") ||
+
+    q.includes("bfitdaily") ||
+
+    q.includes("비핏데일리")
+
+  ){
+
+    return "Bfit Daily 앱은 운동 기록, 체성분 데이터 확인, 건강관리 기능을 제공하는 AI 헬스케어 앱입니다.";
+
+  }
+
+  // 체성분
+
+  if(
+
+    q.includes("체성분") ||
+
+    q.includes("체지방") ||
+
+    q.includes("체중") ||
+
+    q.includes("골격근") ||
+
+    q.includes("분석기")
+
+  ){
+
+    return "Bfit 체성분분석기는 체중, 체지방률, 골격근량 등 다양한 신체 데이터를 측정하고 앱과 연동하여 건강 상태를 관리할 수 있도록 개발된 제품입니다.";
 
   }
 
   // AI
 
-  if(q.indexOf("ai") > -1 || q.indexOf("인공지능") > -1){
+  if(
 
-    return "Bfit AI 기능은 운동 기록과 체성분 데이터를 분석하여 사용자의 건강 상태와 변화 흐름을 이해하고 맞춤형 인사이트를 제공하는 방향으로 개발 중입니다.";
+    q.includes("ai") ||
+
+    q.includes("인공지능")
+
+  ){
+
+    return "Bfit AI 기능은 운동 및 체성분 데이터를 분석하여 건강 상태 변화와 생활 패턴을 이해하고 맞춤형 인사이트를 제공하는 방향으로 개발 중입니다.";
+
+  }
+
+  // 블루투스
+
+  if(
+
+    q.includes("블루투스") ||
+
+    q.includes("bluetooth") ||
+
+    q.includes("연결")
+
+  ){
+
+    return "Bfit 제품은 Bluetooth 기반으로 앱과 연동하여 운동 데이터 및 체성분 측정 데이터를 확인할 수 있도록 지원합니다.";
 
   }
 
   // 제품
 
-  if(q.indexOf("제품") > -1 || q.indexOf("운동기구") > -1 || q.indexOf("폼롤러") > -1 || q.indexOf("요가매트") > -1){
+  if(
 
-    return "Bfit은 폼롤러, 요가매트, 훌라후프, 밸런스보드, 스마트 운동기구 등 다양한 홈트레이닝 제품을 제공합니다. 자세한 내용은 Bfit Product 메뉴에서 확인하실 수 있습니다.";
+    q.includes("제품") ||
+
+    q.includes("운동기구") ||
+
+    q.includes("폼롤러") ||
+
+    q.includes("요가") ||
+
+    q.includes("밸런스")
+
+  ){
+
+    return "Bfit은 폼롤러, 요가매트, 밸런스보드, 스마트 운동기구 등 다양한 홈트레이닝 및 헬스케어 제품을 제공합니다.";
 
   }
 
   // 구매
 
-  if(q.indexOf("구매") > -1 || q.indexOf("가격") > -1 || q.indexOf("판매") > -1 || q.indexOf("쇼핑몰") > -1){
+  if(
 
-    return "Bfit 제품 구매는 홈페이지 상단의 Bfit Shop 또는 네이버 스마트스토어에서 확인하실 수 있습니다.";
+    q.includes("구매") ||
+
+    q.includes("가격") ||
+
+    q.includes("판매") ||
+
+    q.includes("쇼핑몰")
+
+  ){
+
+    return "제품 구매는 홈페이지 상단의 Bfit Shop 또는 네이버 스마트스토어에서 확인하실 수 있습니다.";
 
   }
 
-  // 앱 다운로드
+  // 다운로드
 
-  if(q.indexOf("다운로드") > -1 || q.indexOf("설치") > -1 || q.indexOf("플레이스토어") > -1 || q.indexOf("앱스토어") > -1){
+  if(
 
-    return "Bfit Daily 앱은 홈페이지의 APP DOWN 메뉴 또는 하단의 Google Play, App Store 링크를 통해 다운로드하실 수 있습니다.";
+    q.includes("다운로드") ||
+
+    q.includes("설치") ||
+
+    q.includes("플레이스토어") ||
+
+    q.includes("앱스토어")
+
+  ){
+
+    return "Bfit Daily 앱은 Google Play 및 Apple App Store에서 다운로드하실 수 있습니다.";
 
   }
 
   // 문의
 
-  if(q.indexOf("문의") > -1 || q.indexOf("연락") > -1 || q.indexOf("전화") > -1 || q.indexOf("메일") > -1){
+  if(
+
+    q.includes("문의") ||
+
+    q.includes("연락") ||
+
+    q.includes("전화") ||
+
+    q.includes("메일")
+
+  ){
 
     return "문의는 이메일 bfit@bfit.kr 또는 전화 +82-42-633-1517로 연락 부탁드립니다.";
 
@@ -934,31 +1034,75 @@ $(function() {
 
   // 제휴
 
-  if(q.indexOf("제휴") > -1 || q.indexOf("협력") > -1 || q.indexOf("납품") > -1 || q.indexOf("b2b") > -1){
+  if(
 
-    return "기술제휴, B2B 납품, 제품 개발 협력 문의는 홈페이지의 기술제휴 또는 문의하기 메뉴를 통해 접수하실 수 있습니다.";
+    q.includes("제휴") ||
+
+    q.includes("협력") ||
+
+    q.includes("납품") ||
+
+    q.includes("b2b")
+
+  ){
+
+    return "기술제휴 및 B2B 협력 문의는 문의하기 페이지 또는 이메일을 통해 접수하실 수 있습니다.";
 
   }
 
   // AS
 
-  if(q.indexOf("as") > -1 || q.indexOf("수리") > -1 || q.indexOf("고장") > -1 || q.indexOf("교환") > -1 || q.indexOf("반품") > -1){
+  if(
 
-    return "제품 AS, 교환, 반품 관련 문의는 구매처 또는 bfit@bfit.kr로 제품명과 증상을 함께 보내주시면 확인 후 안내드리겠습니다.";
+    q.includes("as") ||
+
+    q.includes("수리") ||
+
+    q.includes("교환") ||
+
+    q.includes("반품") ||
+
+    q.includes("고장")
+
+  ){
+
+    return "제품 AS 및 교환 문의는 구매처 또는 bfit@bfit.kr 로 제품명과 증상을 함께 보내주시면 확인 후 안내드리겠습니다.";
 
   }
 
   // 위치
 
-  if(q.indexOf("주소") > -1 || q.indexOf("위치") > -1 || q.indexOf("어디") > -1){
+  if(
 
-    return "나노소프트 주소는 대전광역시 유성구 대정로 68, 본관 403호입니다.";
+    q.includes("주소") ||
+
+    q.includes("위치") ||
+
+    q.includes("어디")
+
+  ){
+
+    return "나노소프트는 대전광역시 유성구 대정로 68 본관 403호에 위치하고 있습니다.";
+
+  }
+
+  // idoVOX
+
+  if(
+
+    q.includes("idovox") ||
+
+    q.includes("이도복스")
+
+  ){
+
+    return "idoVOX는 나노소프트에서 개발한 소리 기반 무선통신 기술입니다.";
 
   }
 
   // 기본 응답
 
-  return "문의 감사합니다. 현재 Bfit AI 상담은 제품, 앱, 체성분분석기, 구매, 제휴, AS 문의에 대해 안내할 수 있습니다. 더 자세한 문의는 bfit@bfit.kr로 연락 부탁드립니다.";
+  return "문의 감사합니다. 현재 Bfit AI 상담은 제품, 앱, 체성분분석기, 구매, 기술제휴, AS 관련 내용을 안내하고 있습니다. 자세한 문의는 bfit@bfit.kr 로 연락 부탁드립니다.";
 
 }
   function sendMessage(){
