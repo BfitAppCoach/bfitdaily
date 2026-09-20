@@ -109,8 +109,17 @@ window.__resources = {
       <p style="margin:0 0 clamp(30px,4vw,54px);font-size:clamp(17px,1.9vw,23px);line-height:1.7;font-weight:400;max-width:32ch;text-wrap:pretty" data-i18n="bodyfit_subtitle">몸을 측정하는 기기가 아니라, 측정한 데이터를 다음 행동으로 연결하는 서비스</p>
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:clamp(26px,3.5vw,52px);align-items:start">
         <div id="bodyfit-slideshow" style="background:#f4f4f2;border:1px solid #e0ddd2">
-          <div id="bfs-top-image" style="position:relative;aspect-ratio:4/3;background:#eceade;border-bottom:1px solid #e0ddd2;overflow:hidden">
-            <img src="images/bodyfit-views/front-view.png" alt="비핏 바디핏" style="width:100%;height:100%;object-fit:contain;display:block;padding:20px">
+          <div id="bfs-top-image" style="position:relative;aspect-ratio:941/1672;background:#0d1a15;border-bottom:1px solid #e0ddd2;overflow:hidden">
+            <img id="bht-main-img" src="images/bodyfit-howto/1-smartphone-mount.jpg" alt="스마트폰 거치" style="width:100%;height:100%;object-fit:cover;display:block">
+            <button type="button" id="bht-prev" aria-label="이전 이미지" style="position:absolute;left:10px;top:50%;transform:translateY(-50%);width:36px;height:36px;border:1px solid rgba(255,255,255,0.5);background:rgba(35,48,42,0.55);font-size:16px;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;color:#f3f8f4">‹</button>
+            <button type="button" id="bht-next" aria-label="다음 이미지" style="position:absolute;right:10px;top:50%;transform:translateY(-50%);width:36px;height:36px;border:1px solid rgba(255,255,255,0.5);background:rgba(35,48,42,0.55);font-size:16px;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;color:#f3f8f4">›</button>
+            <div id="bht-dots" style="position:absolute;left:0;right:0;bottom:16px;display:flex;justify-content:center;gap:7px">
+              <button type="button" data-bht-dot="0" aria-label="1번 이미지" style="width:7px;height:7px;padding:0;border:0;border-radius:50%;background:#f3f8f4;cursor:pointer"></button>
+              <button type="button" data-bht-dot="1" aria-label="2번 이미지" style="width:7px;height:7px;padding:0;border:0;border-radius:50%;background:rgba(243,248,244,0.4);cursor:pointer"></button>
+              <button type="button" data-bht-dot="2" aria-label="3번 이미지" style="width:7px;height:7px;padding:0;border:0;border-radius:50%;background:rgba(243,248,244,0.4);cursor:pointer"></button>
+              <button type="button" data-bht-dot="3" aria-label="4번 이미지" style="width:7px;height:7px;padding:0;border:0;border-radius:50%;background:rgba(243,248,244,0.4);cursor:pointer"></button>
+              <button type="button" data-bht-dot="4" aria-label="5번 이미지" style="width:7px;height:7px;padding:0;border:0;border-radius:50%;background:rgba(243,248,244,0.4);cursor:pointer"></button>
+            </div>
           </div>
           <div style="position:relative;aspect-ratio:3/4;background:#f4f4f2;overflow:hidden">
             <img id="bfs-main-img" src="images/bodyfit-views/front-view.png" alt="바디핏 기기 정면" style="width:100%;height:100%;object-fit:contain;display:block">
@@ -474,6 +483,36 @@ window.__resources = {
   ];
   var bfsIndex = 0;
 
+  var bhtSlides = [
+    { src: 'images/bodyfit-howto/1-smartphone-mount.jpg', label: '스마트폰 거치' },
+    { src: 'images/bodyfit-howto/2-step-on.jpg', label: '올라서 준비' },
+    { src: 'images/bodyfit-howto/3-check-record.jpg', label: '기록 확인' },
+    { src: 'images/bodyfit-howto/4-ai-suggestion.jpg', label: 'AI 제안' },
+    { src: 'images/bodyfit-howto/5-start-routine.jpg', label: '실천 시작' }
+  ];
+  var bhtIndex = 0;
+
+  function bhtRender() {
+    var img = document.getElementById('bht-main-img');
+    if (!img) return;
+    var slide = bhtSlides[bhtIndex];
+    img.src = slide.src;
+    img.alt = slide.label;
+    var dots = document.querySelectorAll('#bht-dots [data-bht-dot]');
+    for (var i = 0; i < dots.length; i++) {
+      dots[i].style.background = i === bhtIndex ? '#f3f8f4' : 'rgba(243,248,244,0.4)';
+    }
+  }
+
+  function bhtGo(delta) {
+    bhtIndex = (bhtIndex + delta + bhtSlides.length) % bhtSlides.length;
+    bhtRender();
+  }
+  function bhtSet(i) {
+    bhtIndex = i;
+    bhtRender();
+  }
+
   function bfsRender() {
     var img = document.getElementById('bfs-main-img');
     if (!img) return;
@@ -516,12 +555,25 @@ window.__resources = {
     if (thumb) {
       bfsSet(Number(thumb.getAttribute('data-bfs-thumb')));
     }
+    if (e.target.closest('#bht-prev')) {
+      bhtGo(-1);
+      return;
+    }
+    if (e.target.closest('#bht-next')) {
+      bhtGo(1);
+      return;
+    }
+    var dot = e.target.closest('[data-bht-dot]');
+    if (dot) {
+      bhtSet(Number(dot.getAttribute('data-bht-dot')));
+    }
   });
 
   if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', bfsRender);
+    document.addEventListener('DOMContentLoaded', function () { bfsRender(); bhtRender(); });
   } else {
     bfsRender();
+    bhtRender();
   }
 })();
 </script>
