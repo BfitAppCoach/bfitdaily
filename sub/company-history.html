@@ -21,7 +21,10 @@
       <span style="font-weight:900;font-size:21px;letter-spacing:0.02em">Bfit<span style="font-weight:400;font-size:14px;color:#6b7a71;letter-spacing:0">&nbsp;&nbsp;비핏</span></span>
       <span style="font-size:10px;letter-spacing:0.16em;color:#6b7a71">BY NANOSOFT · FOR A HEALTHIER TOMORROW</span>
     </a>
-    <nav style="display:flex;flex-wrap:wrap;gap:clamp(13px,2vw,28px);font-size:14.5px;font-weight:400;white-space:nowrap">
+    <button type="button" class="nav-toggle" aria-label="메뉴 열기" aria-expanded="false">
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 5H17M3 10H17M3 15H17" stroke="#23302a" stroke-width="1.6" stroke-linecap="round"/></svg>
+    </button>
+    <nav class="site-nav" style="display:flex;flex-wrap:wrap;gap:clamp(13px,2vw,28px);font-size:14.5px;font-weight:400;white-space:nowrap">
       <a href="../index.html#company">회사소개</a>
       <a href="../index.html#tech">idoVOX 기술</a>
       <a href="ir.html">IR 투자소개</a>
@@ -66,5 +69,24 @@
   </footer>
 
 </div>
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var toggle = e.target.closest('.nav-toggle');
+    var nav = document.querySelector('.site-nav');
+    if (!nav) return;
+    if (toggle) {
+      var open = nav.classList.toggle('is-open');
+      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      return;
+    }
+    if (nav.classList.contains('is-open') && (e.target.closest('.site-nav a') || !e.target.closest('.site-nav'))) {
+      nav.classList.remove('is-open');
+      var t = document.querySelector('.nav-toggle');
+      if (t) t.setAttribute('aria-expanded', 'false');
+    }
+  });
+})();
+</script>
 </body>
 </html>

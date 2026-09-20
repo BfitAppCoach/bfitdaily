@@ -26,3 +26,45 @@
     outline-offset: 3px;
     border-radius: 2px;
   }
+
+  /* 모바일 내비게이션 (햄버거 메뉴) */
+  .nav-toggle {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+    border: 1px solid #cdc9bd;
+    border-radius: 4px;
+    background: none;
+    cursor: pointer;
+    padding: 0;
+  }
+  .nav-toggle svg { display: block; }
+
+  @media (max-width: 860px) {
+    .nav-toggle { display: inline-flex; margin-left: auto; }
+    header .site-nav {
+      display: none !important;
+      width: 100%;
+      flex-direction: column;
+      flex-wrap: nowrap !important;
+      gap: 0 !important;
+      order: 5;
+      margin-top: 4px;
+      background: #fbfaf6;
+      border: 1px solid #e0ddd2;
+      border-radius: 4px;
+      overflow: hidden;
+    }
+    header .site-nav.is-open { display: flex !important; }
+    header .site-nav a {
+      width: 100%;
+      padding: 13px 16px !important;
+      border-bottom: 1px solid #ece9dd;
+      white-space: normal !important;
+    }
+    header .site-nav a:last-child { border-bottom: none; }
+    header .header-actions { order: 4; width: 100%; }
+  }

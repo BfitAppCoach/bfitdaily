@@ -47,7 +47,10 @@ window.__resources = {
       <span style="font-weight:900;font-size:21px;letter-spacing:0.02em">Bfit<span style="font-weight:400;font-size:14px;color:#6b7a71;letter-spacing:0">&nbsp;&nbsp;비핏</span></span>
       <span style="font-size:10px;letter-spacing:0.16em;color:#6b7a71" data-i18n="header_tagline">BY NANOSOFT · FOR A HEALTHIER TOMORROW</span>
     </a>
-    <nav style="display:flex;flex-wrap:wrap;gap:clamp(13px,2vw,28px);font-size:clamp(15px,1.6vw,18px);font-weight:400;white-space:nowrap">
+    <button type="button" class="nav-toggle" aria-label="메뉴 열기" aria-expanded="false">
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 5H17M3 10H17M3 15H17" stroke="#23302a" stroke-width="1.6" stroke-linecap="round"/></svg>
+    </button>
+    <nav class="site-nav" style="display:flex;flex-wrap:wrap;gap:clamp(13px,2vw,28px);font-size:clamp(15px,1.6vw,18px);font-weight:400;white-space:nowrap">
       <a href="#daily" style="color:#1f6b44;font-weight:500" data-i18n="nav_daily">비핏 데일리</a>
       <a href="#bodyfit" data-i18n="nav_bodyfit">바디핏</a>
       <a href="#system" data-i18n="nav_system">비핏 시스템</a>
@@ -56,7 +59,7 @@ window.__resources = {
       <a href="#company" data-i18n="nav_company">회사소개</a>
       <a href="#contact" data-i18n="nav_contact">문의</a>
     </nav>
-    <div style="display:flex;gap:9px;white-space:nowrap">
+    <div class="header-actions" style="display:flex;gap:9px;white-space:nowrap">
       <a href="https://smartstore.naver.com/bfit" target="_blank" rel="noopener" style="padding:10px 17px;border:1px solid #cdc9bd;font-size:13px" data-i18n="header_shopBtn">Bfit Shop</a>
       <a href="#contact" style="padding:10px 17px;background:#1f6b44;color:#f3f8f4;font-size:13px;font-weight:400" data-i18n="header_ctaBtn">도입 문의</a>
     </div>
@@ -447,6 +450,26 @@ window.__resources = {
     };
   }
 }</script>
+
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var toggle = e.target.closest('.nav-toggle');
+    var nav = document.querySelector('.site-nav');
+    if (!nav) return;
+    if (toggle) {
+      var open = nav.classList.toggle('is-open');
+      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      return;
+    }
+    if (nav.classList.contains('is-open') && (e.target.closest('.site-nav a') || !e.target.closest('.site-nav'))) {
+      nav.classList.remove('is-open');
+      var t = document.querySelector('.nav-toggle');
+      if (t) t.setAttribute('aria-expanded', 'false');
+    }
+  });
+})();
+</script>
 
 <script>
 (function () {
