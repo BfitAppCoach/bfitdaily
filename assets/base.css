@@ -1,0 +1,28 @@
+* { box-sizing: border-box; }
+  html { scroll-behavior: smooth; text-rendering: optimizeLegibility; }
+  body {
+    margin: 0;
+    background: #f6f4ee;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    -webkit-text-size-adjust: 100%;
+  }
+  a { color: inherit; text-decoration: none; }
+  a:hover { color: #1f6b44; }
+
+  /* 접근성: 키보드 포커스 표시 (마우스 클릭 시에는 표시하지 않음) */
+  a, button, input, textarea, select, sc-raw-select, [tabindex] {
+    outline: none;
+  }
+  a:focus-visible,
+  button:focus-visible,
+  input:focus-visible,
+  textarea:focus-visible,
+  select:focus-visible,
+  sc-raw-select:focus-visible,
+  [tabindex]:focus-visible {
+    outline: 2px solid #1f6b44;
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
