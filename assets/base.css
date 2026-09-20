@@ -66,5 +66,6 @@
       white-space: normal !important;
     }
     header .site-nav a:last-child { border-bottom: none; }
-    header .header-actions { order: 4; width: 100%; }
+    header .header-actions { order: 4; width: 100%; justify-content: flex-end; }
+    .hero-cta { justify-content: flex-end; }
   }
