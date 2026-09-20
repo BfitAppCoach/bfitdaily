@@ -1019,6 +1019,15 @@ window.BFIT_I18N = {
     return (el.value || '').trim();
   }
 
+  function mailtoFallback(section, type, name, phone, people, message) {
+    var lines = ['문의 유형: ' + type, '회사 / 성함: ' + name, '연락처: ' + phone];
+    if (people) lines.push('예상 이용 인원: ' + people);
+    lines.push('', '문의 내용:', message || '(내용 없음)');
+    var subject = '[비핏 문의] ' + type + ' - ' + name;
+    var body = lines.join('\n');
+    window.location.href = 'mailto:help@bfit.kr?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+  }
+
   document.addEventListener('click', function (e) {
     var btn = e.target.closest('[data-role="submit"]');
     if (!btn) return;
@@ -1038,17 +1047,45 @@ window.BFIT_I18N = {
       return;
     }
 
-    var lines = ['문의 유형: ' + type, '회사 / 성함: ' + name, '연락처: ' + phone];
-    if (people) lines.push('예상 이용 인원: ' + people);
-    lines.push('', '문의 내용:', message || '(내용 없음)');
+    var payload = {
+      access_key: '9a8694a7-3624-440f-9fb7-2c7584d9efa7',
+      subject: '[비핏 문의] ' + type + ' - ' + name,
+      from_name: '비핏 홈페이지 문의 폼',
+      '문의 유형': type,
+      '회사 / 성함': name,
+      '연락처': phone,
+      '문의 내용': message || '(내용 없음)'
+    };
+    if (people) payload['예상 이용 인원'] = people;
 
-    var subject = '[비핏 문의] ' + type + ' - ' + name;
-    var body = lines.join('\n');
-    var mailto = 'mailto:help@bfit.kr?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+    btn.disabled = true;
+    var prevLabel = btn.textContent;
+    btn.textContent = '전송 중...';
+    if (statusEl) { statusEl.textContent = '전송 중입니다...'; statusEl.style.color = '#6b7a71'; }
 
-    window.location.href = mailto;
-
-    if (statusEl) { statusEl.textContent = '메일 앱이 열립니다. 내용을 확인하고 보내주세요.'; statusEl.style.color = '#1f6b44'; }
+    fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+      body: JSON.stringify(payload)
+    })
+      .then(function (res) { return res.json(); })
+      .then(function (data) {
+        btn.disabled = false;
+        btn.textContent = prevLabel;
+        if (data && data.success) {
+          if (statusEl) { statusEl.textContent = '문의가 접수되었습니다. 빠르게 답변드리겠습니다.'; statusEl.style.color = '#1f6b44'; }
+          section.querySelectorAll('input[data-role], textarea[data-role]').forEach(function (f) { f.value = ''; });
+        } else {
+          if (statusEl) { statusEl.textContent = '전송에 실패했습니다. 메일 앱으로 대신 보내드릴게요.'; statusEl.style.color = '#c0392b'; }
+          mailtoFallback(section, type, name, phone, people, message);
+        }
+      })
+      .catch(function () {
+        btn.disabled = false;
+        btn.textContent = prevLabel;
+        if (statusEl) { statusEl.textContent = '전송에 실패했습니다. 메일 앱으로 대신 보내드릴게요.'; statusEl.style.color = '#c0392b'; }
+        mailtoFallback(section, type, name, phone, people, message);
+      });
   });
 })();
 </script>
