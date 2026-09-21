@@ -103,14 +103,14 @@ window.__resources = {
   <section id="bodyfit" style="padding: clamp(52px,7vw,400px) clamp(16px,4vw,400px); border-bottom: 1px solid #e0ddd2">
     
   <div style="max-width:1340px;margin:0 auto">
-      <div style="display:flex;flex-wrap:wrap;align-items:center;gap:14px;margin-bottom:clamp(26px,3.5vw,46px)">
-        <span style="padding:7px 14px;background:#1f6b44;color:#f3f8f4;font-size:11.5px;letter-spacing:0.14em;font-weight:500;white-space:nowrap" data-i18n="bodyfit_badge">BFIT NEW PRODUCT</span>
-        <h2 style="margin:0;font-weight:700;font-size:clamp(27px,3.6vw,46px);letter-spacing:-0.025em"><span data-i18n="bodyfit_title">비핏 바디핏</span> <span style="font-family:'Instrument Serif',serif;font-style:italic;font-weight:400;color:#8a9a90">BodyFit</span></h2>
-      </div>
-      <p style="margin:0 0 clamp(30px,4vw,54px);font-size:clamp(17px,1.9vw,23px);line-height:1.7;font-weight:400;max-width:32ch;text-wrap:pretty" data-i18n="bodyfit_subtitle">몸을 측정하는 기기가 아니라, 측정한 데이터를 다음 행동으로 연결하는 서비스</p>
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:clamp(26px,3.5vw,52px);align-items:start">
-        <div id="bodyfit-slideshow" style="background:#f4f4f2;border:1px solid #e0ddd2">
-          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1px;background:#e0ddd2">
+        <div>
+          <div style="display:flex;flex-wrap:wrap;align-items:center;gap:14px;margin-bottom:clamp(20px,2.6vw,28px)">
+            <span style="padding:7px 14px;background:#1f6b44;color:#f3f8f4;font-size:11.5px;letter-spacing:0.14em;font-weight:500;white-space:nowrap" data-i18n="bodyfit_badge">BFIT NEW PRODUCT</span>
+            <h2 style="margin:0;font-weight:700;font-size:clamp(27px,3.6vw,46px);letter-spacing:-0.025em"><span data-i18n="bodyfit_title">비핏 바디핏</span> <span style="font-family:'Instrument Serif',serif;font-style:italic;font-weight:400;color:#8a9a90">BodyFit</span></h2>
+          </div>
+          <p style="margin:0 0 clamp(22px,3vw,32px);font-size:clamp(17px,1.9vw,23px);line-height:1.7;font-weight:400;max-width:32ch;text-wrap:pretty" data-i18n="bodyfit_subtitle">몸을 측정하는 기기가 아니라, 측정한 데이터를 다음 행동으로 연결하는 서비스</p>
+          <div id="bodyfit-slideshow" style="background:#f4f4f2;border:1px solid #e0ddd2;padding:clamp(16px,2vw,22px)">
             <div id="bfs-top-image" style="position:relative;aspect-ratio:941/1672;background:#0d1a15;overflow:hidden">
               <img id="bht-main-img" src="images/bodyfit-howto/1-smartphone-mount.jpg" alt="스마트폰 거치" style="width:100%;height:100%;object-fit:cover;display:block">
               <button type="button" id="bht-prev" aria-label="이전 이미지" style="position:absolute;left:10px;top:50%;transform:translateY(-50%);width:36px;height:36px;border:1px solid rgba(255,255,255,0.5);background:rgba(35,48,42,0.55);font-size:16px;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;color:#f3f8f4">‹</button>
@@ -124,21 +124,12 @@ window.__resources = {
                 <button type="button" data-bht-dot="5" aria-label="6번 이미지" style="width:7px;height:7px;padding:0;border:0;border-radius:50%;background:rgba(243,248,244,0.4);cursor:pointer"></button>
               </div>
             </div>
-            <div style="position:relative;min-height:260px;background:#f4f4f2;overflow:hidden">
-              <img id="bfs-main-img" src="images/bodyfit-views/front-view.png" alt="바디핏 기기 정면" style="width:100%;height:100%;object-fit:contain;display:block">
-              <button type="button" id="bfs-prev" data-i18n-aria="common_prevImage" aria-label="이전 이미지" style="position:absolute;left:10px;top:50%;transform:translateY(-50%);width:36px;height:36px;border:1px solid #e0ddd2;background:rgba(255,255,255,0.92);font-size:16px;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;color:#23302a">‹</button>
-              <button type="button" id="bfs-next" data-i18n-aria="common_nextImage" aria-label="다음 이미지" style="position:absolute;right:10px;top:50%;transform:translateY(-50%);width:36px;height:36px;border:1px solid #e0ddd2;background:rgba(255,255,255,0.92);font-size:16px;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;color:#23302a">›</button>
-              <span id="bfs-counter" style="position:absolute;right:10px;bottom:10px;padding:4px 10px;background:rgba(35,48,42,0.72);color:#f3f8f4;font-size:11.5px;letter-spacing:0.06em">1 / 10</span>
-              <span id="bfs-label" style="position:absolute;left:10px;bottom:10px;padding:4px 10px;background:rgba(35,48,42,0.72);color:#f3f8f4;font-size:11.5px;letter-spacing:0.02em">정면</span>
-            </div>
-          </div>
-          <div style="padding:22px 24px;border-top:1px solid #e0ddd2;background:#fbfaf6">
-            <p style="margin:0;font-size:14.5px;line-height:1.85;color:#4d5a53;text-wrap:pretty" data-i18n="bodyfit_body">
-              체중·체지방·근육량·체수분 등 신체 구성 데이터를 가정과 헬스클럽, 사무실 어디서나 측정합니다. 측정은 음성으로 안내되고, 비핏 데일리 앱에서 오늘의 상태 요약 → 부위별 상세 분석 → 이전 측정 대비 변화 추이 → AI 해설 → 오늘 할 일 순으로 이어서 확인할 수 있습니다.
-            </p>
           </div>
         </div>
         <div>
+          <p style="margin:0 0 clamp(22px,3vw,32px);font-size:14.5px;line-height:1.85;color:#4d5a53;text-wrap:pretty" data-i18n="bodyfit_body">
+            체중·체지방·근육량·체수분 등 신체 구성 데이터를 가정과 헬스클럽, 사무실 어디서나 측정합니다. 측정은 음성으로 안내되고, 비핏 데일리 앱에서 오늘의 상태 요약 → 부위별 상세 분석 → 이전 측정 대비 변화 추이 → AI 해설 → 오늘 할 일 순으로 이어서 확인할 수 있습니다.
+          </p>
           <div style="display:grid;gap:1px;background:#e0ddd2;border:1px solid #e0ddd2">
             <div style="background:#f6f4ee;padding:20px 22px"><div style="font-weight:500;font-size:15.5px;margin-bottom:7px" data-i18n="bodyfit_feat1Title">체중부터 부위별 분석까지 한 번에</div><div style="font-size:14px;line-height:1.8;color:#5b6862" data-i18n="bodyfit_feat1Body">체중·BMI, 체지방·골격근량·체수분·단백질·무기질, 내장지방 수준과 기초대사량, 팔·다리·몸통 부위별 균형까지 한 번의 측정으로 확인합니다.</div></div>
             <div style="background:#f6f4ee;padding:20px 22px"><div style="font-weight:500;font-size:15.5px;margin-bottom:7px" data-i18n="bodyfit_feat2Title">연결 설정이 필요 없습니다</div><div style="font-size:14px;line-height:1.8;color:#5b6862" data-i18n="bodyfit_feat2Body">자체 개발한 idoVOX 무선통신으로 측정 즉시 앱에 기록됩니다.</div></div>
@@ -146,13 +137,20 @@ window.__resources = {
             <div style="background:#f6f4ee;padding:20px 22px"><div style="font-weight:500;font-size:15.5px;margin-bottom:7px" data-i18n="bodyfit_feat4Title">여러 사람이 함께 씁니다</div><div style="font-size:14px;line-height:1.8;color:#5b6862" data-i18n="bodyfit_feat4Body">사무실과 헬스클럽에서 구성원별로 기록을 나누어 관리할 수 있습니다.</div></div>
           </div>
           <p style="margin:16px 0 0;font-size:12px;line-height:1.7;color:#8a9a90;text-wrap:pretty" data-i18n="bodyfit_disclaimer">바디핏은 의료기기가 아니며, 측정 결과는 진단이 아닌 건강관리 참고 정보로 제공됩니다. 측정 데이터는 개인정보 처리방침에 따른 동의 절차를 거쳐 안전하게 관리됩니다.</p>
-          <div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:22px">
+          <div style="display:flex;flex-wrap:wrap;gap:12px;margin:22px 0 clamp(26px,3.5vw,36px)">
             <a href="pricing.dc.html#business" style="padding:14px 26px;background:#23302a;color:#f6f4ee;font-size:14px" data-i18n="bodyfit_buyBtn">구매하기</a>
             <a href="pricing.dc.html" style="padding:14px 26px;border:1px solid #cdc9bd;font-size:14px;white-space:nowrap" data-i18n="bodyfit_pricingBtn">요금 플랜·견적 보기</a>
           </div>
+          <div style="position:relative;width:min(100%,300px);aspect-ratio:3/4;background:#fff;border:1px solid #e0ddd2;overflow:hidden">
+            <img id="bfs-main-img" src="images/bodyfit-views/front-view.png" alt="바디핏 기기 정면" style="width:100%;height:100%;object-fit:contain;display:block">
+            <button type="button" id="bfs-prev" data-i18n-aria="common_prevImage" aria-label="이전 이미지" style="position:absolute;left:8px;top:50%;transform:translateY(-50%);width:30px;height:30px;border:1px solid #e0ddd2;background:rgba(255,255,255,0.92);font-size:14px;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;color:#23302a">‹</button>
+            <button type="button" id="bfs-next" data-i18n-aria="common_nextImage" aria-label="다음 이미지" style="position:absolute;right:8px;top:50%;transform:translateY(-50%);width:30px;height:30px;border:1px solid #e0ddd2;background:rgba(255,255,255,0.92);font-size:14px;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;color:#23302a">›</button>
+            <span id="bfs-counter" style="position:absolute;right:8px;bottom:8px;padding:3px 9px;background:rgba(35,48,42,0.72);color:#f3f8f4;font-size:11px;letter-spacing:0.06em">1 / 10</span>
+            <span id="bfs-label" style="position:absolute;left:8px;bottom:8px;padding:3px 9px;background:rgba(35,48,42,0.72);color:#f3f8f4;font-size:11px;letter-spacing:0.02em">정면</span>
+          </div>
         </div>
       </div>
-      
+
     </div></section>
 
   <section id="system" style="padding:clamp(52px,7vw,104px) clamp(16px,4vw,56px);background:#eceade">
