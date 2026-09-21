@@ -535,6 +535,16 @@ window.BFIT_I18N = {
     } catch (e) { return fallback; }
   }
 
+  function stripMarkdown(s) {
+    if (!s) return s;
+    return s
+      .replace(/^\s{0,3}#{1,6}\s*/gm, '')   // # 헤더 기호 제거
+      .replace(/\*\*(.*?)\*\*/g, '$1')      // **굵게** 기호 제거
+      .replace(/__(.*?)__/g, '$1')          // __굵게__ 기호 제거
+      .replace(/`([^`]*)`/g, '$1')          // `코드` 기호 제거
+      .replace(/^\s*[-*]\s+/gm, '· ');      // 목록 기호(-, *) -> 가운뎃점
+  }
+
   function addBubble(role, text) {
     var messagesEl = document.getElementById('bfitChatMessages');
     if (!messagesEl) return;
@@ -603,7 +613,7 @@ window.BFIT_I18N = {
         if (!result.ok || !result.data || !result.data.reply) {
           throw new Error((result.data && result.data.error) || 'chat error');
         }
-        addBubble('assistant', result.data.reply);
+        addBubble('assistant', stripMarkdown(result.data.reply));
         history.push({ role: 'assistant', content: result.data.reply });
       })
       .catch(function () {
