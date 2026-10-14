@@ -15,7 +15,7 @@
 <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
 
 <link rel="stylesheet" href="assets/pretendard.css">
-<link rel="stylesheet" href="assets/base.css?v=5">
+<link rel="stylesheet" href="assets/base.css?v=6">
 
 <script>
 /* dc-runtime는 기본적으로 React를 unpkg.com CDN에서 받아옵니다.
@@ -35,20 +35,20 @@ window.__resources = {
 <x-dc>
 <div style="font-family:var(--font-sans);font-weight:400;color:var(--text-primary);background:var(--bg-app);overflow-x:hidden;word-break:keep-all;overflow-wrap:break-word">
 
-  <div style="background:var(--accent-strong);color:var(--text-on-accent);padding:11px clamp(16px,4vw,56px);display:flex;flex-wrap:wrap;gap:12px 20px;align-items:center;justify-content:space-between;font-size:13px">
-    <a href="#invitation" style="display:flex;align-items:center;gap:10px"><span style="width:6px;height:6px;border-radius:50%;background:var(--accent-on-dark)"></span><span data-i18n="topbar_announcement">비핏 바디핏 신제품 론칭</span></a>
-    <span style="color:#B9E3CB;font-size:12px;letter-spacing:0.08em;display:flex;gap:8px;margin-left:auto" id="lang-switcher"><button type="button" data-lang="ko" style="all:unset;cursor:pointer">KOR</button> · <button type="button" data-lang="en" style="all:unset;cursor:pointer">ENG</button> · <button type="button" data-lang="cn" style="all:unset;cursor:pointer">CHI</button></span>
+  <div style="background:var(--surface-accent);color:var(--text-accent);font-weight:600;padding:11px clamp(16px,4vw,56px);display:flex;flex-wrap:wrap;gap:12px 20px;align-items:center;justify-content:space-between;font-size:13px">
+    <a href="#invitation" style="display:flex;align-items:center;gap:10px"><span style="width:6px;height:6px;border-radius:50%;background:var(--accent)"></span><span data-i18n="topbar_announcement">비핏 바디핏 신제품 론칭</span></a>
+    <span style="color:var(--text-accent);font-size:12px;letter-spacing:0.08em;display:flex;gap:8px;margin-left:auto" id="lang-switcher"><button type="button" data-lang="ko" style="all:unset;cursor:pointer">KOR</button> · <button type="button" data-lang="en" style="all:unset;cursor:pointer">ENG</button> · <button type="button" data-lang="cn" style="all:unset;cursor:pointer">CHI</button></span>
   </div>
 
-  <header style="position:sticky;top:0;z-index:30;background:rgba(242,245,243,0.93);backdrop-filter:blur(10px);border-bottom:1px solid var(--border-subtle);padding:15px clamp(16px,4vw,56px);display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between">
+  <header style="position:sticky;top:0;z-index:30;background:var(--bg-app);border-bottom:1px solid var(--divider);min-height:56px;padding:8px clamp(16px,4vw,56px);display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between">
     <a href="#top" style="display:flex;flex-direction:column;gap:2px">
-      <span style="font-weight:900;font-size:21px;letter-spacing:0.02em">Bfit<span style="font-weight:400;font-size:14px;color:var(--text-tertiary);letter-spacing:0">&nbsp;&nbsp;비핏</span></span>
+      <span style="font-weight:800;font-size:21px;letter-spacing:-0.02em">Bfit<span style="font-weight:400;font-size:14px;color:var(--text-tertiary);letter-spacing:0">&nbsp;&nbsp;비핏</span></span>
     </a>
     <button type="button" class="nav-toggle" aria-label="메뉴 열기" aria-expanded="false">
       <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 5H17M3 10H17M3 15H17" stroke="var(--text-primary)" stroke-width="1.6" stroke-linecap="round"/></svg>
     </button>
-    <nav class="site-nav" style="display:flex;flex-wrap:wrap;gap:clamp(13px,2vw,28px);font-size:clamp(15px,1.6vw,18px);font-weight:400;white-space:nowrap">
-      <a href="#daily" style="color:var(--text-accent);font-weight:500" data-i18n="nav_daily">비핏 데일리</a>
+    <nav class="site-nav" style="display:flex;flex-wrap:wrap;gap:clamp(13px,2vw,28px);font-size:15px;font-weight:600;white-space:nowrap">
+      <a href="#daily" data-i18n="nav_daily">비핏 데일리</a>
       <a href="#bodyfit" data-i18n="nav_bodyfit">바디핏</a>
       <a href="#system" data-i18n="nav_system">비핏 시스템</a>
       <a href="#product" data-i18n="nav_product">제품 전체</a>
@@ -57,8 +57,8 @@ window.__resources = {
       <a href="#contact" data-i18n="nav_contact">문의</a>
     </nav>
     <div class="header-actions" style="display:flex;gap:9px;white-space:nowrap">
-      <a href="https://smartstore.naver.com/bfit" target="_blank" rel="noopener" style="padding:10px 17px;border:1px solid var(--border-strong);font-size:13px" data-i18n="header_shopBtn">Bfit Shop</a>
-      <a href="#contact" style="padding:10px 17px;background:var(--accent-strong);color:var(--text-on-accent);font-size:13px;font-weight:400" data-i18n="header_ctaBtn">도입 문의</a>
+      <a href="https://smartstore.naver.com/bfit" target="_blank" rel="noopener" class="btn btn-secondary btn-sm" data-i18n="header_shopBtn">Bfit Shop</a>
+      <a href="#contact" class="btn btn-primary btn-sm" data-i18n="header_ctaBtn">도입 문의</a>
     </div>
   </header>
 
@@ -67,8 +67,8 @@ window.__resources = {
       <img src="images/bfit-brand-philosophy-device.jpg" alt="비핏 브랜드 철학과 바디핏 기기" data-i18n-alt="top_heroAlt" style="{{ heroImgStyle }}">
     </div>
     <div class="hero-cta" style="max-width:1340px;margin:0 auto;padding:clamp(24px,3vw,36px) clamp(16px,4vw,56px) 0;display:flex;flex-wrap:wrap;gap:12px">
-      <a href="#bodyfit" style="padding:15px 28px;background:var(--accent-strong);color:var(--text-on-accent);font-size:14.5px;font-weight:400;white-space:nowrap" data-i18n="top_ctaBodyfit">바디핏 알아보기</a>
-      <a href="https://bfitdaily.kr/bodyfit/plans/" style="padding:15px 28px;border:1px solid var(--border-strong);font-size:14.5px;white-space:nowrap" data-i18n="top_ctaPricing">요금 플랜 보기</a>
+      <a href="#bodyfit" class="btn btn-primary" data-i18n="top_ctaBodyfit">바디핏 알아보기</a>
+      <a href="https://bfitdaily.kr/bodyfit/plans/" class="btn btn-secondary" data-i18n="top_ctaPricing">요금 플랜 보기</a>
     </div>
   </section>
 
@@ -80,19 +80,19 @@ window.__resources = {
         바디핏, AB 슬라이드, 스쿼트 머신, 밸런스 보드까지 — 비핏 브랜드의 여러 제품은 모두 비핏 데일리 앱으로 연결됩니다. 어떤 기기로 운동하든 기록은 하나로 쌓이고, 작은 습관들이 모여 나만의 핏(Fit)이 됩니다.
       </p>
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:clamp(16px,2.2vw,24px)">
-        <a href="#bodyfit" style="display:block;border:1px solid var(--border-subtle);background:var(--surface-card)" style-hover="border-color:var(--accent-strong)">
+        <a href="#bodyfit" style="display:block;background:var(--surface-card);border-radius:20px;overflow:hidden">
           <div style="position:relative;aspect-ratio:4/5;overflow:hidden;background:var(--surface-sunken)"><img src="images/bodyfit-bfitdaily-connection.jpg" alt="바디핏 · 비핏 데일리 연결" style="position:absolute;width:200%;height:200%;top:0%;left:0%;display:block;max-width:none"></div>
           <div style="padding:18px 20px"><div style="font-size:11px;letter-spacing:0.1em;color:var(--text-muted);margin-bottom:6px" data-i18n="daily_connectedTag">CONNECTED WITH BFIT DAILY</div><div style="font-weight:500;font-size:16px" data-i18n="daily_card1Name">바디핏</div></div>
         </a>
-        <a href="#product" style="display:block;border:1px solid var(--border-subtle);background:var(--surface-card)" style-hover="border-color:var(--accent-strong)">
+        <a href="#product" style="display:block;background:var(--surface-card);border-radius:20px;overflow:hidden">
           <div style="position:relative;aspect-ratio:4/5;overflow:hidden;background:var(--surface-sunken)"><img src="images/bodyfit-bfitdaily-connection.jpg" alt="AB 슬라이드 · 비핏 데일리 연결" style="position:absolute;width:200%;height:200%;top:0%;left:-100%;display:block;max-width:none"></div>
           <div style="padding:18px 20px"><div style="font-size:11px;letter-spacing:0.1em;color:var(--text-muted);margin-bottom:6px" data-i18n="daily_connectedTag">CONNECTED WITH BFIT DAILY</div><div style="font-weight:500;font-size:16px" data-i18n="daily_card2Name">AB 슬라이드</div></div>
         </a>
-        <a href="#product" style="display:block;border:1px solid var(--border-subtle);background:var(--surface-card)" style-hover="border-color:var(--accent-strong)">
+        <a href="#product" style="display:block;background:var(--surface-card);border-radius:20px;overflow:hidden">
           <div style="position:relative;aspect-ratio:4/5;overflow:hidden;background:var(--surface-sunken)"><img src="images/bodyfit-bfitdaily-connection.jpg" alt="스쿼트 머신 · 비핏 데일리 연결" style="position:absolute;width:200%;height:200%;top:-100%;left:0%;display:block;max-width:none"></div>
           <div style="padding:18px 20px"><div style="font-size:11px;letter-spacing:0.1em;color:var(--text-muted);margin-bottom:6px" data-i18n="daily_connectedTag">CONNECTED WITH BFIT DAILY</div><div style="font-weight:500;font-size:16px" data-i18n="daily_card3Name">스쿼트 머신</div></div>
         </a>
-        <a href="#product" style="display:block;border:1px solid var(--border-subtle);background:var(--surface-card)" style-hover="border-color:var(--accent-strong)">
+        <a href="#product" style="display:block;background:var(--surface-card);border-radius:20px;overflow:hidden">
           <div style="position:relative;aspect-ratio:4/5;overflow:hidden;background:var(--surface-sunken)"><img src="images/bodyfit-bfitdaily-connection.jpg" alt="밸런스 보드 · 비핏 데일리 연결" style="position:absolute;width:200%;height:200%;top:-100%;left:-100%;display:block;max-width:none"></div>
           <div style="padding:18px 20px"><div style="font-size:11px;letter-spacing:0.1em;color:var(--text-muted);margin-bottom:6px" data-i18n="daily_connectedTag">CONNECTED WITH BFIT DAILY</div><div style="font-weight:500;font-size:16px" data-i18n="daily_card4Name">밸런스 보드</div></div>
         </a>
@@ -106,15 +106,15 @@ window.__resources = {
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:clamp(26px,3.5vw,52px);align-items:start">
         <div>
           <div style="display:flex;flex-wrap:wrap;align-items:center;gap:14px;margin-bottom:clamp(20px,2.6vw,28px)">
-            <span style="padding:7px 14px;background:var(--accent-strong);color:var(--text-on-accent);font-size:11.5px;letter-spacing:0.14em;font-weight:500;white-space:nowrap" data-i18n="bodyfit_badge">BFIT NEW PRODUCT</span>
-            <h2 style="margin:0;font-weight:800;font-size:clamp(27px,3.6vw,46px);letter-spacing:-0.025em"><span data-i18n="bodyfit_title">비핏 바디핏</span> <span style="font-weight:700;font-weight:400;color:var(--text-muted)">BodyFit</span></h2>
+            <span style="padding:5px 10px;border-radius:8px;background:var(--surface-accent);color:var(--text-accent);font-size:12px;letter-spacing:0.04em;font-weight:700;white-space:nowrap" data-i18n="bodyfit_badge">BFIT NEW PRODUCT</span>
+            <h2 style="margin:0;font-weight:800;font-size:clamp(27px,3.6vw,46px);letter-spacing:-0.025em"><span data-i18n="bodyfit_title">비핏 바디핏</span> <span style="font-weight:700;color:var(--text-muted)">BodyFit</span></h2>
           </div>
           <p style="margin:0 0 clamp(22px,3vw,32px);font-size:clamp(17px,1.9vw,23px);line-height:1.7;font-weight:400;max-width:32ch;text-wrap:pretty" data-i18n="bodyfit_subtitle">몸을 측정하는 기기가 아니라, 측정한 데이터를 다음 행동으로 연결하는 서비스</p>
-          <div id="bodyfit-slideshow" style="background:var(--bg-app);border:1px solid var(--border-subtle);padding:clamp(16px,2vw,22px)">
-            <div id="bfs-top-image" style="position:relative;aspect-ratio:941/1672;background:#13201B;overflow:hidden">
+          <div id="bodyfit-slideshow" style="background:var(--surface-card);border-radius:20px;padding:clamp(16px,2vw,22px)">
+            <div id="bfs-top-image" style="position:relative;aspect-ratio:941/1672;background:#13201B;border-radius:12px;overflow:hidden">
               <img id="bht-main-img" src="images/bodyfit-howto/1-smartphone-mount.jpg" alt="스마트폰 거치" style="width:100%;height:100%;object-fit:cover;display:block">
-              <button type="button" id="bht-prev" aria-label="이전 이미지" style="position:absolute;left:10px;top:50%;transform:translateY(-50%);width:36px;height:36px;border:1px solid rgba(255,255,255,0.5);background:rgba(25,31,29,0.55);font-size:16px;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--text-on-accent)">‹</button>
-              <button type="button" id="bht-next" aria-label="다음 이미지" style="position:absolute;right:10px;top:50%;transform:translateY(-50%);width:36px;height:36px;border:1px solid rgba(255,255,255,0.5);background:rgba(25,31,29,0.55);font-size:16px;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--text-on-accent)">›</button>
+              <button type="button" id="bht-prev" aria-label="이전 이미지" style="position:absolute;left:10px;top:50%;transform:translateY(-50%);width:36px;height:36px;border:0;border-radius:999px;background:rgba(25,31,29,0.55);font-size:16px;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--text-on-accent)">‹</button>
+              <button type="button" id="bht-next" aria-label="다음 이미지" style="position:absolute;right:10px;top:50%;transform:translateY(-50%);width:36px;height:36px;border:0;border-radius:999px;background:rgba(25,31,29,0.55);font-size:16px;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--text-on-accent)">›</button>
               <div id="bht-dots" style="position:absolute;left:0;right:0;bottom:16px;display:flex;justify-content:center;gap:7px">
                 <button type="button" data-bht-dot="0" aria-label="1번 이미지" style="width:7px;height:7px;padding:0;border:0;border-radius:50%;background:var(--text-on-accent);cursor:pointer"></button>
                 <button type="button" data-bht-dot="1" aria-label="2번 이미지" style="width:7px;height:7px;padding:0;border:0;border-radius:50%;background:rgba(243,248,244,0.4);cursor:pointer"></button>
@@ -130,23 +130,23 @@ window.__resources = {
           <p style="margin:0 0 clamp(22px,3vw,32px);font-size:14.5px;line-height:1.85;color:var(--text-secondary);text-wrap:pretty" data-i18n="bodyfit_body">
             체중·체지방·근육량·체수분 등 신체 구성 데이터를 가정과 헬스클럽, 사무실 어디서나 측정합니다. 측정은 음성으로 안내되고, 비핏 데일리 앱에서 오늘의 상태 요약 → 부위별 상세 분석 → 이전 측정 대비 변화 추이 → AI 해설 → 오늘 할 일 순으로 이어서 확인할 수 있습니다.
           </p>
-          <div style="display:grid;gap:1px;background:var(--border-subtle);border:1px solid var(--border-subtle)">
-            <div style="background:var(--bg-app);padding:20px 22px"><div style="font-weight:500;font-size:15.5px;margin-bottom:7px" data-i18n="bodyfit_feat1Title">체중부터 부위별 분석까지 한 번에</div><div style="font-size:14px;line-height:1.8;color:var(--text-tertiary)" data-i18n="bodyfit_feat1Body">체중·BMI, 체지방·골격근량·체수분·단백질·무기질, 내장지방 수준과 기초대사량, 팔·다리·몸통 부위별 균형까지 한 번의 측정으로 확인합니다.</div></div>
-            <div style="background:var(--bg-app);padding:20px 22px"><div style="font-weight:500;font-size:15.5px;margin-bottom:7px" data-i18n="bodyfit_feat2Title">연결 설정이 필요 없습니다</div><div style="font-size:14px;line-height:1.8;color:var(--text-tertiary)" data-i18n="bodyfit_feat2Body">자체 개발한 idoVOX 무선통신으로 측정 즉시 앱에 기록됩니다.</div></div>
-            <div style="background:var(--bg-app);padding:20px 22px"><div style="font-weight:500;font-size:15.5px;margin-bottom:7px" data-i18n="bodyfit_feat3Title">수치보다 변화 흐름을 봅니다</div><div style="font-size:14px;line-height:1.8;color:var(--text-tertiary)" data-i18n="bodyfit_feat3Body">측정 시간, 식사, 운동, 수분 상태에 따라 값이 달라질 수 있어 단일 수치보다 이전 측정과 비교한 변화 추이를 중심으로 보여줍니다.</div></div>
-            <div style="background:var(--bg-app);padding:20px 22px"><div style="font-weight:500;font-size:15.5px;margin-bottom:7px" data-i18n="bodyfit_feat4Title">여러 사람이 함께 씁니다</div><div style="font-size:14px;line-height:1.8;color:var(--text-tertiary)" data-i18n="bodyfit_feat4Body">사무실과 헬스클럽에서 구성원별로 기록을 나누어 관리할 수 있습니다.</div></div>
+          <div style="display:grid;gap:1px;background:var(--divider);border-radius:20px;overflow:hidden">
+            <div style="background:var(--surface-card);padding:20px 22px"><div style="font-weight:500;font-size:15.5px;margin-bottom:7px" data-i18n="bodyfit_feat1Title">체중부터 부위별 분석까지 한 번에</div><div style="font-size:14px;line-height:1.8;color:var(--text-tertiary)" data-i18n="bodyfit_feat1Body">체중·BMI, 체지방·골격근량·체수분·단백질·무기질, 내장지방 수준과 기초대사량, 팔·다리·몸통 부위별 균형까지 한 번의 측정으로 확인합니다.</div></div>
+            <div style="background:var(--surface-card);padding:20px 22px"><div style="font-weight:500;font-size:15.5px;margin-bottom:7px" data-i18n="bodyfit_feat2Title">연결 설정이 필요 없습니다</div><div style="font-size:14px;line-height:1.8;color:var(--text-tertiary)" data-i18n="bodyfit_feat2Body">자체 개발한 idoVOX 무선통신으로 측정 즉시 앱에 기록됩니다.</div></div>
+            <div style="background:var(--surface-card);padding:20px 22px"><div style="font-weight:500;font-size:15.5px;margin-bottom:7px" data-i18n="bodyfit_feat3Title">수치보다 변화 흐름을 봅니다</div><div style="font-size:14px;line-height:1.8;color:var(--text-tertiary)" data-i18n="bodyfit_feat3Body">측정 시간, 식사, 운동, 수분 상태에 따라 값이 달라질 수 있어 단일 수치보다 이전 측정과 비교한 변화 추이를 중심으로 보여줍니다.</div></div>
+            <div style="background:var(--surface-card);padding:20px 22px"><div style="font-weight:500;font-size:15.5px;margin-bottom:7px" data-i18n="bodyfit_feat4Title">여러 사람이 함께 씁니다</div><div style="font-size:14px;line-height:1.8;color:var(--text-tertiary)" data-i18n="bodyfit_feat4Body">사무실과 헬스클럽에서 구성원별로 기록을 나누어 관리할 수 있습니다.</div></div>
           </div>
           <p style="margin:16px 0 0;font-size:12px;line-height:1.7;color:var(--text-muted);text-wrap:pretty" data-i18n="bodyfit_disclaimer">바디핏은 의료기기가 아니며, 측정 결과는 진단이 아닌 건강관리 참고 정보로 제공됩니다. 측정 데이터는 개인정보 처리방침에 따른 동의 절차를 거쳐 안전하게 관리됩니다.</p>
           <div style="display:flex;flex-wrap:wrap;gap:12px;margin:22px 0 clamp(26px,3.5vw,36px)">
-            <a href="https://bfitdaily.kr/bodyfit/plans/?plan=BUSINESS" style="padding:14px 26px;background:var(--text-primary);color:var(--bg-app);font-size:14px" data-i18n="bodyfit_buyBtn">구매하기</a>
-            <a href="https://bfitdaily.kr/bodyfit/plans/" style="padding:14px 26px;border:1px solid var(--border-strong);font-size:14px;white-space:nowrap" data-i18n="bodyfit_pricingBtn">요금 플랜·견적 보기</a>
+            <a href="https://bfitdaily.kr/bodyfit/plans/?plan=BUSINESS" class="btn btn-primary" data-i18n="bodyfit_buyBtn">구매하기</a>
+            <a href="https://bfitdaily.kr/bodyfit/plans/" class="btn btn-secondary" data-i18n="bodyfit_pricingBtn">요금 플랜·견적 보기</a>
           </div>
-          <div id="bfs-carousel" style="position:relative;width:100%;aspect-ratio:3/4;background:#fff;border:1px solid var(--border-subtle);overflow:hidden">
+          <div id="bfs-carousel" style="position:relative;width:100%;aspect-ratio:3/4;background:#fff;border-radius:20px;overflow:hidden">
             <img id="bfs-main-img" src="images/bodyfit-views/front-view.png" alt="바디핏 기기 정면" style="width:100%;height:100%;object-fit:contain;display:block">
-            <button type="button" id="bfs-prev" data-i18n-aria="common_prevImage" aria-label="이전 이미지" style="position:absolute;left:8px;top:50%;transform:translateY(-50%);width:30px;height:30px;border:1px solid var(--border-subtle);background:rgba(255,255,255,0.92);font-size:14px;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--text-primary)">‹</button>
-            <button type="button" id="bfs-next" data-i18n-aria="common_nextImage" aria-label="다음 이미지" style="position:absolute;right:8px;top:50%;transform:translateY(-50%);width:30px;height:30px;border:1px solid var(--border-subtle);background:rgba(255,255,255,0.92);font-size:14px;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--text-primary)">›</button>
-            <span id="bfs-counter" style="position:absolute;right:8px;bottom:8px;padding:3px 9px;background:rgba(25,31,29,0.72);color:var(--text-on-accent);font-size:11px;letter-spacing:0.06em">1 / 10</span>
-            <span id="bfs-label" style="position:absolute;left:8px;bottom:8px;padding:3px 9px;background:rgba(25,31,29,0.72);color:var(--text-on-accent);font-size:11px;letter-spacing:0.02em">정면</span>
+            <button type="button" id="bfs-prev" data-i18n-aria="common_prevImage" aria-label="이전 이미지" style="position:absolute;left:8px;top:50%;transform:translateY(-50%);width:30px;height:30px;border:0;border-radius:999px;background:rgba(255,255,255,0.94);box-shadow:0 2px 8px rgba(16,32,26,.14);font-size:14px;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--text-primary)">‹</button>
+            <button type="button" id="bfs-next" data-i18n-aria="common_nextImage" aria-label="다음 이미지" style="position:absolute;right:8px;top:50%;transform:translateY(-50%);width:30px;height:30px;border:0;border-radius:999px;background:rgba(255,255,255,0.94);box-shadow:0 2px 8px rgba(16,32,26,.14);font-size:14px;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--text-primary)">›</button>
+            <span id="bfs-counter" style="position:absolute;right:8px;bottom:8px;padding:3px 9px;border-radius:999px;background:rgba(25,31,29,0.72);color:var(--text-on-accent);font-size:11px;letter-spacing:0.06em">1 / 10</span>
+            <span id="bfs-label" style="position:absolute;left:8px;bottom:8px;padding:3px 9px;border-radius:999px;background:rgba(25,31,29,0.72);color:var(--text-on-accent);font-size:11px;letter-spacing:0.02em">정면</span>
           </div>
         </div>
       </div>
@@ -158,10 +158,10 @@ window.__resources = {
       <h2 style="margin:0 0 14px;font-weight:800;font-size:clamp(24px,3vw,38px);letter-spacing:-0.025em" data-i18n="system_title">비핏 시스템</h2>
       <p style="margin:0 0 clamp(28px,3.5vw,48px);font-size:15.5px;line-height:1.9;color:var(--text-secondary);max-width:62ch;text-wrap:pretty" data-i18n="system_body">비핏은 자체 개발한 idoVOX 무선통신 기술로 측정 기기와 앱을 연결하는 건강관리 시스템입니다. 바디핏·스마트 체중계·혈압계로 잰 신체 정보는 비핏 데일리 앱에 자동으로 기록되고, 비핏 데일리 안에서 인공지능 코칭과 변화 추이 확인, 필요할 때 클라우드를 통한 공유로 이어집니다.</p>
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,215px),1fr));gap:clamp(14px,1.8vw,20px)">
-        <div style="background:var(--bg-app);border:1px solid var(--border-subtle);padding:26px 24px"><div style="font-weight:700;font-size:15px;letter-spacing:0.1em;color:var(--text-accent);margin-bottom:14px">01 — MEASURE</div><div style="font-weight:500;font-size:16.5px;margin-bottom:8px" data-i18n="system_step1Title">측정 기기</div><div style="font-size:14px;line-height:1.8;color:var(--text-tertiary)" data-i18n="system_step1Body">바디핏, 스마트 체중계·혈압계부터 스쿼트 머신, AB 슬라이드까지 — 비핏의 측정·운동 기기가 신체 정보와 운동량을 측정하고 음성으로 안내합니다.</div></div>
-        <div style="background:var(--bg-app);border:1px solid var(--border-subtle);padding:26px 24px"><div style="font-weight:700;font-size:15px;letter-spacing:0.1em;color:var(--text-accent);margin-bottom:14px">02 — CONNECT</div><div style="font-weight:500;font-size:16.5px;margin-bottom:8px" data-i18n="system_step2Title">idoVOX 전송</div><div style="font-size:14px;line-height:1.8;color:var(--text-tertiary)" data-i18n="system_step2Body">나노소프트가 독자 개발해 국내 특허로 등록한 병렬 음파통신 기술입니다. 블루투스처럼 페어링 등 연결 설정 단계를 거치지 않고, 기기가 낸 소리를 스마트폰이 바로 인식해 앱에 기록합니다. 같은 방식으로 POS·카드 단말기에 스마트폰을 가져가면 결제 정보를 주고받는 전자결제(VOX Fintech)에도 쓰입니다.</div></div>
-        <div style="background:var(--bg-app);border:1px solid var(--border-subtle);padding:26px 24px"><div style="font-weight:700;font-size:15px;letter-spacing:0.1em;color:var(--text-accent);margin-bottom:14px">03 — DAILY AI</div><div style="font-weight:500;font-size:16.5px;margin-bottom:8px" data-i18n="system_step3Title">비핏 데일리 AI 코칭</div><div style="font-size:14px;line-height:1.8;color:var(--text-tertiary)" data-i18n="system_step3Body">비핏 데일리에 쌓인 측정 기록을 인공지능이 분석해 오늘의 상태 요약, 이전 측정 대비 변화, 식단·운동·목표체중 관리를 위한 코칭 메시지로 보여줍니다. 삼성 S헬스 연동, PC·노트북 멀티뷰로도 확인할 수 있습니다.</div></div>
-        <div style="background:var(--bg-app);border:1px solid var(--border-subtle);padding:26px 24px"><div style="font-weight:700;font-size:15px;letter-spacing:0.1em;color:var(--text-accent);margin-bottom:14px">04 — CLOUD CARE</div><div style="font-weight:500;font-size:16.5px;margin-bottom:8px" data-i18n="system_step4Title">클라우드 헬스케어</div><div style="font-size:14px;line-height:1.8;color:var(--text-tertiary)" data-i18n="system_step4Body">비핏 데일리의 기록과 변화 추이는 클라우드를 통해 필요할 때 트레이너·전문가와 공유할 수 있습니다. 측정값은 진단이 아닌 관리 참고 정보로 제공되며, 사용자가 스스로 몸 상태 변화를 이해하고 다음 행동으로 연결하도록 돕습니다.</div></div>
+        <div style="background:var(--surface-card);border-radius:20px;padding:26px 24px"><div style="font-weight:700;font-size:15px;letter-spacing:0.1em;color:var(--text-accent);margin-bottom:14px">01 — MEASURE</div><div style="font-weight:500;font-size:16.5px;margin-bottom:8px" data-i18n="system_step1Title">측정 기기</div><div style="font-size:14px;line-height:1.8;color:var(--text-tertiary)" data-i18n="system_step1Body">바디핏, 스마트 체중계·혈압계부터 스쿼트 머신, AB 슬라이드까지 — 비핏의 측정·운동 기기가 신체 정보와 운동량을 측정하고 음성으로 안내합니다.</div></div>
+        <div style="background:var(--surface-card);border-radius:20px;padding:26px 24px"><div style="font-weight:700;font-size:15px;letter-spacing:0.1em;color:var(--text-accent);margin-bottom:14px">02 — CONNECT</div><div style="font-weight:500;font-size:16.5px;margin-bottom:8px" data-i18n="system_step2Title">idoVOX 전송</div><div style="font-size:14px;line-height:1.8;color:var(--text-tertiary)" data-i18n="system_step2Body">나노소프트가 독자 개발해 국내 특허로 등록한 병렬 음파통신 기술입니다. 블루투스처럼 페어링 등 연결 설정 단계를 거치지 않고, 기기가 낸 소리를 스마트폰이 바로 인식해 앱에 기록합니다. 같은 방식으로 POS·카드 단말기에 스마트폰을 가져가면 결제 정보를 주고받는 전자결제(VOX Fintech)에도 쓰입니다.</div></div>
+        <div style="background:var(--surface-card);border-radius:20px;padding:26px 24px"><div style="font-weight:700;font-size:15px;letter-spacing:0.1em;color:var(--text-accent);margin-bottom:14px">03 — DAILY AI</div><div style="font-weight:500;font-size:16.5px;margin-bottom:8px" data-i18n="system_step3Title">비핏 데일리 AI 코칭</div><div style="font-size:14px;line-height:1.8;color:var(--text-tertiary)" data-i18n="system_step3Body">비핏 데일리에 쌓인 측정 기록을 인공지능이 분석해 오늘의 상태 요약, 이전 측정 대비 변화, 식단·운동·목표체중 관리를 위한 코칭 메시지로 보여줍니다. 삼성 S헬스 연동, PC·노트북 멀티뷰로도 확인할 수 있습니다.</div></div>
+        <div style="background:var(--surface-card);border-radius:20px;padding:26px 24px"><div style="font-weight:700;font-size:15px;letter-spacing:0.1em;color:var(--text-accent);margin-bottom:14px">04 — CLOUD CARE</div><div style="font-weight:500;font-size:16.5px;margin-bottom:8px" data-i18n="system_step4Title">클라우드 헬스케어</div><div style="font-size:14px;line-height:1.8;color:var(--text-tertiary)" data-i18n="system_step4Body">비핏 데일리의 기록과 변화 추이는 클라우드를 통해 필요할 때 트레이너·전문가와 공유할 수 있습니다. 측정값은 진단이 아닌 관리 참고 정보로 제공되며, 사용자가 스스로 몸 상태 변화를 이해하고 다음 행동으로 연결하도록 돕습니다.</div></div>
       </div>
     </div>
   </section>
@@ -171,11 +171,11 @@ window.__resources = {
       <h2 style="margin:0 0 12px;font-weight:800;font-size:clamp(24px,3vw,38px);letter-spacing:-0.025em" data-i18n="product_title">비핏 제품 전체</h2>
       <p style="margin:0 0 clamp(28px,3.5vw,48px);font-size:15.5px;line-height:1.9;color:var(--text-secondary);max-width:50ch" data-i18n="product_body">측정 기기와 앱은 하나의 기록으로 연결됩니다.</p>
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr));gap:clamp(16px,2.2vw,26px)">
-        <div style="display:block;border:1px solid var(--border-subtle);background:var(--surface-card)">
-          <div style="position:relative;aspect-ratio:3/4;background:transparent;border-bottom:1px solid var(--border-subtle);overflow:hidden">
+        <div style="display:block;background:var(--surface-card);border-radius:20px;overflow:hidden">
+          <div style="position:relative;aspect-ratio:3/4;background:transparent;overflow:hidden">
             <img id="pds-main-img" src="images/product-daily-slides/1-todays-record.jpg" alt="비핏 데일리 앱 - 한눈에 보는 오늘의 기록" style="width:100%;height:100%;object-fit:contain;display:block;padding:6px;background:transparent">
-            <button type="button" id="pds-prev" data-i18n-aria="common_prevScreen" aria-label="이전 화면" style="position:absolute;left:6px;top:50%;transform:translateY(-50%);width:28px;height:28px;border:1px solid var(--border-subtle);background:rgba(255,255,255,0.9);font-size:14px;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--text-primary)">‹</button>
-            <button type="button" id="pds-next" data-i18n-aria="common_nextScreen" aria-label="다음 화면" style="position:absolute;right:6px;top:50%;transform:translateY(-50%);width:28px;height:28px;border:1px solid var(--border-subtle);background:rgba(255,255,255,0.9);font-size:14px;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--text-primary)">›</button>
+            <button type="button" id="pds-prev" data-i18n-aria="common_prevScreen" aria-label="이전 화면" style="position:absolute;left:6px;top:50%;transform:translateY(-50%);width:28px;height:28px;border:0;border-radius:999px;background:rgba(255,255,255,0.94);box-shadow:0 2px 8px rgba(16,32,26,.14);font-size:14px;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--text-primary)">‹</button>
+            <button type="button" id="pds-next" data-i18n-aria="common_nextScreen" aria-label="다음 화면" style="position:absolute;right:6px;top:50%;transform:translateY(-50%);width:28px;height:28px;border:0;border-radius:999px;background:rgba(255,255,255,0.94);box-shadow:0 2px 8px rgba(16,32,26,.14);font-size:14px;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--text-primary)">›</button>
             <div id="pds-dots" style="position:absolute;left:0;right:0;bottom:8px;display:flex;justify-content:center;gap:6px">
               <button type="button" data-pds-dot="0" aria-label="1번 화면" style="width:6px;height:6px;padding:0;border:0;border-radius:50%;background:var(--accent-strong);cursor:pointer"></button>
               <button type="button" data-pds-dot="1" aria-label="2번 화면" style="width:6px;height:6px;padding:0;border:0;border-radius:50%;background:var(--border-strong);cursor:pointer"></button>
@@ -187,11 +187,11 @@ window.__resources = {
           </div>
           <div style="padding:20px 22px"><div style="font-size:11.5px;letter-spacing:0.12em;color:var(--text-muted);margin-bottom:9px" data-i18n="product_card1Tag">APP</div><div style="font-weight:500;font-size:16.5px;margin-bottom:6px" data-i18n="product_card1Title">비핏 데일리</div><div style="font-size:13.5px;line-height:1.75;color:var(--text-tertiary)" data-i18n="product_card1Desc">모든 비핏 기기의 기록을 모으는 통합 앱, 삼성 S헬스 연동</div></div>
         </div>
-        <div style="display:block;border:1px solid var(--border-subtle);background:var(--surface-card)">
-          <div style="position:relative;aspect-ratio:3/4;background:var(--bg-app);border-bottom:1px solid var(--border-subtle);overflow:hidden">
+        <div style="display:block;background:var(--surface-card);border-radius:20px;overflow:hidden">
+          <div style="position:relative;aspect-ratio:3/4;background:var(--bg-app);overflow:hidden">
             <img id="pbf-main-img" src="images/product-bodyfit-slides/1-full-top-view.png" alt="바디핏 신체 구성 측정기 - 전체 탑뷰" style="width:100%;height:100%;object-fit:contain;display:block;padding:10px;background:transparent;transform:scale(2);transform-origin:center center">
-            <button type="button" id="pbf-prev" data-i18n-aria="common_prevImage" aria-label="이전 이미지" style="position:absolute;left:6px;top:50%;transform:translateY(-50%);width:28px;height:28px;border:1px solid var(--border-subtle);background:rgba(255,255,255,0.9);font-size:14px;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--text-primary)">‹</button>
-            <button type="button" id="pbf-next" data-i18n-aria="common_nextImage" aria-label="다음 이미지" style="position:absolute;right:6px;top:50%;transform:translateY(-50%);width:28px;height:28px;border:1px solid var(--border-subtle);background:rgba(255,255,255,0.9);font-size:14px;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--text-primary)">›</button>
+            <button type="button" id="pbf-prev" data-i18n-aria="common_prevImage" aria-label="이전 이미지" style="position:absolute;left:6px;top:50%;transform:translateY(-50%);width:28px;height:28px;border:0;border-radius:999px;background:rgba(255,255,255,0.94);box-shadow:0 2px 8px rgba(16,32,26,.14);font-size:14px;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--text-primary)">‹</button>
+            <button type="button" id="pbf-next" data-i18n-aria="common_nextImage" aria-label="다음 이미지" style="position:absolute;right:6px;top:50%;transform:translateY(-50%);width:28px;height:28px;border:0;border-radius:999px;background:rgba(255,255,255,0.94);box-shadow:0 2px 8px rgba(16,32,26,.14);font-size:14px;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--text-primary)">›</button>
             <div id="pbf-dots" style="position:absolute;left:0;right:0;bottom:8px;display:flex;justify-content:center;gap:6px">
               <button type="button" data-pbf-dot="0" aria-label="1번 이미지" style="width:6px;height:6px;padding:0;border:0;border-radius:50%;background:var(--accent-strong);cursor:pointer"></button>
               <button type="button" data-pbf-dot="1" aria-label="2번 이미지" style="width:6px;height:6px;padding:0;border:0;border-radius:50%;background:var(--border-strong);cursor:pointer"></button>
@@ -202,11 +202,11 @@ window.__resources = {
           </div>
           <div style="padding:20px 22px"><div style="font-size:11.5px;letter-spacing:0.12em;color:var(--text-accent);margin-bottom:9px" data-i18n="product_card2Tag">NEW</div><div style="font-weight:500;font-size:16.5px;margin-bottom:6px" data-i18n="product_card2Title">바디핏 신체 구성 측정기</div><div style="font-size:13.5px;line-height:1.75;color:var(--text-tertiary)" data-i18n="product_card2Desc">체지방·골량·체수분·근육량 분석</div></div>
         </div>
-        <div style="display:block;border:1px solid var(--border-subtle);background:var(--surface-card)">
-          <div style="position:relative;aspect-ratio:3/4;background:var(--surface-sunken);border-bottom:1px solid var(--border-subtle);overflow:hidden">
+        <div style="display:block;background:var(--surface-card);border-radius:20px;overflow:hidden">
+          <div style="position:relative;aspect-ratio:3/4;background:var(--surface-sunken);overflow:hidden">
             <img id="sws-main-img" src="images/product-scale-slides/1-front-appcoach.jpg" alt="스마트 체중계 ABS1402 - Bfit AppCoach 화면" style="width:100%;height:100%;object-fit:cover;display:block">
-            <button type="button" id="sws-prev" data-i18n-aria="common_prevImage" aria-label="이전 이미지" style="position:absolute;left:6px;top:50%;transform:translateY(-50%);width:28px;height:28px;border:1px solid var(--border-subtle);background:rgba(255,255,255,0.9);font-size:14px;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--text-primary)">‹</button>
-            <button type="button" id="sws-next" data-i18n-aria="common_nextImage" aria-label="다음 이미지" style="position:absolute;right:6px;top:50%;transform:translateY(-50%);width:28px;height:28px;border:1px solid var(--border-subtle);background:rgba(255,255,255,0.9);font-size:14px;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--text-primary)">›</button>
+            <button type="button" id="sws-prev" data-i18n-aria="common_prevImage" aria-label="이전 이미지" style="position:absolute;left:6px;top:50%;transform:translateY(-50%);width:28px;height:28px;border:0;border-radius:999px;background:rgba(255,255,255,0.94);box-shadow:0 2px 8px rgba(16,32,26,.14);font-size:14px;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--text-primary)">‹</button>
+            <button type="button" id="sws-next" data-i18n-aria="common_nextImage" aria-label="다음 이미지" style="position:absolute;right:6px;top:50%;transform:translateY(-50%);width:28px;height:28px;border:0;border-radius:999px;background:rgba(255,255,255,0.94);box-shadow:0 2px 8px rgba(16,32,26,.14);font-size:14px;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--text-primary)">›</button>
             <div id="sws-dots" style="position:absolute;left:0;right:0;bottom:8px;display:flex;justify-content:center;gap:6px">
               <button type="button" data-sws-dot="0" aria-label="1번 이미지" style="width:6px;height:6px;padding:0;border:0;border-radius:50%;background:var(--accent-strong);cursor:pointer"></button>
               <button type="button" data-sws-dot="1" aria-label="2번 이미지" style="width:6px;height:6px;padding:0;border:0;border-radius:50%;background:var(--border-strong);cursor:pointer"></button>
@@ -216,11 +216,11 @@ window.__resources = {
           </div>
           <div style="padding:20px 22px"><div style="font-size:11.5px;letter-spacing:0.12em;color:var(--text-muted);margin-bottom:9px" data-i18n="product_card3Tag">ABS1402</div><div style="font-weight:500;font-size:16.5px;margin-bottom:6px" data-i18n="product_card3Title">스마트 체중계</div><div style="font-size:13.5px;line-height:1.75;color:var(--text-tertiary)" data-i18n="product_card3Desc">체중 측정값을 비핏 앱으로 자동 관리</div></div>
         </div>
-        <div style="display:block;border:1px solid var(--border-subtle);background:var(--surface-card)">
-          <div style="position:relative;aspect-ratio:3/4;background:var(--surface-sunken);border-bottom:1px solid var(--border-subtle);overflow:hidden">
+        <div style="display:block;background:var(--surface-card);border-radius:20px;overflow:hidden">
+          <div style="position:relative;aspect-ratio:3/4;background:var(--surface-sunken);overflow:hidden">
             <img id="bps-main-img" src="images/product-bp-slides/1-front-display.jpg" alt="스마트 혈압계 LD-737" style="width:100%;height:100%;object-fit:cover;display:block">
-            <button type="button" id="bps-prev" data-i18n-aria="common_prevImage" aria-label="이전 이미지" style="position:absolute;left:6px;top:50%;transform:translateY(-50%);width:28px;height:28px;border:1px solid var(--border-subtle);background:rgba(255,255,255,0.9);font-size:14px;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--text-primary)">‹</button>
-            <button type="button" id="bps-next" data-i18n-aria="common_nextImage" aria-label="다음 이미지" style="position:absolute;right:6px;top:50%;transform:translateY(-50%);width:28px;height:28px;border:1px solid var(--border-subtle);background:rgba(255,255,255,0.9);font-size:14px;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--text-primary)">›</button>
+            <button type="button" id="bps-prev" data-i18n-aria="common_prevImage" aria-label="이전 이미지" style="position:absolute;left:6px;top:50%;transform:translateY(-50%);width:28px;height:28px;border:0;border-radius:999px;background:rgba(255,255,255,0.94);box-shadow:0 2px 8px rgba(16,32,26,.14);font-size:14px;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--text-primary)">‹</button>
+            <button type="button" id="bps-next" data-i18n-aria="common_nextImage" aria-label="다음 이미지" style="position:absolute;right:6px;top:50%;transform:translateY(-50%);width:28px;height:28px;border:0;border-radius:999px;background:rgba(255,255,255,0.94);box-shadow:0 2px 8px rgba(16,32,26,.14);font-size:14px;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--text-primary)">›</button>
             <div id="bps-dots" style="position:absolute;left:0;right:0;bottom:8px;display:flex;justify-content:center;gap:6px">
               <button type="button" data-bps-dot="0" aria-label="1번 이미지" style="width:6px;height:6px;padding:0;border:0;border-radius:50%;background:var(--accent-strong);cursor:pointer"></button>
               <button type="button" data-bps-dot="1" aria-label="2번 이미지" style="width:6px;height:6px;padding:0;border:0;border-radius:50%;background:var(--border-strong);cursor:pointer"></button>
@@ -231,36 +231,36 @@ window.__resources = {
         </div>
       </div>
       <div id="app" style="display:flex;flex-wrap:wrap;gap:10px;margin-top:clamp(22px,2.6vw,32px)">
-        <a href="https://play.google.com/store/apps/details?id=com.nanosoft.bfitappcoach" target="_blank" rel="noopener" style="padding:14px 24px;border:1px solid var(--border-strong);font-size:14px;white-space:nowrap" data-i18n="product_googlePlayBtn">앱 · Google Play</a>
-        <a href="https://apps.apple.com/kr/app/id1599175282" target="_blank" rel="noopener" style="padding:14px 24px;border:1px solid var(--border-strong);font-size:14px;white-space:nowrap" data-i18n="product_appStoreBtn">앱 · App Store</a>
-        <a href="images/catalog-kr.pdf" target="_blank" rel="noopener" style="padding:14px 24px;border:1px solid var(--border-strong);font-size:14px;white-space:nowrap" data-i18n="product_catalogBtn">카탈로그 PDF</a>
+        <a href="https://play.google.com/store/apps/details?id=com.nanosoft.bfitappcoach" target="_blank" rel="noopener" class="btn btn-secondary" data-i18n="product_googlePlayBtn">앱 · Google Play</a>
+        <a href="https://apps.apple.com/kr/app/id1599175282" target="_blank" rel="noopener" class="btn btn-secondary" data-i18n="product_appStoreBtn">앱 · App Store</a>
+        <a href="images/catalog-kr.pdf" target="_blank" rel="noopener" class="btn btn-secondary" data-i18n="product_catalogBtn">카탈로그 PDF</a>
       </div>
     </div>
   </section>
 
-  <section id="biz" style="padding:clamp(52px,7vw,104px) clamp(16px,4vw,56px);background:var(--accent-strong);color:var(--text-on-accent)">
-    <div style="max-width:1340px;margin:0 auto">
+  <section id="biz" style="padding:clamp(52px,7vw,104px) clamp(16px,4vw,56px)">
+    <div style="max-width:1340px;margin:0 auto;background:var(--surface-accent);border-radius:28px;padding:clamp(28px,4vw,56px)">
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:clamp(28px,4vw,60px);align-items:start">
         <div>
-          <p style="margin:0 0 16px;font-size:12.5px;letter-spacing:0.14em;color:var(--accent-on-dark)" data-i18n="biz_eyebrow">신제품 론칭 기념 특별 프로그램</p>
+          <p style="margin:0 0 16px;font-size:12.5px;font-weight:700;color:var(--text-accent)" data-i18n="biz_eyebrow">신제품 론칭 기념 특별 프로그램</p>
           <h2 style="margin:0 0 22px;font-weight:800;font-size:clamp(25px,3.2vw,40px);line-height:1.35;letter-spacing:-0.025em;text-wrap:pretty" data-i18n-html="biz_title">회원들의 건강을 책임지는 비핏 바디핏<br>무상체험 및 도입 프로그램</h2>
-          <p style="margin:0 0 30px;font-size:15.5px;line-height:1.9;color:#DDEFE5;max-width:44ch;text-wrap:pretty" data-i18n="biz_body">기업·기관을 대상으로 바디핏을 현장에 설치해 무상으로 체험하고, 신제품 론칭 기념 기간 도입 기업에 별도 혜택을 제공합니다. 플랜과 금액은 요금·도입 페이지에서 확인하세요.</p>
-          <p style="margin:0;font-weight:700;font-size:clamp(19px,2vw,25px);line-height:1.5;color:var(--accent-on-dark)" data-i18n="biz_quote">건강한 회원이 만드는, 더 큰 내일</p>
+          <p style="margin:0 0 30px;font-size:15.5px;line-height:1.9;color:var(--text-secondary);max-width:44ch;text-wrap:pretty" data-i18n="biz_body">기업·기관을 대상으로 바디핏을 현장에 설치해 무상으로 체험하고, 신제품 론칭 기념 기간 도입 기업에 별도 혜택을 제공합니다. 플랜과 금액은 요금·도입 페이지에서 확인하세요.</p>
+          <p style="margin:0;font-weight:700;font-size:clamp(19px,2vw,25px);line-height:1.5;color:var(--text-accent)" data-i18n="biz_quote">건강한 회원이 만드는, 더 큰 내일</p>
         </div>
-        <div style="display:grid;gap:1px;background:rgba(243,248,244,0.28);border:1px solid rgba(243,248,244,0.28);align-content:start">
-          <div style="background:var(--accent-strong);padding:24px 26px">
-            <div style="font-size:12.5px;color:var(--accent-on-dark);margin-bottom:10px" data-i18n="biz_planLabel">12개월 할부 기준</div>
+        <div style="display:grid;gap:12px;align-content:start">
+          <div style="background:var(--surface-card);border-radius:20px;padding:24px 26px">
+            <div style="font-size:12.5px;color:var(--text-accent);margin-bottom:10px" data-i18n="biz_planLabel">12개월 할부 기준</div>
             <div style="font-weight:700;font-size:clamp(23px,2.6vw,30px);letter-spacing:-0.02em;white-space:nowrap" data-i18n="biz_planPrice">월 32,500원부터</div>
-            <div style="font-size:14px;line-height:1.8;color:#DDEFE5;margin-top:10px" data-i18n="biz_planNote">월 이용 인원에 따라 Starter · Business · Pro · Enterprise 중 선택합니다.</div>
+            <div style="font-size:14px;line-height:1.8;color:var(--text-secondary);margin-top:10px" data-i18n="biz_planNote">월 이용 인원에 따라 Starter · Business · Pro · Enterprise 중 선택합니다.</div>
           </div>
-          <div style="background:rgba(255,255,255,0.08);padding:20px 26px;display:flex;flex-wrap:wrap;gap:12px 24px"><a href="https://bfitdaily.kr/bodyfit/plans/" style="font-size:14.5px;font-weight:500;border-bottom:1px solid var(--accent-on-dark);padding-bottom:2px;color:var(--text-on-accent);white-space:nowrap" data-i18n="biz_pricingLink">요금 플랜 자세히 보기 →</a><a href="#contact" style="font-size:14.5px;border-bottom:1px solid rgba(243,248,244,0.4);padding-bottom:2px;color:var(--text-on-accent);white-space:nowrap" data-i18n="biz_trialLink">무상체험 신청</a></div>
+          <div style="background:var(--surface-card);border-radius:20px;padding:20px 26px;display:flex;flex-wrap:wrap;gap:12px 24px"><a href="https://bfitdaily.kr/bodyfit/plans/" style="font-size:14.5px;font-weight:700;border-bottom:1px solid var(--accent-strong);padding-bottom:2px;color:var(--text-accent);white-space:nowrap" data-i18n="biz_pricingLink">요금 플랜 자세히 보기 →</a><a href="#contact" style="font-size:14.5px;border-bottom:1px solid var(--border-strong);padding-bottom:2px;color:var(--text-primary);white-space:nowrap" data-i18n="biz_trialLink">무상체험 신청</a></div>
         </div>
       </div>
     </div>
   </section>
 
   <section id="invitation" style="padding:clamp(52px,7vw,104px) clamp(16px,4vw,56px);border-bottom:1px solid var(--border-subtle)">
-    <div style="max-width:1340px;margin:0 auto;border:1px solid var(--border-subtle);background:var(--surface-card);padding:clamp(28px,4vw,56px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:clamp(28px,4vw,56px);align-items:start">
+    <div style="max-width:1340px;margin:0 auto;background:var(--surface-card);border-radius:20px;overflow:hidden;padding:clamp(28px,4vw,56px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:clamp(28px,4vw,56px);align-items:start">
       <div>
       <p style="margin:0 0 18px;font-size:12px;letter-spacing:0.2em;color:var(--text-accent)" data-i18n="invitation_eyebrow">INVITATION</p>
       <h2 style="margin:0 0 12px;font-weight:800;font-size:clamp(25px,3.4vw,42px);letter-spacing:-0.025em" data-i18n-html="invitation_title"><span style="color:var(--text-accent)">비핏</span> 바디핏 신제품 론칭 행사에 초대합니다</h2>
@@ -268,7 +268,7 @@ window.__resources = {
       <p style="margin:0 0 clamp(28px,3.5vw,44px);font-size:15.5px;line-height:1.95;color:var(--text-secondary);max-width:58ch;text-wrap:pretty" data-i18n="invitation_body">
         비핏(Bfit)의 새로운 헬스케어 제품 ‘바디핏(BodyFit)’ 신제품 론칭을 기념해, 나노소프트 계룡 신사옥에서 여러분을 초대합니다. 바디핏을 직접 경험하고, 편안한 식사와 다과를 즐기며 함께 이야기 나누는 시간을 마련했습니다.
       </p>
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:1px;background:var(--border-subtle);border:1px solid var(--border-subtle);margin-bottom:clamp(24px,3vw,36px)">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:1px;background:var(--divider);border-radius:20px;overflow:hidden;margin-bottom:clamp(24px,3vw,36px)">
         <div style="background:var(--bg-app);padding:22px 24px"><div style="font-size:12.5px;color:var(--text-tertiary);margin-bottom:8px" data-i18n="invitation_dateLabel">일시</div><div style="font-weight:700;font-size:clamp(17px,1.8vw,21px);line-height:1.5" data-i18n-html="invitation_dateValue">2026년 10월 30일 (금)<br>오후 2시</div></div>
         <div style="background:var(--bg-app);padding:22px 24px"><div style="font-size:12.5px;color:var(--text-tertiary);margin-bottom:8px" data-i18n="invitation_venueLabel">장소</div><div style="font-weight:700;font-size:clamp(17px,1.8vw,21px);line-height:1.5"><a href="https://www.google.com/maps/search/?api=1&query=%EC%B6%A9%EB%82%A8%20%EA%B3%84%EB%A3%A1%EC%8B%9C%20%EB%91%90%EB%A7%88%EB%A9%B4%20%EC%9E%85%EC%95%94%EB%A6%AC%20622" target="_blank" rel="noopener" data-i18n="invitation_venueValue" style="color:inherit">충남 계룡시 두마면 입암리 622</a></div><div style="font-size:13.5px;color:var(--text-tertiary);margin-top:6px" data-i18n="invitation_venueNote">(나노소프트 신사옥)</div></div>
       </div>
@@ -277,11 +277,11 @@ window.__resources = {
       </div>
       <p style="margin:14px 0 0;font-size:13.5px;line-height:1.8;color:var(--text-tertiary)" data-i18n="invitation_giftNote">현장에서 바디핏을 체험하신 분께 대형 코르크 요가매트를 선착순으로 증정합니다.</p>
       <div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:26px">
-        <a href="#contact" style="padding:14px 26px;background:var(--accent-strong);color:var(--text-on-accent);font-size:14px;white-space:nowrap" data-i18n="invitation_rsvpBtn">참석 회신</a>
-        <a href="https://www.google.com/maps/search/?api=1&query=%EC%B6%A9%EB%82%A8%20%EA%B3%84%EB%A3%A1%EC%8B%9C%20%EB%91%90%EB%A7%88%EB%A9%B4%20%EC%9E%85%EC%95%94%EB%A6%AC%20622" target="_blank" rel="noopener" style="padding:14px 26px;border:1px solid var(--border-strong);font-size:14px;white-space:nowrap" data-i18n="invitation_directionsBtn">오시는 길</a>
+        <a href="#contact" class="btn btn-primary" data-i18n="invitation_rsvpBtn">참석 회신</a>
+        <a href="https://www.google.com/maps/search/?api=1&query=%EC%B6%A9%EB%82%A8%20%EA%B3%84%EB%A3%A1%EC%8B%9C%20%EB%91%90%EB%A7%88%EB%A9%B4%20%EC%9E%85%EC%95%94%EB%A6%AC%20622" target="_blank" rel="noopener" class="btn btn-secondary" data-i18n="invitation_directionsBtn">오시는 길</a>
       </div>
       </div>
-      <div style="background:var(--surface-sunken);border:1px solid var(--border-subtle);padding:clamp(14px,1.6vw,20px)">
+      <div style="background:var(--surface-sunken);border-radius:20px;overflow:hidden;padding:clamp(14px,1.6vw,20px)">
         <img src="images/nanosoft-groundbreaking-invitation.jpg" alt="비핏 바디핏 신제품 론칭 초대장" style="width:100%;height:auto;display:block">
         <div style="font-size:12.5px;color:var(--text-tertiary);padding-top:12px" data-i18n="invitation_cardCaption">초대장 전문 내려받기 (PDF)</div>
       </div>
@@ -303,11 +303,11 @@ window.__resources = {
           </div>
         </div>
         <div style="display:grid;gap:clamp(16px,2vw,22px)">
-          <div style="background:var(--text-on-accent);border:1px solid rgba(238,242,239,0.18);padding:clamp(22px,2.6vw,30px) clamp(20px,2.4vw,26px)">
+          <div style="background:var(--text-on-accent);border-radius:20px;padding:clamp(22px,2.6vw,30px) clamp(20px,2.4vw,26px)">
             <img src="images/idovox-concept-diagram.png" alt="idoVOX 기술 개념도 — 측정 장치의 음파 신호를 스마트기기가 바로 인식" style="width:100%;height:auto;display:block">
             <p style="margin:16px 0 0;font-size:12.5px;letter-spacing:0.06em;color:var(--text-tertiary)" data-i18n="tech_diagramCaption">측정 장치의 음파 신호 → 페어링 없이 스마트기기가 바로 인식</p>
           </div>
-          <div style="position:relative;overflow:hidden">
+          <div style="position:relative;overflow:hidden;border-radius:20px">
             <img src="images/idovox-brand-story.jpg" alt="훈민정음 — idoVOX 이름의 출발점" style="width:100%;height:220px;object-fit:cover;display:block;filter:grayscale(1)">
             <div style="position:absolute;inset:0;background:linear-gradient(0deg,rgba(25,31,29,0.92) 0%,rgba(25,31,29,0.25) 55%,rgba(25,31,29,0.05) 100%);display:flex;flex-direction:column;justify-content:flex-end;padding:20px 22px">
               <p style="margin:0 0 6px;font-weight:700;font-size:16px;color:var(--accent-on-dark)" data-i18n="tech_storyLabel">Brand Story</p>
@@ -325,22 +325,22 @@ window.__resources = {
         <h2 style="margin:0 0 18px;font-weight:800;font-size:clamp(23px,2.8vw,34px);letter-spacing:-0.025em" data-i18n-html="company_title">세상을 건강하게<br>만드는 사람들의 회사</h2>
         <p style="margin:0;font-size:15.5px;line-height:1.95;color:var(--text-secondary);max-width:42ch;text-wrap:pretty" data-i18n="company_body">2010년 나노소프트(주) 법인설립 이후, 자체 음파통신 특허를 시작으로 idoVOX 기술 브랜드를 출시하고 미국·유럽·일본·동남아 등 아마존 글로벌 시장으로 나아갔습니다. 이제 AI 헬스케어로 한 걸음 더 나아가며, 2026년 계룡 신사옥 준공과 함께 생산·물류 인프라를 확장합니다.</p>
         <div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:28px">
-          <a href="sub/company-history.html" style="padding:13px 24px;border:1px solid var(--border-strong);font-size:14px" data-i18n="company_historyBtn">회사연혁 전체보기</a>
-          <a href="sub/ir.html" style="padding:13px 24px;border:1px solid var(--border-strong);font-size:14px" data-i18n="company_irBtn">IR 투자소개</a>
+          <a href="sub/company-history.html" class="btn btn-secondary" data-i18n="company_historyBtn">회사연혁 전체보기</a>
+          <a href="sub/ir.html" class="btn btn-secondary" data-i18n="company_irBtn">IR 투자소개</a>
         </div>
       </div>
       <div>
         <p style="margin:0 0 12px;font-weight:700;font-size:18px;color:var(--text-accent)" data-i18n="company_historyLabel">History</p>
-        <div style="display:grid;gap:1px;background:var(--border-subtle);border:1px solid var(--border-subtle)">
-          <div style="background:var(--bg-app);padding:16px 20px;display:flex;gap:18px;align-items:baseline"><div style="font-weight:700;font-size:21px;color:var(--text-accent);min-width:52px;flex-shrink:0">2026</div><div style="font-size:13.5px;line-height:1.75;color:var(--text-secondary)" data-i18n="company_h2026">계룡 신사옥 준공, 생산·물류 인프라 확장 (예정)</div></div>
-          <div style="background:var(--bg-app);padding:16px 20px;display:flex;gap:18px;align-items:baseline"><div style="font-weight:700;font-size:21px;color:var(--text-accent);min-width:52px;flex-shrink:0">2025</div><div style="font-size:13.5px;line-height:1.75;color:var(--text-secondary)" data-i18n="company_h2025">AI 신체 구성 분석기 개발 완료, 일본 SPORTEC Tokyo 참가 · 10만 달러 MOU 체결</div></div>
-          <div style="background:var(--bg-app);padding:16px 20px;display:flex;gap:18px;align-items:baseline"><div style="font-weight:700;font-size:21px;color:var(--text-accent);min-width:52px;flex-shrink:0">2024</div><div style="font-size:13.5px;line-height:1.75;color:var(--text-secondary)" data-i18n="company_h2024">문화체육관광부 우수체육용품생산업체 지정, 일본 도쿄 빅사이트 전시회 참가 · 10만 달러 수출</div></div>
-          <div style="background:var(--bg-app);padding:16px 20px;display:flex;gap:18px;align-items:baseline"><div style="font-weight:700;font-size:21px;color:var(--text-accent);min-width:52px;flex-shrink:0">2023</div><div style="font-size:13.5px;line-height:1.75;color:var(--text-secondary)" data-i18n="company_h2023">AI Bfit Daily 앱 서비스 개발, 아마존 미국·캐나다·멕시코 시장 진출</div></div>
-          <div style="background:var(--bg-app);padding:16px 20px;display:flex;gap:18px;align-items:baseline"><div style="font-weight:700;font-size:21px;color:var(--text-accent);min-width:52px;flex-shrink:0">2020</div><div style="font-size:13.5px;line-height:1.75;color:var(--text-secondary)" data-i18n="company_h2020">미국·유럽·일본 아마존 글로벌 판매 시작, 베트남 GS홈쇼핑 진출</div></div>
-          <div style="background:var(--bg-app);padding:16px 20px;display:flex;gap:18px;align-items:baseline"><div style="font-weight:700;font-size:21px;color:var(--text-accent);min-width:52px;flex-shrink:0">2018</div><div style="font-size:13.5px;line-height:1.75;color:var(--text-secondary)" data-i18n="company_h2018">idoVOX 기술 브랜드 출시, 스마트 체지방분석기·혈압계 등 라인업 확장</div></div>
-          <div style="background:var(--bg-app);padding:16px 20px;display:flex;gap:18px;align-items:baseline"><div style="font-weight:700;font-size:21px;color:var(--text-accent);min-width:52px;flex-shrink:0">2016</div><div style="font-size:13.5px;line-height:1.75;color:var(--text-secondary)" data-i18n="company_h2016">병렬 음파통신 한국 특허 등록 — idoVOX 핵심 기술</div></div>
-          <div style="background:var(--bg-app);padding:16px 20px;display:flex;gap:18px;align-items:baseline"><div style="font-weight:700;font-size:21px;color:var(--text-accent);min-width:52px;flex-shrink:0">2013</div><div style="font-size:13.5px;line-height:1.75;color:var(--text-secondary)" data-i18n="company_h2013">음파통신 특허 등록, Bfit ABS1402 스마트 체중계 출시</div></div>
-          <div style="background:var(--bg-app);padding:16px 20px;display:flex;gap:18px;align-items:baseline"><div style="font-weight:700;font-size:21px;color:var(--text-accent);min-width:52px;flex-shrink:0">2010</div><div style="font-size:13.5px;line-height:1.75;color:var(--text-secondary)" data-i18n="company_h2010">나노소프트(주) 법인설립</div></div>
+        <div style="display:grid;gap:1px;background:var(--divider);border-radius:20px;overflow:hidden">
+          <div style="background:var(--surface-card);padding:16px 20px;display:flex;gap:18px;align-items:baseline"><div style="font-weight:700;font-size:21px;color:var(--text-accent);min-width:52px;flex-shrink:0">2026</div><div style="font-size:13.5px;line-height:1.75;color:var(--text-secondary)" data-i18n="company_h2026">계룡 신사옥 준공, 생산·물류 인프라 확장 (예정)</div></div>
+          <div style="background:var(--surface-card);padding:16px 20px;display:flex;gap:18px;align-items:baseline"><div style="font-weight:700;font-size:21px;color:var(--text-accent);min-width:52px;flex-shrink:0">2025</div><div style="font-size:13.5px;line-height:1.75;color:var(--text-secondary)" data-i18n="company_h2025">AI 신체 구성 분석기 개발 완료, 일본 SPORTEC Tokyo 참가 · 10만 달러 MOU 체결</div></div>
+          <div style="background:var(--surface-card);padding:16px 20px;display:flex;gap:18px;align-items:baseline"><div style="font-weight:700;font-size:21px;color:var(--text-accent);min-width:52px;flex-shrink:0">2024</div><div style="font-size:13.5px;line-height:1.75;color:var(--text-secondary)" data-i18n="company_h2024">문화체육관광부 우수체육용품생산업체 지정, 일본 도쿄 빅사이트 전시회 참가 · 10만 달러 수출</div></div>
+          <div style="background:var(--surface-card);padding:16px 20px;display:flex;gap:18px;align-items:baseline"><div style="font-weight:700;font-size:21px;color:var(--text-accent);min-width:52px;flex-shrink:0">2023</div><div style="font-size:13.5px;line-height:1.75;color:var(--text-secondary)" data-i18n="company_h2023">AI Bfit Daily 앱 서비스 개발, 아마존 미국·캐나다·멕시코 시장 진출</div></div>
+          <div style="background:var(--surface-card);padding:16px 20px;display:flex;gap:18px;align-items:baseline"><div style="font-weight:700;font-size:21px;color:var(--text-accent);min-width:52px;flex-shrink:0">2020</div><div style="font-size:13.5px;line-height:1.75;color:var(--text-secondary)" data-i18n="company_h2020">미국·유럽·일본 아마존 글로벌 판매 시작, 베트남 GS홈쇼핑 진출</div></div>
+          <div style="background:var(--surface-card);padding:16px 20px;display:flex;gap:18px;align-items:baseline"><div style="font-weight:700;font-size:21px;color:var(--text-accent);min-width:52px;flex-shrink:0">2018</div><div style="font-size:13.5px;line-height:1.75;color:var(--text-secondary)" data-i18n="company_h2018">idoVOX 기술 브랜드 출시, 스마트 체지방분석기·혈압계 등 라인업 확장</div></div>
+          <div style="background:var(--surface-card);padding:16px 20px;display:flex;gap:18px;align-items:baseline"><div style="font-weight:700;font-size:21px;color:var(--text-accent);min-width:52px;flex-shrink:0">2016</div><div style="font-size:13.5px;line-height:1.75;color:var(--text-secondary)" data-i18n="company_h2016">병렬 음파통신 한국 특허 등록 — idoVOX 핵심 기술</div></div>
+          <div style="background:var(--surface-card);padding:16px 20px;display:flex;gap:18px;align-items:baseline"><div style="font-weight:700;font-size:21px;color:var(--text-accent);min-width:52px;flex-shrink:0">2013</div><div style="font-size:13.5px;line-height:1.75;color:var(--text-secondary)" data-i18n="company_h2013">음파통신 특허 등록, Bfit ABS1402 스마트 체중계 출시</div></div>
+          <div style="background:var(--surface-card);padding:16px 20px;display:flex;gap:18px;align-items:baseline"><div style="font-weight:700;font-size:21px;color:var(--text-accent);min-width:52px;flex-shrink:0">2010</div><div style="font-size:13.5px;line-height:1.75;color:var(--text-secondary)" data-i18n="company_h2010">나노소프트(주) 법인설립</div></div>
         </div>
       </div>
     </div>
@@ -358,10 +358,10 @@ window.__resources = {
           <div><span style="color:var(--text-tertiary);font-size:13px;display:block;margin-bottom:4px" data-i18n="contact_officeLabel">연구소 및 공장</span><a href="https://www.google.com/maps/search/?api=1&query=%EC%B6%A9%EB%82%A8%20%EA%B3%84%EB%A3%A1%EC%8B%9C%20%EB%91%90%EB%A7%88%EB%A9%B4%20%EC%9E%85%EC%95%94%EB%A6%AC%20622" target="_blank" rel="noopener" data-i18n="contact_officeValue" style="color:inherit">충남 계룡시 두마면 입암리 622</a></div>
         </div>
       </div>
-      <div style="border:1px solid var(--border-subtle);background:var(--surface-card);padding:clamp(22px,3vw,34px)">
+      <div style="background:var(--surface-card);border-radius:20px;overflow:hidden;padding:clamp(22px,3vw,34px)">
         <div style="display:grid;gap:16px">
           <label style="display:grid;gap:7px;font-size:13px;color:var(--text-tertiary)"><span data-i18n="contact_formTypeLabel">문의 유형</span>
-            <sc-raw-select data-role="type" style="font-family:inherit;font-size:15px;font-weight:300;padding:13px 12px;border:1px solid var(--border-subtle);background:var(--bg-app);color:var(--text-primary)">
+            <sc-raw-select data-role="type" style="font-family:inherit;font-size:15px;font-weight:400;padding:13px 14px;border:1px solid var(--border);border-radius:12px;background:var(--surface-card);color:var(--text-primary)">
               <option data-i18n="contact_formType1">기업 무상체험 신청</option>
               <option data-i18n="contact_formType2">바디핏 구매·견적</option>
               <option data-i18n="contact_formType3">기술 제휴</option>
@@ -369,38 +369,38 @@ window.__resources = {
             </sc-raw-select>
           </label>
           <label style="display:grid;gap:7px;font-size:13px;color:var(--text-tertiary)"><span data-i18n="contact_formNameLabel">회사 / 성함</span>
-            <input type="text" data-role="name" placeholder="예: 나노소프트 김OO" data-i18n-placeholder="contact_formNamePlaceholder" style="font-family:inherit;font-size:15px;font-weight:300;padding:13px 12px;border:1px solid var(--border-subtle);background:var(--bg-app);color:var(--text-primary)">
+            <input type="text" data-role="name" placeholder="예: 나노소프트 김OO" data-i18n-placeholder="contact_formNamePlaceholder" style="font-family:inherit;font-size:15px;font-weight:400;padding:13px 14px;border:1px solid var(--border);border-radius:12px;background:var(--surface-card);color:var(--text-primary)">
           </label>
           <label style="display:grid;gap:7px;font-size:13px;color:var(--text-tertiary)"><span data-i18n="contact_formContactLabel">연락처</span>
-            <input type="text" data-role="phone" placeholder="이메일 또는 휴대전화" data-i18n-placeholder="contact_formContactPlaceholder" style="font-family:inherit;font-size:15px;font-weight:300;padding:13px 12px;border:1px solid var(--border-subtle);background:var(--bg-app);color:var(--text-primary)">
+            <input type="text" data-role="phone" placeholder="이메일 또는 휴대전화" data-i18n-placeholder="contact_formContactPlaceholder" style="font-family:inherit;font-size:15px;font-weight:400;padding:13px 14px;border:1px solid var(--border);border-radius:12px;background:var(--surface-card);color:var(--text-primary)">
           </label>
           <label style="display:grid;gap:7px;font-size:13px;color:var(--text-tertiary)"><span data-i18n="contact_formMessageLabel">문의 내용</span>
-            <textarea rows="4" data-role="message" style="font-family:inherit;font-size:15px;font-weight:300;padding:13px 12px;border:1px solid var(--border-subtle);background:var(--bg-app);color:var(--text-primary);resize:vertical"></textarea>
+            <textarea rows="4" data-role="message" style="font-family:inherit;font-size:15px;font-weight:400;padding:13px 14px;border:1px solid var(--border);border-radius:12px;background:var(--surface-card);color:var(--text-primary);resize:vertical"></textarea>
           </label>
           <input type="checkbox" name="botcheck" data-role="botcheck" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0">
-          <button type="button" data-role="submit" style="font-family:inherit;font-size:14.5px;padding:15px;background:var(--accent-strong);color:var(--text-on-accent);border:none;cursor:pointer" data-i18n="contact_formSubmitBtn">문의 보내기</button>
+          <button type="button" data-role="submit" class="btn btn-primary" style="font-family:inherit;border:none;cursor:pointer;height:56px" data-i18n="contact_formSubmitBtn">문의 보내기</button>
           <p data-role="status" style="margin:0;font-size:13px;min-height:18px"></p>
         </div>
       </div>
     </div>
   </section>
 
-  <footer style="background:var(--text-primary);color:var(--border);padding:clamp(40px,5vw,72px) clamp(16px,4vw,56px) 28px">
+  <footer style="background:var(--surface-card);color:var(--text-secondary);padding:clamp(40px,5vw,72px) clamp(16px,4vw,56px) 28px">
     <div style="max-width:1340px;margin:0 auto">
-      <div style="display:flex;flex-wrap:wrap;gap:20px 40px;align-items:center;justify-content:space-between;padding-bottom:30px;border-bottom:1px solid rgba(195,205,199,0.2)">
-        <div style="display:flex;flex-direction:column;gap:2px;color:var(--text-on-accent)"><span style="font-weight:900;font-size:19px;letter-spacing:0.02em">NANOSOFT</span><span style="font-size:10px;letter-spacing:0.18em;color:var(--accent-on-dark)">FOR A HEALTHIER TOMORROW</span></div>
+      <div style="display:flex;flex-wrap:wrap;gap:20px 40px;align-items:center;justify-content:space-between;padding-bottom:30px;border-bottom:1px solid var(--divider)">
+        <div style="display:flex;flex-direction:column;gap:2px;color:var(--text-primary)"><span style="font-weight:800;font-size:19px;letter-spacing:0.02em">NANOSOFT</span><span style="font-size:10px;letter-spacing:0.18em;color:var(--text-accent)">FOR A HEALTHIER TOMORROW</span></div>
         <div style="font-size:14.5px;letter-spacing:0.14em;white-space:nowrap" data-i18n="footer_slogan">사람의 오늘이 더 건강한 내일이 되도록</div>
-        <a href="https://www.bfit.kr" target="_blank" rel="noopener" style="font-size:14.5px;color:var(--accent-on-dark)">www.bfit.kr</a>
+        <a href="https://www.bfit.kr" target="_blank" rel="noopener" style="font-size:14.5px;color:var(--text-accent)">www.bfit.kr</a>
       </div>
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,140px),1fr));gap:18px 16px;padding:30px 0;font-size:13.5px">
-        <div style="display:grid;gap:9px"><span style="color:var(--text-muted);font-size:12px;letter-spacing:0.1em" data-i18n="footer_bfitCol">BFIT</span><a href="#daily" data-i18n="nav_daily">비핏 데일리</a><a href="#bodyfit" data-i18n="nav_bodyfit">바디핏</a><a href="#system" data-i18n="nav_system">비핏 시스템</a><a href="#product" data-i18n="nav_product">제품 전체</a><a href="https://bfitdaily.kr/bodyfit/plans/" data-i18n="nav_pricing">요금·도입</a></div>
-        <div style="display:grid;gap:9px"><span style="color:var(--text-muted);font-size:12px;letter-spacing:0.1em" data-i18n="footer_nanosoftCol">NANOSOFT</span><a href="#company" data-i18n="nav_company">회사소개</a><a href="#tech" data-i18n="footer_techLabel">idoVOX 기술</a><a href="sub/company-history.html" data-i18n="footer_historyLabel">회사연혁</a><a href="sub/ir.html" data-i18n="footer_irLabel">IR 투자소개</a></div>
-        <div style="display:grid;gap:9px"><span style="color:var(--text-muted);font-size:12px;letter-spacing:0.1em" data-i18n="footer_shopCol">SHOP &amp; SERVICE</span><a href="https://smartstore.naver.com/bfit" target="_blank" rel="noopener">Bfit Shop</a><a href="#contact" data-i18n="footer_oneOnOneLabel">1:1 문의</a><a href="sub/privacy_ko.html" data-i18n="footer_privacyLabel">개인정보처리방침</a><a href="bbs/content-provision.html" data-i18n="footer_termsLabel">이용약관</a></div>
-        <div style="display:grid;gap:9px;align-content:start"><span style="color:var(--text-muted);font-size:12px;letter-spacing:0.1em" data-i18n="footer_followCol">FOLLOW</span><a href="https://www.instagram.com/bfit_app_coach/" target="_blank" rel="noopener">Instagram</a><a href="https://blog.naver.com/bfitapp" target="_blank" rel="noopener">Naver Blog</a><a href="https://www.facebook.com/BfitAppCoach" target="_blank" rel="noopener">Facebook</a>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,140px),1fr));gap:18px 16px;padding:30px 0;font-size:13px">
+        <div style="display:grid;gap:9px"><span style="color:var(--text-tertiary);font-size:12px;font-weight:700;letter-spacing:0.06em" data-i18n="footer_bfitCol">BFIT</span><a href="#daily" data-i18n="nav_daily">비핏 데일리</a><a href="#bodyfit" data-i18n="nav_bodyfit">바디핏</a><a href="#system" data-i18n="nav_system">비핏 시스템</a><a href="#product" data-i18n="nav_product">제품 전체</a><a href="https://bfitdaily.kr/bodyfit/plans/" data-i18n="nav_pricing">요금·도입</a></div>
+        <div style="display:grid;gap:9px"><span style="color:var(--text-tertiary);font-size:12px;font-weight:700;letter-spacing:0.06em" data-i18n="footer_nanosoftCol">NANOSOFT</span><a href="#company" data-i18n="nav_company">회사소개</a><a href="#tech" data-i18n="footer_techLabel">idoVOX 기술</a><a href="sub/company-history.html" data-i18n="footer_historyLabel">회사연혁</a><a href="sub/ir.html" data-i18n="footer_irLabel">IR 투자소개</a></div>
+        <div style="display:grid;gap:9px"><span style="color:var(--text-tertiary);font-size:12px;font-weight:700;letter-spacing:0.06em" data-i18n="footer_shopCol">SHOP &amp; SERVICE</span><a href="https://smartstore.naver.com/bfit" target="_blank" rel="noopener">Bfit Shop</a><a href="#contact" data-i18n="footer_oneOnOneLabel">1:1 문의</a><a href="sub/privacy_ko.html" data-i18n="footer_privacyLabel">개인정보처리방침</a><a href="bbs/content-provision.html" data-i18n="footer_termsLabel">이용약관</a></div>
+        <div style="display:grid;gap:9px;align-content:start"><span style="color:var(--text-tertiary);font-size:12px;font-weight:700;letter-spacing:0.06em" data-i18n="footer_followCol">FOLLOW</span><a href="https://www.instagram.com/bfit_app_coach/" target="_blank" rel="noopener">Instagram</a><a href="https://blog.naver.com/bfitapp" target="_blank" rel="noopener">Naver Blog</a><a href="https://www.facebook.com/BfitAppCoach" target="_blank" rel="noopener">Facebook</a>
           <a href="https://play.google.com/store/apps/details?id=com.nanosoft.bfitappcoach" target="_blank" rel="noopener">Google Play</a><a href="https://apps.apple.com/kr/app/id1599175282" target="_blank" rel="noopener">App Store</a>
         </div>
       </div>
-      <div style="padding-top:22px;border-top:1px solid rgba(195,205,199,0.2);display:flex;flex-wrap:wrap;gap:8px 24px;font-size:12.5px;color:var(--text-muted)">
+      <div style="padding-top:22px;border-top:1px solid var(--divider);display:flex;flex-wrap:wrap;gap:8px 24px;font-size:12.5px;color:var(--text-tertiary)">
         <a href="https://www.google.com/maps/search/?api=1&query=%EB%8C%80%EC%A0%84%EA%B4%91%EC%97%AD%EC%8B%9C%20%EC%9C%A0%EC%84%B1%EA%B5%AC%20%EB%8C%80%EC%A0%95%EB%A1%9C%2068" target="_blank" rel="noopener" style="white-space:nowrap;color:inherit" data-i18n="footer_hqLine">본사 대전광역시 유성구 대정로 68, 본관 403호</a>
         <a href="https://www.google.com/maps/search/?api=1&query=%EC%B6%A9%EB%82%A8%20%EA%B3%84%EB%A3%A1%EC%8B%9C%20%EB%91%90%EB%A7%88%EB%A9%B4%20%EC%9E%85%EC%95%94%EB%A6%AC%20622" target="_blank" rel="noopener" style="white-space:nowrap;color:inherit" data-i18n="footer_officeLine">연구소 및 공장 충남 계룡시 두마면 입암리 622</a>
         <a href="tel:+82426331517" style="white-space:nowrap;color:inherit">Tel +82-42-633-1517</a>
