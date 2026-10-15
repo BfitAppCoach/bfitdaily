@@ -95,7 +95,41 @@
     header .site-nav a:last-child { border-bottom: none; }
     header .header-actions { order: 2; width: auto; margin-left: auto; flex-shrink: 0; gap: 6px !important; }
     header .header-actions a { padding: 9px 12px !important; font-size: 12.5px !important; }
-    .hero-cta { justify-content: flex-end; }
+    .hero-cta .btn { flex: 1 1 0; }
+    /* 떠 있는 채팅 버튼(높이 약 48px, 아래 20px)이 푸터 마지막 줄을 가리지 않게 */
+    footer { padding-bottom: 96px !important; }
+  }
+
+  /* 히어로 — 문구는 사진에 그리지 않고 글자로 둔다(번역 · 폰 가독성 · 검색).
+     폰: 사진 아래. 861px 이상: 사진 오른쪽 위에 얹고, 사진 폭에 비례해 커진다 */
+  .hero { max-width: 1340px; margin: 0 auto; position: relative; }
+  .hero-copy {
+    display: grid; gap: 8px;
+    padding: clamp(20px, 3vw, 28px) clamp(16px, 4vw, 56px) 0;
+  }
+  .hero-kicker { font-size: 13px; font-weight: 600; color: var(--text-accent); }
+  .hero-title {
+    margin: 0; font-size: clamp(25px, 6.6vw, 30px); font-weight: 800;
+    line-height: 1.28; letter-spacing: -0.025em; color: var(--text-primary); text-wrap: balance;
+  }
+  .hero-sub { margin: 0; font-size: 15px; line-height: 1.65; color: var(--text-secondary); text-wrap: balance; }
+
+  @media (min-width: 861px) {
+    .hero { --hero-w: min(100vw, 1340px); }
+    .hero::after {
+      content: ""; position: absolute; inset: 0 0 auto 40%; height: 42%; pointer-events: none;
+      background: linear-gradient(to bottom, rgba(15, 26, 22, 0.55), rgba(15, 26, 22, 0));
+      -webkit-mask-image: linear-gradient(to right, transparent, #000 30%);
+              mask-image: linear-gradient(to right, transparent, #000 30%);
+    }
+    .hero-copy {
+      position: absolute; z-index: 1; top: 2.6%; left: 53%; right: 2.5%;
+      padding: 0; gap: calc(var(--hero-w) * 0.006);
+      text-shadow: 0 1px 12px rgba(15, 26, 22, 0.45);
+    }
+    .hero-kicker { font-size: max(12.5px, calc(var(--hero-w) * 0.0125)); font-weight: 500; color: var(--text-on-accent); }
+    .hero-title { font-size: calc(var(--hero-w) * 0.029); color: var(--text-on-accent); }
+    .hero-sub { font-size: max(14.5px, calc(var(--hero-w) * 0.0165)); line-height: 1.5; color: var(--text-on-accent); text-wrap: pretty; max-width: 21em; }
   }
 
   @media (max-width: 400px) {
