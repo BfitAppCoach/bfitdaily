@@ -132,6 +132,7 @@
     line-height: 1.28; letter-spacing: -0.025em; color: var(--text-primary); text-wrap: balance;
   }
   .hero-sub { margin: 0; font-size: 15px; line-height: 1.65; color: var(--text-secondary); text-wrap: balance; }
+  .hero-cta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 16px; }
 
   @media (min-width: 861px) {
     .hero { --hero-w: min(100vw, 1340px); }
@@ -142,13 +143,16 @@
               mask-image: linear-gradient(to right, transparent, #000 30%);
     }
     .hero-copy {
-      position: absolute; z-index: 1; top: 2.6%; left: 53%; right: 2.5%;
+      position: absolute; z-index: 1; top: 2.6%; bottom: 4.5%; left: 53%; right: 2.5%;
+      display: flex; flex-direction: column;
       padding: 0; gap: calc(var(--hero-w) * 0.006);
       text-shadow: 0 1px 12px rgba(15, 26, 22, 0.45);
     }
     .hero-kicker { font-size: max(12.5px, calc(var(--hero-w) * 0.0125)); font-weight: 500; color: var(--text-on-accent); }
     .hero-title { font-size: calc(var(--hero-w) * 0.029); color: var(--text-on-accent); }
     .hero-sub { font-size: max(14.5px, calc(var(--hero-w) * 0.0165)); line-height: 1.5; color: var(--text-on-accent); text-wrap: pretty; max-width: 21em; }
+    /* 버튼은 사진 오른쪽 아래 바닥 위에 둔다 — 문구 바로 밑은 기기 손잡이 · 거치대 폰 화면을 가린다. 문구용 그림자는 주지 않는다 */
+    .hero-cta { margin-top: auto; align-self: flex-end; text-shadow: none; }
   }
 
   @media (max-width: 400px) {
