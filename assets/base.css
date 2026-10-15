@@ -100,6 +100,25 @@
     footer { padding-bottom: 96px !important; }
   }
 
+  /* 캐러셀 화살표 · 점 — 보이는 크기는 작게 두고 누르는 영역만 넓힌다(화살표 44px, 점 24px) */
+  #pds-prev, #pds-next, #pbf-prev, #pbf-next, #sws-prev, #sws-next, #bps-prev, #bps-next, #bfs-prev, #bfs-next {
+    width: 36px !important; height: 36px !important; font-size: 17px !important;
+  }
+  #pds-prev::before, #pds-next::before, #pbf-prev::before, #pbf-next::before, #sws-prev::before, #sws-next::before,
+  #bps-prev::before, #bps-next::before, #bfs-prev::before, #bfs-next::before, #bht-prev::before, #bht-next::before {
+    content: ""; position: absolute; inset: -4px; border-radius: 999px;
+  }
+  #pds-dots, #pbf-dots, #sws-dots, #bps-dots, #bht-dots { gap: 17px !important; }
+  [data-pds-dot], [data-pbf-dot], [data-sws-dot], [data-bps-dot], [data-bht-dot] {
+    position: relative; width: 7px !important; height: 7px !important;
+  }
+  [data-pds-dot]::before, [data-pbf-dot]::before, [data-sws-dot]::before, [data-bps-dot]::before, [data-bht-dot]::before {
+    content: ""; position: absolute; inset: -8.5px; border-radius: 999px;
+  }
+
+  /* 초대장 행사 항목 — 가운뎃점 대신 칩(줄이 어디서 바뀌어도 점이 홀로 남지 않게) */
+  .inv-tags > span { padding: 6px 12px; border-radius: 999px; background: var(--bg-app); line-height: 1.5; }
+
   /* 히어로 — 문구는 사진에 그리지 않고 글자로 둔다(번역 · 폰 가독성 · 검색).
      폰: 사진 아래. 861px 이상: 사진 오른쪽 위에 얹고, 사진 폭에 비례해 커진다 */
   .hero { max-width: 1340px; margin: 0 auto; position: relative; }

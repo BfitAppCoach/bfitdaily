@@ -15,7 +15,7 @@
 <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
 
 <link rel="stylesheet" href="assets/pretendard.css">
-<link rel="stylesheet" href="assets/base.css?v=7">
+<link rel="stylesheet" href="assets/base.css?v=8">
 
 <script>
 /* dc-runtime는 기본적으로 React를 unpkg.com CDN에서 받아옵니다.
@@ -179,7 +179,7 @@ window.__resources = {
       <p style="margin:0 0 clamp(28px,3.5vw,48px);font-size:15.5px;line-height:1.9;color:var(--text-secondary);max-width:50ch" data-i18n="product_body">측정 기기와 앱은 하나의 기록으로 연결됩니다.</p>
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr));gap:clamp(16px,2.2vw,26px)">
         <div style="display:block;background:var(--surface-card);border-radius:20px;overflow:hidden">
-          <div style="position:relative;aspect-ratio:3/4;background:transparent;overflow:hidden">
+          <div data-carousel="pds" style="position:relative;aspect-ratio:3/4;background:var(--surface-card);overflow:hidden">
             <img id="pds-main-img" src="images/product-daily-slides/1-todays-record.jpg" alt="비핏 데일리 앱 - 한눈에 보는 오늘의 기록" style="width:100%;height:100%;object-fit:contain;display:block;padding:6px;background:transparent">
             <button type="button" id="pds-prev" data-i18n-aria="common_prevScreen" aria-label="이전 화면" style="position:absolute;left:6px;top:50%;transform:translateY(-50%);width:28px;height:28px;border:0;border-radius:999px;background:rgba(255,255,255,0.94);box-shadow:0 2px 8px rgba(16,32,26,.14);font-size:14px;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--text-primary)">‹</button>
             <button type="button" id="pds-next" data-i18n-aria="common_nextScreen" aria-label="다음 화면" style="position:absolute;right:6px;top:50%;transform:translateY(-50%);width:28px;height:28px;border:0;border-radius:999px;background:rgba(255,255,255,0.94);box-shadow:0 2px 8px rgba(16,32,26,.14);font-size:14px;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--text-primary)">›</button>
@@ -195,8 +195,8 @@ window.__resources = {
           <div style="padding:20px 22px"><div style="font-size:11.5px;letter-spacing:0.12em;color:var(--text-tertiary);margin-bottom:9px" data-i18n="product_card1Tag">APP</div><div style="font-weight:500;font-size:16.5px;margin-bottom:6px" data-i18n="product_card1Title">비핏 데일리</div><div style="font-size:13.5px;line-height:1.75;color:var(--text-tertiary)" data-i18n="product_card1Desc">모든 비핏 기기의 기록을 모으는 통합 앱, 삼성 S헬스 연동</div></div>
         </div>
         <div style="display:block;background:var(--surface-card);border-radius:20px;overflow:hidden">
-          <div style="position:relative;aspect-ratio:3/4;background:var(--bg-app);overflow:hidden">
-            <img id="pbf-main-img" src="images/product-bodyfit-slides/1-full-top-view.png" alt="바디핏 신체 구성 측정기 - 전체 탑뷰" style="width:100%;height:100%;object-fit:contain;display:block;padding:10px;background:transparent;transform:scale(2);transform-origin:center center">
+          <div data-carousel="pbf" style="position:relative;aspect-ratio:3/4;background:var(--surface-card);overflow:hidden">
+            <img id="pbf-main-img" src="images/bodyfit-views/right-profile.png" alt="바디핏 신체 구성 측정기 - 옆모습 전체" style="width:100%;height:100%;object-fit:contain;display:block;padding:8% 10% 12%;background:transparent;transform:scale(1);transform-origin:center center">
             <button type="button" id="pbf-prev" data-i18n-aria="common_prevImage" aria-label="이전 이미지" style="position:absolute;left:6px;top:50%;transform:translateY(-50%);width:28px;height:28px;border:0;border-radius:999px;background:rgba(255,255,255,0.94);box-shadow:0 2px 8px rgba(16,32,26,.14);font-size:14px;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--text-primary)">‹</button>
             <button type="button" id="pbf-next" data-i18n-aria="common_nextImage" aria-label="다음 이미지" style="position:absolute;right:6px;top:50%;transform:translateY(-50%);width:28px;height:28px;border:0;border-radius:999px;background:rgba(255,255,255,0.94);box-shadow:0 2px 8px rgba(16,32,26,.14);font-size:14px;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--text-primary)">›</button>
             <div id="pbf-dots" style="position:absolute;left:0;right:0;bottom:8px;display:flex;justify-content:center;gap:6px">
@@ -205,13 +205,14 @@ window.__resources = {
               <button type="button" data-pbf-dot="2" aria-label="3번 이미지" style="width:6px;height:6px;padding:0;border:0;border-radius:50%;background:var(--border-strong);cursor:pointer"></button>
               <button type="button" data-pbf-dot="3" aria-label="4번 이미지" style="width:6px;height:6px;padding:0;border:0;border-radius:50%;background:var(--border-strong);cursor:pointer"></button>
               <button type="button" data-pbf-dot="4" aria-label="5번 이미지" style="width:6px;height:6px;padding:0;border:0;border-radius:50%;background:var(--border-strong);cursor:pointer"></button>
+              <button type="button" data-pbf-dot="5" aria-label="6번 이미지" style="width:6px;height:6px;padding:0;border:0;border-radius:50%;background:var(--border-strong);cursor:pointer"></button>
             </div>
           </div>
           <div style="padding:20px 22px"><div style="font-size:11.5px;letter-spacing:0.12em;color:var(--text-accent);margin-bottom:9px" data-i18n="product_card2Tag">NEW</div><div style="font-weight:500;font-size:16.5px;margin-bottom:6px" data-i18n="product_card2Title">바디핏 신체 구성 측정기</div><div style="font-size:13.5px;line-height:1.75;color:var(--text-tertiary)" data-i18n="product_card2Desc">체지방·골량·체수분·근육량 분석</div></div>
         </div>
         <div style="display:block;background:var(--surface-card);border-radius:20px;overflow:hidden">
-          <div style="position:relative;aspect-ratio:3/4;background:var(--surface-sunken);overflow:hidden">
-            <img id="sws-main-img" src="images/product-scale-slides/1-front-appcoach.jpg" alt="스마트 체중계 ABS1402 - Bfit AppCoach 화면" style="width:100%;height:100%;object-fit:cover;display:block">
+          <div data-carousel="sws" style="position:relative;aspect-ratio:3/4;background:var(--surface-card);overflow:hidden">
+            <img id="sws-main-img" src="images/product-scale-slides/1-front-appcoach.jpg" alt="스마트 체중계 ABS1402 - Bfit AppCoach 화면" style="width:100%;height:100%;object-fit:contain;display:block;padding:6% 6% 12%">
             <button type="button" id="sws-prev" data-i18n-aria="common_prevImage" aria-label="이전 이미지" style="position:absolute;left:6px;top:50%;transform:translateY(-50%);width:28px;height:28px;border:0;border-radius:999px;background:rgba(255,255,255,0.94);box-shadow:0 2px 8px rgba(16,32,26,.14);font-size:14px;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--text-primary)">‹</button>
             <button type="button" id="sws-next" data-i18n-aria="common_nextImage" aria-label="다음 이미지" style="position:absolute;right:6px;top:50%;transform:translateY(-50%);width:28px;height:28px;border:0;border-radius:999px;background:rgba(255,255,255,0.94);box-shadow:0 2px 8px rgba(16,32,26,.14);font-size:14px;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--text-primary)">›</button>
             <div id="sws-dots" style="position:absolute;left:0;right:0;bottom:8px;display:flex;justify-content:center;gap:6px">
@@ -224,8 +225,8 @@ window.__resources = {
           <div style="padding:20px 22px"><div style="font-size:11.5px;letter-spacing:0.12em;color:var(--text-tertiary);margin-bottom:9px" data-i18n="product_card3Tag">ABS1402</div><div style="font-weight:500;font-size:16.5px;margin-bottom:6px" data-i18n="product_card3Title">스마트 체중계</div><div style="font-size:13.5px;line-height:1.75;color:var(--text-tertiary)" data-i18n="product_card3Desc">체중 측정값을 비핏 앱으로 자동 관리</div></div>
         </div>
         <div style="display:block;background:var(--surface-card);border-radius:20px;overflow:hidden">
-          <div style="position:relative;aspect-ratio:3/4;background:var(--surface-sunken);overflow:hidden">
-            <img id="bps-main-img" src="images/product-bp-slides/1-front-display.jpg" alt="스마트 혈압계 LD-737" style="width:100%;height:100%;object-fit:cover;display:block">
+          <div data-carousel="bps" style="position:relative;aspect-ratio:3/4;background:var(--surface-card);overflow:hidden">
+            <img id="bps-main-img" src="images/product-bp-slides/1-front-display.jpg" alt="스마트 혈압계 LD-737" style="width:100%;height:100%;object-fit:contain;display:block;padding:6% 6% 12%">
             <button type="button" id="bps-prev" data-i18n-aria="common_prevImage" aria-label="이전 이미지" style="position:absolute;left:6px;top:50%;transform:translateY(-50%);width:28px;height:28px;border:0;border-radius:999px;background:rgba(255,255,255,0.94);box-shadow:0 2px 8px rgba(16,32,26,.14);font-size:14px;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--text-primary)">‹</button>
             <button type="button" id="bps-next" data-i18n-aria="common_nextImage" aria-label="다음 이미지" style="position:absolute;right:6px;top:50%;transform:translateY(-50%);width:28px;height:28px;border:0;border-radius:999px;background:rgba(255,255,255,0.94);box-shadow:0 2px 8px rgba(16,32,26,.14);font-size:14px;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--text-primary)">›</button>
             <div id="bps-dots" style="position:absolute;left:0;right:0;bottom:8px;display:flex;justify-content:center;gap:6px">
@@ -245,7 +246,7 @@ window.__resources = {
     </div>
   </section>
 
-  <section id="biz" style="padding:clamp(52px,7vw,104px) clamp(16px,4vw,56px)">
+  <section id="biz" style="padding:clamp(52px,7vw,104px) clamp(16px,4vw,56px) 0">
     <div style="max-width:1340px;margin:0 auto;background:var(--surface-accent);border-radius:28px;padding:clamp(28px,4vw,56px)">
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:clamp(28px,4vw,60px);align-items:start">
         <div>
@@ -266,7 +267,7 @@ window.__resources = {
     </div>
   </section>
 
-  <section id="invitation" style="padding:clamp(52px,7vw,104px) clamp(16px,4vw,56px);border-bottom:1px solid var(--border-subtle)">
+  <section id="invitation" style="padding:clamp(24px,3vw,40px) clamp(16px,4vw,56px) clamp(52px,7vw,104px);border-bottom:1px solid var(--border-subtle)">
     <div style="max-width:1340px;margin:0 auto;background:var(--surface-card);border-radius:20px;overflow:hidden;padding:clamp(28px,4vw,56px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:clamp(28px,4vw,56px);align-items:start">
       <div>
       <p style="margin:0 0 18px;font-size:12px;letter-spacing:0.2em;color:var(--text-accent)" data-i18n="invitation_eyebrow">INVITATION</p>
@@ -279,8 +280,8 @@ window.__resources = {
         <div style="background:var(--bg-app);padding:22px 24px"><div style="font-size:12.5px;color:var(--text-tertiary);margin-bottom:8px" data-i18n="invitation_dateLabel">일시</div><div style="font-weight:700;font-size:clamp(17px,1.8vw,21px);line-height:1.5" data-i18n-html="invitation_dateValue">2026년 10월 30일 (금)<br>오후 2시</div></div>
         <div style="background:var(--bg-app);padding:22px 24px"><div style="font-size:12.5px;color:var(--text-tertiary);margin-bottom:8px" data-i18n="invitation_venueLabel">장소</div><div style="font-weight:700;font-size:clamp(17px,1.8vw,21px);line-height:1.5"><a href="https://www.google.com/maps/search/?api=1&query=%EC%B6%A9%EB%82%A8%20%EA%B3%84%EB%A3%A1%EC%8B%9C%20%EB%91%90%EB%A7%88%EB%A9%B4%20%EC%9E%85%EC%95%94%EB%A6%AC%20622" target="_blank" rel="noopener" data-i18n="invitation_venueValue" style="color:inherit">충남 계룡시 두마면 입암리 622</a></div><div style="font-size:13.5px;color:var(--text-tertiary);margin-top:6px" data-i18n="invitation_venueNote">(나노소프트 신사옥)</div></div>
       </div>
-      <div style="display:flex;flex-wrap:wrap;gap:10px 28px;font-size:14px;color:var(--text-secondary);padding-bottom:26px;border-bottom:1px solid var(--border-subtle)">
-        <span data-i18n="invitation_tag1">신제품 론칭 행사</span><span style="color:var(--border-strong)">·</span><span data-i18n="invitation_tag2">바디핏 체험</span><span style="color:var(--border-strong)">·</span><span data-i18n="invitation_tag3">식사 및 다과</span><span style="color:var(--border-strong)">·</span><span data-i18n="invitation_tag4">네트워킹</span><span style="color:var(--border-strong)">·</span><span data-i18n="invitation_tag5">기념촬영 및 이벤트</span><span style="color:var(--border-strong)">·</span><span data-i18n="invitation_tag6">대형 코르크 요가매트 증정</span>
+      <div class="inv-tags" style="display:flex;flex-wrap:wrap;gap:8px;font-size:14px;color:var(--text-secondary);padding-bottom:26px;border-bottom:1px solid var(--border-subtle)">
+        <span data-i18n="invitation_tag1">신제품 론칭 행사</span><span data-i18n="invitation_tag2">바디핏 체험</span><span data-i18n="invitation_tag3">식사 및 다과</span><span data-i18n="invitation_tag4">네트워킹</span><span data-i18n="invitation_tag5">기념촬영 및 이벤트</span><span data-i18n="invitation_tag6">대형 코르크 요가매트 증정</span>
       </div>
       <p style="margin:14px 0 0;font-size:13.5px;line-height:1.8;color:var(--text-tertiary)" data-i18n="invitation_giftNote">현장에서 바디핏을 체험하신 분께 대형 코르크 요가매트를 선착순으로 증정합니다.</p>
       <div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:26px">
@@ -636,6 +637,31 @@ window.__resources = {
 </script>
 
 <script>
+// 제품 카드 캐러셀 자동 넘김 멈춤 — 마우스를 올리거나 키보드로 들어가 있는 동안 멈추고,
+// 화살표 · 점을 직접 누르면 그 캐러셀은 다시 저절로 넘어가지 않는다(WCAG 2.2.2).
+// dc-runtime 재렌더링에도 안전하도록 document 이벤트 위임으로 처리한다.
+(function () {
+  var holding = {};
+  var stopped = {};
+  window.bfitCarouselPaused = function (key) { return !!(holding[key] || stopped[key]); };
+  window.bfitCarouselStop = function (key) { stopped[key] = true; };
+  function keyOf(el) {
+    var box = el && el.closest ? el.closest('[data-carousel]') : null;
+    return box ? box.getAttribute('data-carousel') : null;
+  }
+  document.addEventListener('mouseover', function (e) { var k = keyOf(e.target); if (k) holding[k] = true; });
+  document.addEventListener('mouseout', function (e) {
+    var k = keyOf(e.target);
+    if (k && keyOf(e.relatedTarget) !== k) holding[k] = false;
+  });
+  document.addEventListener('focusin', function (e) { var k = keyOf(e.target); if (k) holding[k] = true; });
+  document.addEventListener('focusout', function (e) {
+    var k = keyOf(e.target);
+    if (k && keyOf(e.relatedTarget) !== k) holding[k] = false;
+  });
+})();
+</script>
+<script>
 (function () {
   // 비핏 제품 전체 > 비핏 데일리 카드 슬라이드쇼 (온보딩 화면 6장, 스마트폰 목업 형식)
   var pdsSlides = [
@@ -672,11 +698,12 @@ window.__resources = {
 
   function pdsStartAuto() {
     clearInterval(pdsTimer);
-    pdsTimer = setInterval(function () { pdsGo(1); }, 3500);
+    pdsTimer = setInterval(function () { if (!bfitCarouselPaused('pds')) pdsGo(1); }, 3500);
   }
   function pdsRestartAuto() {
-    // 사용자가 직접 조작하면 자동 전환 타이머를 리셋
-    pdsStartAuto();
+    // 사용자가 직접 넘기면 이 캐러셀의 자동 넘김을 멈춘다
+    bfitCarouselStop('pds');
+    clearInterval(pdsTimer);
   }
 
   // 카드 전체가 <a href="#app">로 감싸여 있으므로, 슬라이드쇼 컨트롤 클릭은
@@ -750,11 +777,12 @@ window.__resources = {
 
   function swsStartAuto() {
     clearInterval(swsTimer);
-    swsTimer = setInterval(function () { swsGo(1); }, 3500);
+    swsTimer = setInterval(function () { if (!bfitCarouselPaused('sws')) swsGo(1); }, 3500);
   }
   function swsRestartAuto() {
-    // 사용자가 직접 조작하면 자동 전환 타이머를 리셋
-    swsStartAuto();
+    // 사용자가 직접 넘기면 이 캐러셀의 자동 넘김을 멈춘다
+    bfitCarouselStop('sws');
+    clearInterval(swsTimer);
   }
 
   // 카드 전체가 외부 링크(target="_blank")로 감싸여 있으므로, 슬라이드쇼 컨트롤 클릭은
@@ -830,10 +858,12 @@ window.__resources = {
 
   function bpsStartAuto() {
     clearInterval(bpsTimer);
-    bpsTimer = setInterval(function () { bpsGo(1); }, 3500);
+    bpsTimer = setInterval(function () { if (!bfitCarouselPaused('bps')) bpsGo(1); }, 3500);
   }
   function bpsRestartAuto() {
-    bpsStartAuto();
+    // 사용자가 직접 넘기면 이 캐러셀의 자동 넘김을 멈춘다
+    bfitCarouselStop('bps');
+    clearInterval(bpsTimer);
   }
 
   // 카드 전체가 외부 링크(target="_blank")로 감싸여 있으므로, 슬라이드쇼 컨트롤 클릭은
@@ -877,8 +907,9 @@ window.__resources = {
 
 <script>
 (function () {
-  // 비핏 제품 전체 > 바디핏 신체 구성 측정기 카드 슬라이드쇼 (제품 사진 5장)
+  // 비핏 제품 전체 > 바디핏 신체 구성 측정기 카드 슬라이드쇼 (제품 사진 6장, 첫 장은 옆모습 전체)
   var pbfSlides = [
+    { src: 'images/bodyfit-views/right-profile.png', alt: '바디핏 신체 구성 측정기 - 옆모습 전체', scale: 1 },
     { src: 'images/product-bodyfit-slides/1-full-top-view.png', alt: '바디핏 신체 구성 측정기 - 전체 탑뷰', scale: 2 },
     { src: 'images/product-bodyfit-slides/2-footplate-closeup.png', alt: '바디핏 - 발판 클로즈업', scale: 2 },
     { src: 'images/product-bodyfit-slides/3-handle-display.png', alt: '바디핏 - 손잡이 디스플레이', scale: 2 },
@@ -913,11 +944,12 @@ window.__resources = {
 
   function pbfStartAuto() {
     clearInterval(pbfTimer);
-    pbfTimer = setInterval(function () { pbfGo(1); }, 3500);
+    pbfTimer = setInterval(function () { if (!bfitCarouselPaused('pbf')) pbfGo(1); }, 3500);
   }
   function pbfRestartAuto() {
-    // 사용자가 직접 조작하면 자동 전환 타이머를 리셋
-    pbfStartAuto();
+    // 사용자가 직접 넘기면 이 캐러셀의 자동 넘김을 멈춘다
+    bfitCarouselStop('pbf');
+    clearInterval(pbfTimer);
   }
 
   // 카드 전체가 <a href="#bodyfit">로 감싸여 있으므로, 슬라이드쇼 컨트롤 클릭은
