@@ -120,13 +120,14 @@
   .inv-tags > span { padding: 6px 12px; border-radius: 999px; background: var(--bg-app); line-height: 1.5; }
 
   /* 히어로 — 문구는 사진에 그리지 않고 글자로 둔다(번역 · 폰 가독성 · 검색).
-     폰: 사진 아래. 861px 이상: 사진 오른쪽 위에 얹고, 사진 폭에 비례해 커진다 */
+     폰: 사진 아래. 861px 이상: 밝은 사진 오른쪽 빈 벽 위에 카피와 버튼을 한 덩어리로 얹고, 사진 폭에 비례해 커진다 */
   .hero { max-width: 1340px; margin: 0 auto; position: relative; }
+  .hero-chip { display: none; }
   .hero-copy {
     display: grid; gap: 8px;
     padding: clamp(20px, 3vw, 28px) clamp(16px, 4vw, 56px) 0;
   }
-  .hero-kicker { font-size: 13px; font-weight: 600; color: var(--text-accent); }
+  .hero-kicker { font-size: 13px; font-weight: 700; color: var(--text-accent); }
   .hero-title {
     margin: 0; font-size: clamp(25px, 6.6vw, 30px); font-weight: 800;
     line-height: 1.28; letter-spacing: -0.025em; color: var(--text-primary); text-wrap: balance;
@@ -136,23 +137,25 @@
 
   @media (min-width: 861px) {
     .hero { --hero-w: min(100vw, 1340px); }
-    .hero::after {
-      content: ""; position: absolute; inset: 0 0 auto 40%; height: 42%; pointer-events: none;
-      background: linear-gradient(to bottom, rgba(15, 26, 22, 0.55), rgba(15, 26, 22, 0));
-      -webkit-mask-image: linear-gradient(to right, transparent, #000 30%);
-              mask-image: linear-gradient(to right, transparent, #000 30%);
+    /* 분석기 옆 제품 이름표 — 오른쪽 끝을 카피 왼쪽에 맞춰, 번역 문구가 길어져도 헤드라인과 겹치지 않게 */
+    .hero-chip {
+      display: flex; align-items: center; gap: 8px;
+      position: absolute; z-index: 1; right: 43%; top: 49%;
+      padding: 6px 12px 6px 9px; border-radius: 999px;
+      background: rgba(255, 255, 255, 0.92); color: var(--text-primary);
+      font-size: max(12px, calc(var(--hero-w) * 0.0097)); font-weight: 700; white-space: nowrap;
     }
+    .hero-chip::before { content: ""; width: 9px; height: 9px; border-radius: 50%; background: var(--accent-strong); }
     .hero-copy {
-      position: absolute; z-index: 1; top: 2.6%; bottom: 4.5%; left: 53%; right: 2.5%;
-      display: flex; flex-direction: column;
-      padding: 0; gap: calc(var(--hero-w) * 0.006);
-      text-shadow: 0 1px 12px rgba(15, 26, 22, 0.45);
+      position: absolute; z-index: 1; top: 0; bottom: 0; left: 59.7%; right: 3%;
+      display: flex; flex-direction: column; justify-content: center;
+      padding: 0; gap: calc(var(--hero-w) * 0.014);
     }
-    .hero-kicker { font-size: max(12.5px, calc(var(--hero-w) * 0.0125)); font-weight: 500; color: var(--text-on-accent); }
-    .hero-title { font-size: calc(var(--hero-w) * 0.029); color: var(--text-on-accent); }
-    .hero-sub { font-size: max(14.5px, calc(var(--hero-w) * 0.0165)); line-height: 1.5; color: var(--text-on-accent); text-wrap: pretty; max-width: 21em; }
-    /* 버튼은 사진 오른쪽 아래 바닥 위에 둔다 — 문구 바로 밑은 기기 손잡이 · 거치대 폰 화면을 가린다. 문구용 그림자는 주지 않는다 */
-    .hero-cta { margin-top: auto; align-self: flex-end; text-shadow: none; }
+    .hero-kicker { font-size: max(13px, calc(var(--hero-w) * 0.0105)); }
+    .hero-title { font-size: calc(var(--hero-w) * 0.035); line-height: 1.26; max-width: 11.5em; }
+    .hero-sub { font-size: max(14.5px, calc(var(--hero-w) * 0.0132)); line-height: 1.7; color: #2E2A27; text-wrap: pretty; max-width: 22em; }
+    /* 버튼은 문구 바로 아래 — 읽고 나서 바로 누를 수 있게 */
+    .hero-cta { margin-top: calc(var(--hero-w) * 0.008); }
   }
 
   @media (max-width: 400px) {
