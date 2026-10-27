@@ -180,7 +180,7 @@ window.__resources = {
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr));gap:clamp(16px,2.2vw,26px)">
         <div style="display:block;background:var(--surface-card);border-radius:20px;overflow:hidden">
           <div data-carousel="pds" style="position:relative;aspect-ratio:3/4;background:var(--surface-card);overflow:hidden">
-            <img id="pds-main-img" src="images/product-daily-slides/1-todays-record.jpg" alt="비핏 데일리 앱 - 한눈에 보는 오늘의 기록" style="width:100%;height:100%;object-fit:contain;display:block;padding:6px;background:transparent">
+            <img id="pds-main-img" src="images/product-daily-slides/1-analysis.webp" alt="비핏 데일리 앱의 AI 분석 화면" style="width:100%;height:100%;object-fit:contain;display:block;padding:6px;background:transparent">
             <button type="button" id="pds-prev" data-i18n-aria="common_prevScreen" aria-label="이전 화면" style="position:absolute;left:6px;top:50%;transform:translateY(-50%);width:28px;height:28px;border:0;border-radius:999px;background:rgba(255,255,255,0.94);box-shadow:0 2px 8px rgba(16,32,26,.14);font-size:14px;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--text-primary)">‹</button>
             <button type="button" id="pds-next" data-i18n-aria="common_nextScreen" aria-label="다음 화면" style="position:absolute;right:6px;top:50%;transform:translateY(-50%);width:28px;height:28px;border:0;border-radius:999px;background:rgba(255,255,255,0.94);box-shadow:0 2px 8px rgba(16,32,26,.14);font-size:14px;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--text-primary)">›</button>
             <div id="pds-dots" style="position:absolute;left:0;right:0;bottom:8px;display:flex;justify-content:center;gap:6px">
@@ -190,6 +190,7 @@ window.__resources = {
               <button type="button" data-pds-dot="3" aria-label="4번 화면" style="width:6px;height:6px;padding:0;border:0;border-radius:50%;background:var(--border-strong);cursor:pointer"></button>
               <button type="button" data-pds-dot="4" aria-label="5번 화면" style="width:6px;height:6px;padding:0;border:0;border-radius:50%;background:var(--border-strong);cursor:pointer"></button>
               <button type="button" data-pds-dot="5" aria-label="6번 화면" style="width:6px;height:6px;padding:0;border:0;border-radius:50%;background:var(--border-strong);cursor:pointer"></button>
+              <button type="button" data-pds-dot="6" aria-label="7번 화면" style="width:6px;height:6px;padding:0;border:0;border-radius:50%;background:var(--border-strong);cursor:pointer"></button>
             </div>
           </div>
           <div style="padding:20px 22px"><div style="font-size:11.5px;letter-spacing:0.12em;color:var(--text-tertiary);margin-bottom:9px" data-i18n="product_card1Tag">APP</div><div style="font-weight:500;font-size:16.5px;margin-bottom:6px" data-i18n="product_card1Title">비핏 데일리</div><div style="font-size:13.5px;line-height:1.75;color:var(--text-tertiary)" data-i18n="product_card1Desc">바디핏 측정 기록과 데일리 습관을 관리하는 앱</div></div>
@@ -663,14 +664,15 @@ window.__resources = {
 </script>
 <script>
 (function () {
-  // 비핏 제품 전체 > 비핏 데일리 카드 슬라이드쇼 (온보딩 화면 6장, 스마트폰 목업 형식)
+  // 비핏 제품 전체 > 비핏 데일리 카드 슬라이드쇼 (지금 앱 화면 7장, bfitdaily.kr 바디핏 소개 앱 화면과 같은 순서)
   var pdsSlides = [
-    { src: 'images/product-daily-slides/1-todays-record.jpg', alt: '한눈에 보는 오늘의 기록 - 운동·물 섭취·활동·목표 달성' },
-    { src: 'images/product-daily-slides/2-activity-log.png', alt: '다양한 활동을 편리하게 기록 - 걷기·스마트 운동·물마시기' },
-    { src: 'images/product-daily-slides/3-goal-setting.jpg', alt: '목표를 설정하고 알림으로 챙겨요 - 비핏 데일리 만들기' },
-    { src: 'images/product-daily-slides/4-timer-practice.png', alt: '재미있게 꾸준히 실천해요 - 타이머와 가이드' },
-    { src: 'images/product-daily-slides/5-app-start.png', alt: '작은 습관이 더 나은 일상을 만듭니다' },
-    { src: 'images/product-daily-slides/6-healthier-today.png', alt: '오늘도, 더 건강한 나 - Bfit Daily' }
+    { src: 'images/product-daily-slides/1-analysis.webp', alt: '비핏 데일리 앱의 AI 분석 화면' },
+    { src: 'images/product-daily-slides/2-daily-picks.webp', alt: '비핏 데일리 앱의 데일리 추천 화면' },
+    { src: 'images/product-daily-slides/3-today.webp', alt: '비핏 데일리 앱의 오늘의 실천 기록 화면' },
+    { src: 'images/product-daily-slides/4-bodyfit-home.webp', alt: '비핏 데일리 앱의 바디핏 홈 화면' },
+    { src: 'images/product-daily-slides/5-summary.webp', alt: '비핏 데일리 앱의 종합과 부위별 화면' },
+    { src: 'images/product-daily-slides/6-metric-records.webp', alt: '비핏 데일리 앱의 항목별 측정 기록 화면' },
+    { src: 'images/product-daily-slides/7-metric.webp', alt: '비핏 데일리 앱의 지표 설명 화면' }
   ];
   var pdsIndex = 0;
   var pdsTimer = null;
