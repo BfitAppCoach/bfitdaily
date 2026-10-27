@@ -120,7 +120,7 @@
   .inv-tags > span { padding: 6px 12px; border-radius: 999px; background: var(--bg-app); line-height: 1.5; }
 
   /* 히어로 — 문구는 사진에 그리지 않고 글자로 둔다(번역 · 폰 가독성 · 검색).
-     폰: 사진 아래. 861px 이상: 밝은 사진 오른쪽 빈 벽 위에 카피와 버튼을 한 덩어리로 얹고, 사진 폭에 비례해 커진다 */
+     폰: 사진 아래. 861px 이상: 헬스장 사진 오른쪽(러닝머신 쪽)을 어둡게 눌러 흰 카피와 버튼을 한 덩어리로 얹고, 사진 폭에 비례해 커진다 */
   .hero { max-width: 1340px; margin: 0 auto; position: relative; }
   .hero-chip { display: none; }
   .hero-copy {
@@ -137,25 +137,30 @@
 
   @media (min-width: 861px) {
     .hero { --hero-w: min(100vw, 1340px); }
-    /* 분석기 옆 제품 이름표 — 오른쪽 끝을 카피 왼쪽에 맞춰, 번역 문구가 길어져도 헤드라인과 겹치지 않게 */
+    /* 카피 뒤 오른쪽만 어둡게 — 바디핏(사진 가운데 오른쪽)은 밝게 남긴다 */
+    .hero-frame::after {
+      content: ""; position: absolute; inset: 0; pointer-events: none;
+      background: linear-gradient(270deg, rgba(10, 12, 11, 0.78) 0%, rgba(10, 12, 11, 0.55) 22%, rgba(10, 12, 11, 0) 38%);
+    }
+    /* 분석기 손잡이 왼쪽 이름표 — 오른쪽 끝을 휴대폰 앞에 맞춰 기기와 겹치지 않게 */
     .hero-chip {
       display: flex; align-items: center; gap: 8px;
-      position: absolute; z-index: 1; right: 43%; top: 49%;
+      position: absolute; z-index: 1; right: 39%; top: 25%;
       padding: 6px 12px 6px 9px; border-radius: 999px;
       background: rgba(255, 255, 255, 0.92); color: var(--text-primary);
       font-size: max(12px, calc(var(--hero-w) * 0.0097)); font-weight: 700; white-space: nowrap;
     }
     .hero-chip::before { content: ""; width: 9px; height: 9px; border-radius: 50%; background: var(--accent-strong); }
     .hero-copy {
-      position: absolute; z-index: 1; top: 0; bottom: 0; left: 59.7%; right: 3%;
-      display: flex; flex-direction: column; justify-content: center;
-      padding: 0; gap: calc(var(--hero-w) * 0.014);
+      position: absolute; z-index: 1; top: 7%; left: 73.5%; right: 3.5%;
+      display: flex; flex-direction: column;
+      padding: 0; gap: calc(var(--hero-w) * 0.011);
     }
-    .hero-kicker { font-size: max(13px, calc(var(--hero-w) * 0.0105)); }
-    .hero-title { font-size: calc(var(--hero-w) * 0.035); line-height: 1.26; max-width: 11.5em; }
-    .hero-sub { font-size: max(14.5px, calc(var(--hero-w) * 0.0132)); line-height: 1.7; color: #2E2A27; text-wrap: pretty; max-width: 22em; }
-    /* 버튼은 문구 바로 아래 — 읽고 나서 바로 누를 수 있게 */
-    .hero-cta { margin-top: calc(var(--hero-w) * 0.008); }
+    .hero-kicker { font-size: max(13px, calc(var(--hero-w) * 0.0105)); color: var(--accent-on-dark); }
+    .hero-title { font-size: calc(var(--hero-w) * 0.027); line-height: 1.26; color: var(--text-on-accent); }
+    .hero-sub { font-size: max(14px, calc(var(--hero-w) * 0.0128)); line-height: 1.7; color: rgba(255, 255, 255, 0.86); text-wrap: pretty; }
+    /* 버튼은 문구 바로 아래, 좁은 칸이라 세로로 — 읽고 나서 바로 누를 수 있게 */
+    .hero-cta { flex-direction: column; align-items: flex-start; margin-top: calc(var(--hero-w) * 0.008); }
   }
 
   @media (max-width: 400px) {
